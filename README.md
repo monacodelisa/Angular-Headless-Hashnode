@@ -14,8 +14,8 @@ The **Angular Headless Hashnode Project** aims to seamlessly connect your Angula
 - Support Angular versions 16 and 17.
 - Include light and dark mode options for user interface customization.
 
-## No UI Libraries
-
+## Features
+- [Material Symbols and Icons](https://fonts.google.com/icons)
 - The project intentionally avoids including any UI libraries, allowing developers to choose and integrate UI components according to their preferences.
 
 ## Getting Started
