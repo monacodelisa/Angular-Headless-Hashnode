@@ -45,7 +45,7 @@ npm install
 ```
 
 ## Found an issue?
-If you have found an issue or bug, please create an issue.
+If you have found an issue or bug, please create an issue..
 
 If it's a quick fix, such as a misspelled word or a broken link, feel free to skip creating an issue. You can create a pull request directly.
 
