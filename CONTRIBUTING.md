@@ -84,7 +84,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
      ```shell
      git checkout -b my-fix-branch develop
      ```
-### default branch is develop
+### the default branch is develop!
 
 5. Create your patch, **including appropriate test cases**.
 
