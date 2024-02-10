@@ -82,8 +82,9 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 4. In your forked repository, make your changes in a new git branch:
 
      ```shell
-     git checkout -b my-fix-branch main
+     git checkout -b my-fix-branch develop
      ```
+### the default branch is develop!
 
 5. Create your patch, **including appropriate test cases**.
 
@@ -105,7 +106,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
     git push origin my-fix-branch
     ```
 
-10. In GitHub, send a pull request to `angular:main`.
+10. In GitHub, send a pull request to `angular-headless-hashnode:develop`.
 
 ### Reviewing a Pull Request
 
