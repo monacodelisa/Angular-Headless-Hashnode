@@ -125,10 +125,10 @@ After your pull request is merged, you can safely delete your branch and pull th
     git push origin --delete my-fix-branch
     ```
 
-* Check out the main branch:
+* Check out the develop branch:
 
     ```shell
-    git checkout main -f
+    git checkout develop -f
     ```
 
 * Delete the local branch:
@@ -137,10 +137,10 @@ After your pull request is merged, you can safely delete your branch and pull th
     git branch -D my-fix-branch
     ```
 
-* Update your local `main` with the latest upstream version:
+* Update your local `develop` with the latest upstream version:
 
     ```shell
-    git pull --ff upstream main
+    git pull --ff upstream develop
     ```
 
 
