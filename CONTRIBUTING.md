@@ -5,13 +5,13 @@ First off, thanks for taking the time to contribute! ❤️
 All types of contributions are encouraged and valued. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved. The community looks forward to your contributions. 🎉
 
  - [Code of Conduct](#code-of-conduct)
- - [Question or Problem?](#question)
- - [Issues and Bugs](#issue)
- - [Feature Requests](#feature)
- - [Submission Guidelines](#submit)
- - [Coding Rules](#rules)
- - [Commit Message Guidelines](#commit)
- - [Signing the CLA](#cla)
+ - [Question or Problem?](#question-or-problem)
+ - [Issues and Bugs](#found-a-bug)
+ - [Feature Requests](#missing-a-feature)
+ - [Submission Guidelines](#submission-guidelines)
+ - [Coding Rules](#coding-rules)
+ - [Commit Message Guidelines](#revert-commits)
+
 
 
 ## Code of Conduct
@@ -22,7 +22,7 @@ By participating, you are expected to uphold this code. Please report unacceptab
 to @monacodelisa.
 
 
-## Got a Question or Problem?
+## Question or Problem?
 
 Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests.
 Instead, we recommend using [Stack Overflow](https://stackoverflow.com/questions/tagged/angular) to ask support-related questions. 
