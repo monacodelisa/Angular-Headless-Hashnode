@@ -17,7 +17,7 @@ All types of contributions are encouraged and valued. Please make sure to read t
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[Code of Conduct](blob/main/CODE_OF_CONDUCT.md).
+[Code of Conduct](/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
 to @monacodelisa.
 
@@ -25,16 +25,16 @@ to @monacodelisa.
 ## Question or Problem?
 
 Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests.
-Instead, we recommend using [Stack Overflow](https://stackoverflow.com/questions/tagged/angular) to ask support-related questions. 
+Instead, we recommend using Stack Overflow to ask support-related questions. 
 
 ## Found a Bug?
 
-If you find a bug in the source code, you can help by [submitting an issue](#submit-issue) to our [GitHub Repository][github].
-Even better, you can [submit a Pull Request](#submit-pr) with a fix.
+If you find a bug in the source code, you can help by [submitting an issue](#submitting-an-issue) to our [GitHub Repository][github].
+Even better, you can [submit a Pull Request](#submitting-a-pull-request-pr) with a fix.
 
 
 ## Missing a Feature?
-You can *request* a new feature by [submitting an issue](#submit-issue) to our GitHub Repository.
+You can *request* a new feature by [submitting an issue](#submitting-an-issue) to our GitHub Repository.
 If you would like to *implement* a new feature, please consider the size of the change in order to determine the right steps to proceed:
 
 * For a **Major Feature**, first open an issue and outline your proposal so that it can be discussed.
@@ -42,7 +42,7 @@ If you would like to *implement* a new feature, please consider the size of the 
 
   **Note**: Adding a new topic to the documentation, or significantly re-writing a topic, counts as a major feature.
 
-* **Small Features** can be crafted and directly [submitted as a Pull Request](#submit-pr).
+* **Small Features** can be crafted and directly [submitted as a Pull Request](#submitting-a-pull-request-pr).
 
 
 ## Submission Guidelines
@@ -77,25 +77,21 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
    Discussing the design upfront helps to ensure that we're ready to accept your work.
 
-3. Please sign our [Contributor License Agreement (CLA)](#cla) before sending PRs.
-   We cannot accept code without a signed CLA.
-   Make sure you author all contributed Git commits with email address associated with your CLA signature.
+3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `monacodelisa/angular-headles-hashnopde` repo.
 
-4. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `monacodelisa/angular-headles-hashnopde` repo.
-
-5. In your forked repository, make your changes in a new git branch:
+4. In your forked repository, make your changes in a new git branch:
 
      ```shell
      git checkout -b my-fix-branch main
      ```
 
-6. Create your patch, **including appropriate test cases**.
+5. Create your patch, **including appropriate test cases**.
 
-7. Follow our [Coding Rules](#rules).
+6. Follow our [Coding Rules](#coding-rules).
 
-8. Run the full Angular test suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
+7. Run the full Angular test suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
 
-9. Commit your changes using a descriptive commit message that follows our [commit message conventions](#commit).
+8. Commit your changes using a descriptive commit message.
    Adherence to these conventions is necessary because release notes are automatically generated from these messages.
 
      ```shell
@@ -103,13 +99,13 @@ Before you submit your Pull Request (PR) consider the following guidelines:
      ```
     Note: the optional commit `--all` command line option will automatically "add" and "rm" edited files.
 
-10. Push your branch to GitHub:
+9. Push your branch to GitHub:
 
     ```shell
     git push origin my-fix-branch
     ```
 
-11. In GitHub, send a pull request to `angular:main`.
+10. In GitHub, send a pull request to `angular:main`.
 
 ### Reviewing a Pull Request
 
