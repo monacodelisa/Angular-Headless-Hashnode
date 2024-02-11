@@ -1,8 +1,27 @@
 <div class="toolbar" role="banner">
-  <button><span class="material-symbols-outlined">
-    menu
-    </span></button>
-  <button><span class="material-symbols-outlined">
-    bedtime
-    </span></button>
+  <div class="toolbar-row">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/monacodelisa/images/main/users/sophie-reed.png" alt="logo" />
+      <h1>{{ blogName }}</h1>
+    </div>
+    <div class="theme-control">
+      <button><span class="material-symbols-outlined">
+          bedtime
+        </span></button>
+    </div>
+  </div>
+  <div class="toolbar-row">
+    <div class="social">
+      <div class="social-link" *ngFor="let social of socialLinks">
+        <a href="{{social.url}}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-{{social.icon}}"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="toolbar-row">
+    <div class="series">
+      <div class="topic-link" *ngFor="let topic of topics">
+        <a href="{{topic.route }}" target="_blank" rel="noopener noreferrer">{{topic.name}}</a>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,62 @@
 .toolbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+  padding: 1.5rem 1.5rem 0.3rem;
+
+  .toolbar-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &:nth-child(2) {
+      border-bottom: 1px solid #80808050;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+
+    .social {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 1rem 0 0.5rem;
+
+      a {
+
+        i {
+          height: 1.3rem;
+          width: 1.3rem;
+
+          &:before {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+
+    .series {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 0.7rem 0;
+
+      a {
+        font-size: 1.1rem;;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
