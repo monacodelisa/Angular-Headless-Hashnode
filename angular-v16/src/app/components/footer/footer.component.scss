@@ -4,4 +4,21 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 1rem;
+
+  p, small {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  small {
+    color: #999999;
+    margin-top: 0.8rem;
+    a {
+      color: #b6b6b6;
+      &:hover {
+        color: #d0d0d0;
+      }
+    }
+  }
 }
