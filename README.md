@@ -9,16 +9,20 @@ The **Angular Headless Hashnode Project** aims to seamlessly connect your Angula
 
 ## Project Goals
 
-- Connect Angular app to Hashnode's GraphQL database.
-- Provide a flexible template for Angular integration with headless Hashnode.
+- Develop a flexible template for Angular integration with headless Hashnode.
+- Connect the Angular app to Hashnode's GraphQL database.
 - Support Angular versions 16 and 17.
 - Include light and dark mode options for user interface customization.
 
 ## Features
-- [Material Symbols and Icons](https://fonts.google.com/icons)
+- [Font Awesome Icons](https://fontawesome.com/)
+- [Google Material Symbols and Icons](https://fonts.google.com/icons)
+- [Google Fonts: Browse Fonts](https://fonts.google.com/)
 - The project intentionally avoids including any UI libraries, allowing developers to choose and integrate UI components according to their preferences.
 
 ## Getting Started
+
+#### the default branch is `develop`!
 
 ### Run locally
 
@@ -43,6 +47,39 @@ cd angular-v17
 ```
 npm install
 ```
+
+## Or Fork the repository
+
+1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `monacodelisa/angular-headles-hashnopde` repo.
+
+### Making Changes
+
+1. In your local or forked repository, make your changes in a new git branch:
+
+     ```shell
+     git checkout -b my-fix-branch develop
+     ```
+
+2. Create your patch, **including appropriate test cases**.
+
+3. Follow our [Coding Rules](#coding-rules).
+
+4. Run the full test suite, as described in the developer documentation, and ensure that all tests pass.
+
+5. Commit your changes using a descriptive commit message.
+
+     ```shell
+     git commit --all
+     ```
+    Note: the optional commit `--all` command line option will automatically "add" and "rm" edited files.
+
+6. Push your branch to GitHub:
+
+    ```shell
+    git push origin my-fix-branch
+    ```
+
+7. In GitHub, send a pull request to `angular-headless-hashnode:develop`.
 
 ## Found an issue?
 If you have found an issue or bug, please create an issue.

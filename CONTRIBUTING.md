@@ -90,10 +90,9 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 6. Follow our [Coding Rules](#coding-rules).
 
-7. Run the full Angular test suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
+7. Run the full test suite, as described in the developer documentation, and ensure that all tests pass.
 
 8. Commit your changes using a descriptive commit message.
-   Adherence to these conventions is necessary because release notes are automatically generated from these messages.
 
      ```shell
      git commit --all
