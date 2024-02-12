@@ -1,9 +1,9 @@
 ![](/angular-headless-hashnode.jpg)
 
 # Angular Headless Hashnode
-## Open Source Project
+## [![Discord](https://github.com/monacodelisa/icons-and-graphics/blob/main/icomoon/PNG/discord.png?raw=true)](https://discord.gg/3bS3xpCj) Open Source Project  
 
-## Overview
+## Overview 
 
 The **Angular Headless Hashnode Project** aims to seamlessly connect your Angular application to the Hashnode GraphQL database, providing a template for integrating Angular with a headless Hashnode setup. 
 
@@ -93,4 +93,3 @@ If it's a quick fix, such as a misspelled word or a broken link, feel free to sk
 ## Have feedback?
 Feel free to create an issue with the feedback label. I will take a look and get back to you as soon as I can!
 
-If you like, you can also DM me on social media!
