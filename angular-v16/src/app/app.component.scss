@@ -1,3 +1,12 @@
 .content {
-  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+
+  img {
+    width: 32rem;
+    height: 18rem;
+    border-radius: 1rem;
+  }
 }
