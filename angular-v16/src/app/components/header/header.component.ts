@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
+import { ThemeService } from "src/app/services/theme.service";
 
 @Component({
 	selector: "app-header",
@@ -7,6 +8,7 @@ import { Component } from "@angular/core";
 })
 export class HeaderComponent {
 	blogName = "Blog Name";
+  themeService:ThemeService = inject(ThemeService);
 
 	socialLinks = [
     {
@@ -61,4 +63,8 @@ export class HeaderComponent {
       route: "/clean-code",
     },
   ]
+
+  toggleTheme() {
+    this.themeService.updateTheme();
+  }
 }

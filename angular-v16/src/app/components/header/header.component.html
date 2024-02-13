@@ -5,8 +5,11 @@
       <h1>{{ blogName }}</h1>
     </div>
     <div class="theme-control">
-      <button><span class="material-symbols-outlined">
+      <button *ngIf="themeService.themeSignal() == 'dark'" (click)="toggleTheme()"><span class="material-symbols-outlined">
           bedtime
+        </span></button>
+      <button *ngIf="themeService.themeSignal() == 'light'" (click)="toggleTheme()"><span class="material-symbols-outlined">
+          wb_sunny
         </span></button>
     </div>
   </div>
