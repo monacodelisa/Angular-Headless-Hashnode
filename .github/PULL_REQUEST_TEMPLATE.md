@@ -1,42 +1,35 @@
-## PR Checklist
-Please check if your PR fulfills the following requirements:
+## Description
 
-- [ ] The commit message follows the guidelines
-- [ ] Tests for the changes have been added (for bug fixes / features)
-- [ ] Docs have been added / updated (for bug fixes / features)
+## What type of PR is this? (check all applicable)
+- [ ] 🅰️ Feature
+- [ ] 🐛 Bug Fix
+- [ ] 📝 Documentation Update
+- [ ] 🎨 Style
+- [ ] 🧑‍💻 Code Refactor
+- [ ] 🔥 Performance Improvements
+- [ ] ✅ Test
+- [ ] 🤖 Build
+- [ ] 🔁 CI
+- [ ] 📦 Chore (Release)
+- [ ] ⏩ Revert
 
-
-## PR Type
-What kind of change does this PR introduce?
-
-<!-- Please check the one that applies to this PR using "x". -->
-
-- [ ] Bugfix
-- [ ] Feature
-- [ ] Code style update (formatting, local variables)
-- [ ] Refactoring (no functional changes, no api changes)
-- [ ] Build related changes
-- [ ] CI related changes
-- [ ] Documentation content changes
-- [ ] Other... Please describe:
+## Related Tickets & Documents
 
 
-## What is the current behavior?
-<!-- Please describe the current behavior that you are modifying, or link to a relevant issue. -->
+## Mobile & Desktop Screenshots/Recordings
+[Attach screenshots or recordings if applicable]
 
-Issue Number: N/A
+## Steps to QA
 
+## Added to documentation?
+- [ ] 📜 README.md
+- [ ] 📓 docs.opensauced.pizza
+- [ ] 🍕 dev.to/opensauced
+- [ ] 📕 storybook
+- [ ] 🙅 no documentation needed
 
-## What is the new behavior?
+## [Optional] Post-deployment tasks
+[Specify any post-deployment tasks that need to be performed]
 
-
-## Does this PR introduce a breaking change?
-
-- [ ] Yes
-- [ ] No
-
-
-<!-- If this PR contains a breaking change, please describe the impact and migration path for existing applications below. -->
-
-
-## Other information
+## [Optional] What gif best describes this PR or how it makes you feel? 
+[Embed gif or describe the feeling in plain text]
