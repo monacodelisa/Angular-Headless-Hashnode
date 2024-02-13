@@ -3,8 +3,6 @@
 # Angular Headless Hashnode
 ## [![Discord](https://github.com/monacodelisa/icons-and-graphics/blob/main/icomoon/PNG/discord.png?raw=true)](https://discord.gg/3bS3xpCj) Open Source Project 
 
-### Most of the open issues feature engaging YouTube videos, providing step-by-step guidance on implementing requirements. Dive in and contribute without hesitation – your skills are valued, and you can make a meaningful impact! Join us in building something great together.🌟
-
 ## Overview 
 
 The **Angular Headless Hashnode Project** aims to seamlessly connect your Angular application to the Hashnode GraphQL database, providing a template for integrating Angular with a headless Hashnode setup. 
@@ -31,6 +29,8 @@ The **Angular Headless Hashnode Project** aims to seamlessly connect your Angula
 ## To Be Implemented or Considered Features
 - adding v16 & v17 with Angular Material
 - adding v16 & v17 with PrimeNG
+
+### Most of the open issues feature engaging YouTube videos, providing step-by-step guidance on implementing requirements. Dive in and contribute without hesitation – your skills are valued, and you can make a meaningful impact! Join us in building something great together.🌟
 
 ## Getting Started
 
