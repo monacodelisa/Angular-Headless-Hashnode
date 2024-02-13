@@ -17,23 +17,20 @@ The **Angular Headless Hashnode Project** aims to seamlessly connect your Angula
 - Include light and dark mode options for user interface customization.
 
 ## Existing Setup & Features
+- [Appolo Angular](https://the-guild.dev/graphql/apollo-angular/docs) - GraphQL Client for Angular
 - [Font Awesome Icons](https://fontawesome.com/)
 - [Google Material Symbols and Icons](https://fonts.google.com/icons)
 - [Google Fonts: Browse Fonts](https://fonts.google.com/)
-- The project intentionally avoids including any UI libraries, allowing developers to choose and integrate UI components according to their preferences.
 
 ## LIVE VERSIONS
 
 | [![v16 dark](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![v16 light](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
 | - | - |
-### [Angular v16](https://angular-hashnode.monacodelisa.com/)                          
-without any UI Libraries (native)
-
-
+### [Angular v16 - no UI libraries](https://angular-hashnode.monacodelisa.com/)                          
 
 ## To Be Implemented or Considered Features
-
-- [Appolo Angular](https://the-guild.dev/graphql/apollo-angular/docs) - GraphQL Client for Angular
+- adding v16 & v17 with Angular Material
+- adding v16 & v17 with PrimeNG
 
 ## Getting Started
 
