@@ -1,3 +1,7 @@
+# Related Issues
+
+## This PR Closes Issue 
+
 ## Description
 
 ## What type of PR is this? (check all applicable)
@@ -12,9 +16,6 @@
 - [ ] 🔁 CI
 - [ ] 📦 Chore (Release)
 - [ ] ⏩ Revert
-
-## Related Tickets & Documents
-Closing Issue # 
 
 ## Mobile & Desktop Screenshots/Recordings
 [Attach screenshots or recordings if applicable]
