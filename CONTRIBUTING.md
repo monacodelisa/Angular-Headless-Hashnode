@@ -10,7 +10,7 @@ All types of contributions are encouraged and valued. Please make sure to read t
  - [Feature Requests](#missing-a-feature)
  - [Submission Guidelines](#submission-guidelines)
  - [Coding Rules](#coding-rules)
- - [Commit Message Guidelines](#revert-commits)
+ - [Commit Message Guidelines](#commit-message-guidelines)
 
 
 
@@ -19,7 +19,7 @@ All types of contributions are encouraged and valued. Please make sure to read t
 This project and everyone participating in it is governed by the
 [Code of Conduct](/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
-to @monacodelisa.
+to [monacodelisa](https://github.com/monacodelisa).
 
 
 ## Question or Problem?
@@ -50,19 +50,11 @@ If you would like to *implement* a new feature, please consider the size of the 
 
 ### Submitting an Issue
 
-Before you submit an issue, please search the issue tracker. An issue for your problem might already exist and the discussion might inform you of workarounds readily available.
+Before opening an issue, please check the tracker to see if a similar issue has been raised. Existing discussions may provide useful insights or workarounds.
 
-We want to fix all the issues as soon as possible, but before fixing a bug, we need to reproduce and confirm it.
-In order to reproduce bugs, we require that you provide a minimal reproduction.
-Having a minimal reproducible scenario gives us a wealth of important information without going back and forth to you with additional questions.
+To expedite bug fixes, a minimal reproduction of the issue is required. This concise example helps in swiftly identifying and addressing the problem.
 
-A minimal reproduction allows us to quickly confirm a bug (or point out a coding problem) as well as confirm that we are fixing the right problem.
-
-We require a minimal reproduction to save maintainers' time and ultimately be able to fix more bugs.
-Often, developers find coding problems themselves while preparing a minimal reproduction.
-We understand that sometimes it might be hard to extract essential bits of code from a larger codebase, but we really need to isolate the problem before we can fix it.
-
-Unfortunately, we are not able to investigate / fix bugs without a minimal reproduction, so if we don't hear back from you, we are going to close an issue that doesn't have enough info to be reproduced.
+Providing a minimal reproduction is crucial for saving time, increasing the chances of a quick resolution, and ensuring that focus is given to the correct issue.
 
 You can file new issues by selecting from our [new issue templates](https://github.com/monacodelisa/angular-headless-hashnode/issues/new/choose) and filling out the issue template.
 
@@ -84,7 +76,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
      ```shell
      git checkout -b my-fix-branch develop
      ```
-### the default branch is develop!
+### The default branch is develop!
 
 5. Create your patch, **including appropriate test cases**.
 
@@ -152,12 +144,60 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
    An automated formatter is available, see [DEVELOPER.md](docs/DEVELOPER.md#clang-format).
 
+## Commit Message Guidelines
 
-### Revert commits
+To maintain a clear and organized version history, we follow a standardized commit message convention. This ensures that each commit provides valuable information about the changes made. Please adhere to the following guidelines when crafting your commit messages:
 
-If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit.
+### Feature:
 
-The content of the commit message body should contain:
+```
+feat(component): add new feature X
+```
 
-- information about the SHA of the commit being reverted in the following format: `This reverts commit <SHA>`,
-- a clear description of the reason for reverting the commit message.
+### Bug Fix:
+
+```
+fix(component): resolve issue with Y
+```
+
+### Documentation Update:
+
+```
+docs(readme): update installation instructions
+```
+
+### Code Refactor:
+
+```
+refactor(service): restructure data fetching logic
+```
+
+### Performance Improvements:
+
+```
+perf(api): optimize data retrieval for faster response
+```
+
+### Test:
+
+```
+test(component): add unit tests for feature Z
+```
+
+### Build:
+
+```
+build(pipeline): update dependencies and build scripts
+```
+
+### Chore (Release):
+
+```
+chore: prepare for version 1.0.0 release
+```
+
+### Revert 
+
+```
+revert: revert changes from commit abc123
+```
