@@ -23,9 +23,6 @@ Closing Issue #
 
 ## Added to documentation?
 - [ ] 📜 README.md
-- [ ] 📓 docs.opensauced.pizza
-- [ ] 🍕 dev.to/opensauced
-- [ ] 📕 storybook
 - [ ] 🙅 no documentation needed
 
 ## [Optional] Post-deployment tasks
