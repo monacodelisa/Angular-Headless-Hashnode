@@ -20,6 +20,15 @@ The **Angular Headless Hashnode Project** aims to seamlessly connect your Angula
 - [Google Fonts: Browse Fonts](https://fonts.google.com/)
 - The project intentionally avoids including any UI libraries, allowing developers to choose and integrate UI components according to their preferences.
 
+## LIVE VERSIONS
+
+| [![v16 dark](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![v16 light](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
+| - | - |
+### [Angular v16](https://angular-hashnode.monacodelisa.com/)                          
+without any UI Libraries (native)
+
+
+
 ## To Be Implemented or Considered Features
 
 - [Appolo Angular](https://the-guild.dev/graphql/apollo-angular/docs) - GraphQL Client for Angular
