@@ -33,12 +33,12 @@ query Publication {
       edges {
         node {
           id,
+          slug,
           coverImage{
             url
           }
           title,
           brief,
-          url,
           content {
             html
           }
