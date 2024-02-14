@@ -14,11 +14,6 @@ body {
   box-shadow: 0 0 1px 1px #0000001f;
   cursor: pointer;
 
-  &:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-  }
-
   .card-image {
     width: 100%;
     height: 10rem;
@@ -29,7 +24,6 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.1;
     }
   }
 
