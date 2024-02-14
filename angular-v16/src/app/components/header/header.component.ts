@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from "@angular/core";
+import { Component, OnInit, OnDestroy, inject } from "@angular/core";
 import { Subscription } from "rxjs";
 import { BlogService } from "src/app/services/blog.service";
 import { ThemeService } from "src/app/services/theme.service";
@@ -8,32 +8,13 @@ import { ThemeService } from "src/app/services/theme.service";
 	templateUrl: "./header.component.html",
 	styleUrls: ["./header.component.scss"],
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit, OnDestroy {
   blogInfo: any;
 	blogName = "";
   blogSocialLinks: [] = [];
   private querySubscription?: Subscription;
   themeService:ThemeService = inject(ThemeService);
   blogService: BlogService = inject(BlogService);
-
-	socialLinks = [
-    {
-			url: "https://github.com",
-			icon: "github",
-		},
-    {
-			url: "https://linkedin.com",
-			icon: "linkedin",
-		},
-		{
-			url: "https://twitter.com",
-			icon: "twitter",
-		},
-		{
-			url: "https://facebook.com",
-			icon: "facebook",
-		},
-	];
 
   topics = [
     {

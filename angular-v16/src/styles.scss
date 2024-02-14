@@ -102,6 +102,16 @@ a {
       }
     }
   }
+
+
+  footer {
+    a {
+      color: #a7a7a7;
+      &:hover {
+        color: #bcbcbc;
+      }
+    }
+  }
 }
 
 .light {
@@ -114,7 +124,7 @@ a {
   button {
     background-color: #d5d5d5;
     border-color: #c2c2c2;
-    color: gray;
+    color: #656565;
   }
 
   .content {
@@ -128,6 +138,15 @@ a {
 
       .card-title {
         background-color: #c2c2c2;
+      }
+    }
+  }
+
+  footer {
+    a {
+      color: #898989;
+      &:hover {
+        color: #a0a0a0;
       }
     }
   }
