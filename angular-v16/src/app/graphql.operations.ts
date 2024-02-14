@@ -26,6 +26,7 @@ query Publication {
 export const GET_POSTS = gql`
 query Publication {
   publication(host: "${BLOG_HOST}") {
+    id,
     isTeam,
     title,
     posts(first: 10) {
