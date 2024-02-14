@@ -5,66 +5,47 @@
 
 ## Overview 
 
-The **Angular Headless Hashnode Project** aims to seamlessly connect your Angular application to the Hashnode GraphQL database, providing a template for integrating Angular with a headless Hashnode setup. 
+The **Angular Headless Hashnode Project** aims to seamlessly connect your Angular application to the Hashnode GraphQL database, providing a template for integrating Angular with a headless Hashnode setup.
+
+In other words - this project is very much like the starter kit that Hashnode provides, except that this project uses Angular for the frontend and deployment is set to be done through Netlify.
 
 ## Project Goals
 
 - Develop a flexible template for Angular integration with headless Hashnode.
-- Connect the Angular app to Hashnode's GraphQL database.
-- Support Angular versions 16 and 17.
-- Include light and dark mode options for user interface customization.
+- Connect the Angular app to Hashnode's GraphQL database to retrieve posts and blog data.
+- Support Angular versions 16 and 17 native - without UI libraries and just custom SCSS.
+- Support Angular versions 16 and 17 with Angular Material UI.
+- Support Angular versions 16 and 17 with PrimeNG.
+- Responsive layout improvements for different devices
 
 ## Existing Setup & Features
+- [Angular](https://angular.dev) v16 & v17
 - [Appolo Angular](https://the-guild.dev/graphql/apollo-angular/docs) - GraphQL Client for Angular
 - [Font Awesome Icons](https://fontawesome.com/)
 - [Google Material Symbols and Icons](https://fonts.google.com/icons)
-- [Google Fonts: Browse Fonts](https://fonts.google.com/)
+- [Google Fonts](https://fonts.google.com/)
 
 ## LIVE VERSIONS
 
 | [![v16 dark](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![v16 light](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
 | - | - |
-### [Angular v16 - no UI libraries](https://angular-hashnode.monacodelisa.com/)                          
+### [Angular v16 native - no UI libraries](https://angular-hashnode.monacodelisa.com/)                          
 
 ## To Be Implemented or Considered Features
 - adding v16 & v17 with Angular Material
 - adding v16 & v17 with PrimeNG
 
-### Most of the open issues feature engaging YouTube videos, providing step-by-step guidance on implementing requirements. Dive in and contribute without hesitation – your skills are valued, and you can make a meaningful impact! Join us in building something great together.🌟
+## Contributing
 
-## Getting Started
+### Most of the open issues feature engaging YouTube videos, providing step-by-step guidance on implementing requirements. Dive in and contribute without hesitation – your skills are valued, and you can make a meaningful impact! Join us in building something great together.🌟
 
 #### the default branch is `develop`!
 
-### Run locally
-
-1. Clone this repository.
-
-```bash
-git clone https://github.com/your-username/angular-headless-hashnode.git
-cd angular-headless-hashnode
-```
-2. Select Angular version 16 
-```
-cd angular-16
-```
-
-or Angular version 17
-```
-cd angular-v17
-```
-
-3. Install dependencies.
-
-```
-npm install
-```
-
-## Or Fork the repository
+### Fork the repository
 
 1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `monacodelisa/angular-headles-hashnopde` repo.
 
-### Making Changes
+### Working on Issues
 
 1. In your local or forked repository, make your changes in a new git branch:
 
@@ -92,6 +73,55 @@ npm install
     ```
 
 7. In GitHub, send a pull request to `angular-headless-hashnode:develop`.
+
+## Using the app with your Hashnode Blog
+
+This app is still in its early stages, and it currently has limited features. At this point, I strongly encourage you to contribute to its development before actively using the app.
+
+### Fork the repository
+
+1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `monacodelisa/angular-headles-hashnopde` repo.
+
+2. Go to the `angular-v16` app and inside the `graphql.operations.ts` file, replace the URL of the blog to point to your blog
+
+3. Right now only `angular-v16` can be deployed to Netlify so you just need to select it and deploy from an existing github repo. (Your forked repo)
+
+Be advised that a lot of features are yet to be implemented.
+
+### Run locally
+
+1. Clone this repository.
+
+```bash
+git clone https://github.com/your-username/angular-headless-hashnode.git
+cd angular-headless-hashnode
+```
+2. Select Angular version 16 
+```
+cd angular-16
+```
+
+3. Install dependencies.
+
+```
+npm install
+```
+
+4. Run the app 
+
+```
+npm start
+```
+
+or 
+
+```
+ng serve
+```
+
+## Celebrate Your Achievements!
+
+If you've added exciting features or functionalities that the project currently lacks, we'd love to see what you've accomplished. Share your contributions, suggestions, or improvements to help enhance the overall app experience. Your input plays a crucial role in making the application even better, and we're eager to see the innovative strides you've taken!
 
 ## Found an issue?
 If you have found an issue or bug, please create an issue.
