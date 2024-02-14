@@ -1,7 +1,6 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
-import { Apollo } from "apollo-angular";
+import { Component, OnDestroy, OnInit, inject } from "@angular/core";
 import { Subscription } from 'rxjs';
-import { GET_POSTS } from "src/app/graphql.operations";
+import { BlogService } from "src/app/services/blog.service";
 
 @Component({
 	selector: "app-posts",
@@ -11,21 +10,14 @@ import { GET_POSTS } from "src/app/graphql.operations";
 export class PostsComponent implements OnInit, OnDestroy {
 	loading?: boolean;
   posts: any;
-
+  blogService: BlogService = inject(BlogService);
   private querySubscription?: Subscription;
 
-	constructor(private apollo: Apollo) {}
-
   ngOnInit() {
-    this.querySubscription = this.apollo
-      .watchQuery<any>({
-        query: GET_POSTS,
-      })
-      .valueChanges.subscribe(({ data, loading }) => {
-        this.loading = loading;
-        this.posts = data.publication.posts.edges;
-        console.log(this.posts);
-      });
+    this.querySubscription = this.blogService.getPosts().subscribe((posts) => {
+      this.posts = posts;
+      console.log(this.posts);
+    });
   }
 
   ngOnDestroy() {
