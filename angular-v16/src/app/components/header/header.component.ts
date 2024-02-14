@@ -1,4 +1,6 @@
-import { Component, inject } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
+import { Subscription } from "rxjs";
+import { BlogService } from "src/app/services/blog.service";
 import { ThemeService } from "src/app/services/theme.service";
 
 @Component({
@@ -6,9 +8,13 @@ import { ThemeService } from "src/app/services/theme.service";
 	templateUrl: "./header.component.html",
 	styleUrls: ["./header.component.scss"],
 })
-export class HeaderComponent {
-	blogName = "Blog Name";
+export class HeaderComponent implements OnInit{
+  blogInfo: any;
+	blogName = "";
+  blogSocialLinks: [] = [];
+  private querySubscription?: Subscription;
   themeService:ThemeService = inject(ThemeService);
+  blogService: BlogService = inject(BlogService);
 
 	socialLinks = [
     {
@@ -66,5 +72,18 @@ export class HeaderComponent {
 
   toggleTheme() {
     this.themeService.updateTheme();
+  }
+
+  ngOnInit(): void {
+    this.querySubscription = this.blogService.getBlogInfo().subscribe((data) => {
+      this.blogInfo = data;
+      this.blogName = this.blogInfo.title;
+      this.blogSocialLinks = data.links;
+      console.log(this.blogSocialLinks);
+    });
+  }
+
+  ngOnDestroy() {
+    this.querySubscription?.unsubscribe();
   }
 }
