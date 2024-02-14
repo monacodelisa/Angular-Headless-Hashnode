@@ -31,6 +31,7 @@ query Publication {
     posts(first: 10) {
       edges {
         node {
+          id,
           coverImage{
             url
           }
