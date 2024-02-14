@@ -38,7 +38,10 @@ query Publication {
           }
           title,
           brief,
-          url
+          url,
+          content {
+            html
+          }
         }
       }
     }
