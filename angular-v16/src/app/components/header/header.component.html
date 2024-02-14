@@ -15,8 +15,13 @@
   </div>
   <div class="toolbar-row">
     <div class="social">
-      <div class="social-link" *ngFor="let social of socialLinks">
-        <a href="{{social.url}}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-{{social.icon}}"></i></a>
+      <div class="social-link" *ngFor="let social of blogSocialLinks | keyvalue">
+        <a *ngIf="social.value && social.key !== 'website'" href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-{{social.key}}"></i>
+        </a>
+        <a *ngIf="social.value && social.key === 'website'" href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-globe"></i>
+        </a>
       </div>
     </div>
     <div class="follow">
