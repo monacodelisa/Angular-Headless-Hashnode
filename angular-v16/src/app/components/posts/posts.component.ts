@@ -8,14 +8,20 @@ import { BlogService } from "src/app/services/blog.service";
 	styleUrls: ["./posts.component.scss"],
 })
 export class PostsComponent implements OnInit, OnDestroy {
+  layout = "grid";
 	loading?: boolean;
   posts: any;
   blogService: BlogService = inject(BlogService);
   private querySubscription?: Subscription;
 
+  toggleLayout() {
+    this.layout = this.layout === "grid" ? "list" : "grid";
+  }
+
   ngOnInit() {
     this.querySubscription = this.blogService.getPosts().subscribe((posts) => {
       this.posts = posts;
+      console.log(this.posts);
     });
   }
 
