@@ -1,5 +1,5 @@
 [build]
-  base = "angular-v16/"
+  base = "/"
   command = "npm run build:prod"
   publish = "dist/"
 
