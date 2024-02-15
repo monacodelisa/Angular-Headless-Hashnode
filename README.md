@@ -29,7 +29,9 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 | [![v16 dark](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![v16 light](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
 | - | - |
-### [Angular v16 native - no UI libraries](https://angular-hashnode.monacodelisa.com/)                          
+### [Angular v16 native - no UI libraries](https://angular-v16-hashnode.monacodelisa.com/)                          
+
+### [Angular v17 native - no UI libraries](https://angular-v17-hashnode.monacodelisa.com/)                          
 
 ## To Be Implemented or Considered Features
 - adding v16 & v17 with Angular Material
