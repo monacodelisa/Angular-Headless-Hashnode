@@ -5,6 +5,7 @@ export const BLOG_HOST = "angular-headless.hashnode.dev";
 export const GET_BLOG_INFO = gql`
 query Publication {
   publication(host: "${BLOG_HOST}") {
+    id,
     title,
     links {
       twitter

@@ -6,11 +6,11 @@
     </div>
     <div class="theme-control">
       @if (themeService.themeSignal() == 'dark') {
-        <button (click)="toggleTheme()"><span class="material-symbols-outlined">
+      <button (click)="toggleTheme()"><span class="material-symbols-outlined">
           bedtime
         </span></button>
       } @else {
-        <button (click)="toggleTheme()"><span class="material-symbols-outlined">
+      <button (click)="toggleTheme()"><span class="material-symbols-outlined">
           wb_sunny
         </span></button>
       }
@@ -19,14 +19,28 @@
   <div class="toolbar-row">
     <div class="social">
       <div class="social-link">
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/monacodelisa/Angular-Headless-Hashnode" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a href="https://angular-hashnode.monacodelisa.com/" target="_blank" rel="noopener noreferrer">
           <i class="fa-solid fa-globe"></i>
         </a>
       </div>
     </div>
+    <!-- @for (social of blogSocialLinks | keyvalue; track social) {
+        <div class="social-link">
+          @if (social.value && social.key !== 'website') {
+            <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-{{social.key}}"></i>
+            </a>
+          }
+          @if (social.value && social.key === 'website') {
+            <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+          }
+        </div>
+      } -->
     <div class="follow">
       <button>Follow</button>
     </div>

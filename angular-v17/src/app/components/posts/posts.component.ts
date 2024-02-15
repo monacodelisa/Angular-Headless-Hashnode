@@ -10,6 +10,7 @@ import { BlogService } from '../../services/blog.service';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent implements OnInit, OnDestroy {
+  loading?: boolean;
   posts: any;
   blogService: BlogService = inject(BlogService);
   private querySubscription?: Subscription;
