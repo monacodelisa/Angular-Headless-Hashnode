@@ -12,8 +12,7 @@
   <div *ngIf="layout == 'grid'" class="cards-wrapper grid">
     <a *ngFor="let post of posts" class="card">
       <div class="card-image">
-        <img
-          [src]="post.node.coverImage.url">
+        <img [src]="post.node.coverImage.url">
       </div>
       <div class="card-title">
         <h3>{{post.node.title}}</h3>
@@ -23,8 +22,7 @@
   <div *ngIf="layout == 'list'" class="cards-wrapper list">
     <a *ngFor="let post of posts" class="card">
       <div class="card-image">
-        <img
-          src="https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-headless-hashnode.jpg">
+        <img [src]="post.node.coverImage.url">
       </div>
       <div class="card-info">
         <div class="card-title">

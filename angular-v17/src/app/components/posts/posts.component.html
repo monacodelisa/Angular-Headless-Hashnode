@@ -3,7 +3,7 @@
     @for (post of posts; track post.id) {
       <a class="card">
         <div class="card-image">
-          <img src="../../../assets/images/angular-headless-hashnode-logo.jpg">
+          <img [src]="post.node.coverImage.url">
         </div>
         <div class="card-title">
           <h3>{{post.node.title}}</h3>
