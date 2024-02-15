@@ -5,12 +5,15 @@
       <h1>{{ blogName }}</h1>
     </div>
     <div class="theme-control">
-      <button><span class="material-symbols-outlined">
+      @if (themeService.themeSignal() == 'dark') {
+        <button (click)="toggleTheme()"><span class="material-symbols-outlined">
           bedtime
         </span></button>
-      <button><span class="material-symbols-outlined">
+      } @else {
+        <button (click)="toggleTheme()"><span class="material-symbols-outlined">
           wb_sunny
         </span></button>
+      }
     </div>
   </div>
   <div class="toolbar-row">
@@ -30,10 +33,9 @@
   </div>
   <div class="toolbar-row">
     <div class="series">
-      <div class="topic-link">
-        <a href="" target="_blank" rel="noopener noreferrer">Series</a>
-      </div>
+      @for (topic of topics; track topic) {
+      <a class="topic-link" href="" target="_blank" rel="noopener noreferrer">{{ topic.name}}</a>
+      }
     </div>
   </div>
 </div>
-

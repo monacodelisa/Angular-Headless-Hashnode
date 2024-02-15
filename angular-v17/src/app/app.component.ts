@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +14,5 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class AppComponent {
   title = 'angular-v17';
+  themeService:ThemeService = inject(ThemeService);
 }
