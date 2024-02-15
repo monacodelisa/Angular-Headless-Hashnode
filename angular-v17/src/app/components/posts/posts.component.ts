@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Apollo } from "apollo-angular";
-import { map } from 'rxjs';
-import { GET_POSTS } from '../../graphql.operations';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-posts',
@@ -10,21 +9,19 @@ import { GET_POSTS } from '../../graphql.operations';
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss'
 })
-export class PostsComponent implements OnInit {
+export class PostsComponent implements OnInit, OnDestroy {
   posts: any;
+  blogService: BlogService = inject(BlogService);
+  private querySubscription?: Subscription;
 
-  constructor(private apollo: Apollo) { }
+  ngOnInit() {
+    this.querySubscription = this.blogService.getPosts().subscribe((posts) => {
+      this.posts = posts;
+      console.log(this.posts);
+    });
+  }
 
-  ngOnInit(): void {
-    this.apollo
-    .watchQuery<any>({
-      query: GET_POSTS,
-    })
-    .valueChanges.pipe(map(({ data }) => data.publication.posts.edges)).subscribe(
-      (posts) => {
-        this.posts = posts;
-        console.log(posts);
-      }
-    );
+  ngOnDestroy() {
+    this.querySubscription?.unsubscribe();
   }
 }
