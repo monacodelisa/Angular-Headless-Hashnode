@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 67.2vh;
+  width: 100%;
+
+  img {
+    width: 32rem;
+    height: 18rem;
+    border-radius: 1rem;
+  }
+}
