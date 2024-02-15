@@ -51,10 +51,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
   ]
 
-  toggleTheme() {
-    this.themeService.updateTheme();
-  }
-
   ngOnInit(): void {
     this.querySubscription = this.blogService.getBlogInfo().subscribe((data) => {
       this.blogInfo = data;
@@ -62,6 +58,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.blogSocialLinks = data.links;
       console.log(this.blogSocialLinks);
     });
+  }
+
+  toggleTheme() {
+    this.themeService.updateTheme();
   }
 
   ngOnDestroy() {
