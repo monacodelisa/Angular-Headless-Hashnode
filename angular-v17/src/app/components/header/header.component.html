@@ -48,7 +48,7 @@
   <div class="toolbar-row">
     <div class="series">
       @for (topic of topics; track topic) {
-      <a class="topic-link" href="" target="_blank" rel="noopener noreferrer">{{ topic.name}}</a>
+      <a class="topic-link" href="{{ topic.route }}" target="_blank" rel="noopener noreferrer">{{ topic.name}}</a>
       }
     </div>
   </div>
