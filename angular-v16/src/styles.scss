@@ -7,44 +7,101 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.card {
-  width: 20vw;
-  margin: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 1px 1px #0000001f;
-  cursor: pointer;
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 1rem;
 
-  .card-image {
-    width: 100%;
-    height: 10rem;
-    border-radius: 1rem 1rem 0 0;
-    overflow: hidden;
+  &.grid {
+    .card {
+      width: 20vw;
+      margin: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 1px 1px #0000001f;
+      cursor: pointer;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      p {
+        font-size: 0.9rem;
+        padding: 1rem 1rem 0;
+        margin: 0 0 0.5rem;
+      }
+
+      a {
+        .card-image {
+          width: 100%;
+          height: 10rem;
+          border-radius: 1rem 1rem 0 0;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card-title {
+          display: flex;
+          height: 6rem;
+          border-radius: 0 0 1rem 1rem;
+
+          h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 0.5rem 1rem;
+          }
+        }
+      }
     }
   }
 
-  .card-title {
-    display: flex;
-    height: 6rem;
-    border-radius: 0 0 1rem 1rem;
+  &.list {
+    .card {
+      display: flex;
+      width: 70%;
+      margin: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 1px 1px #0000001f;
+      cursor: pointer;
 
-    h3 {
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 0.5rem 1rem;
+      a {
+        display: flex;
+
+        .card-image {
+          width: 40%;
+          border-radius: 1rem 0 0 1rem;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card-title {
+          height: 4rem;
+          width: 100%;
+          padding-left: 1rem;
+          border-radius: 0 1rem 0 0;
+        }
+
+        .card-brief {
+          padding-bottom: 1rem;
+        }
+
+      }
     }
-  }
-
-  p {
-    font-size: 0.9rem;
-    padding: 1rem 1rem 0;
-    margin: 0 0 0.5rem;
   }
 }
+
+
 
 button {
   padding: 0.3rem 0.5rem;
@@ -101,6 +158,7 @@ a {
   footer {
     a {
       color: #a7a7a7;
+
       &:hover {
         color: #bcbcbc;
       }
@@ -123,6 +181,7 @@ a {
 
   .content {
     background-color: #dedede;
+
     .card {
       border: 1px solid #0000001f;
 
@@ -139,6 +198,7 @@ a {
   footer {
     a {
       color: #898989;
+
       &:hover {
         color: #a0a0a0;
       }
