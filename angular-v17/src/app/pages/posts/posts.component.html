@@ -1,7 +1,7 @@
 <div class="posts-view">
   <div class="cards-wrapper grid">
     @for (post of posts; track post.id) {
-      <a class="card">
+      <a (click)="navigateToPost(post.node.slug)" class="card">
         <div class="card-image">
           <img [src]="post.node.coverImage.url">
         </div>
