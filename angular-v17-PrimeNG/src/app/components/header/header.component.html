@@ -1,0 +1,33 @@
+<p-toolbar>
+  <div class="toolbar-row">
+    <a class="logo" href="">
+      <img src="../../../assets/images/angular-headless-hashnode-logo.jpg" alt="logo" />
+      <h1>{{ blogName }}</h1>
+    </a>
+    <div class="theme-control">
+      <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+    </div>
+  </div>
+  <div class="toolbar-row">
+    <div class="social">
+      <div class="social-link">
+        <a href="https://github.com/monacodelisa/Angular-Headless-Hashnode" target="_blank" rel="noopener noreferrer">
+          <i class="pi pi-github"></i>
+        </a>
+        <a href="https://angular-v17-hashnode.monacodelisa.com/" target="_blank" rel="noopener noreferrer">
+          <i class="pi pi-globe"></i>
+        </a>
+      </div>
+    </div>
+    <div class="follow">
+      <p-button label="Follow" [raised]="true"></p-button>
+    </div>
+  </div>
+  <div class="toolbar-row">
+    <div class="series">
+      @for (topic of topics; track topic) {
+      <a class="topic-link" href="" target="_blank" rel="noopener noreferrer">{{ topic.name}}</a>
+      }
+    </div>
+  </div>
+</p-toolbar>
