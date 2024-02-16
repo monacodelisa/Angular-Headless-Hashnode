@@ -21,7 +21,6 @@ export class PostsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.querySubscription = this.blogService.getPosts().subscribe((posts) => {
       this.posts = posts;
-      console.log(this.posts);
     });
   }
 
