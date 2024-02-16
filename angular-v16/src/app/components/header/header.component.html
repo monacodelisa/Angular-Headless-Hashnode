@@ -1,9 +1,9 @@
 <div class="toolbar" role="banner">
   <div class="toolbar-row">
-    <div class="logo">
+    <a routerLink="/" class="logo">
       <img src="../../../assets/images/angular-headless-hashnode-logo.jpg" alt="logo" />
       <h1>{{ blogName }}</h1>
-    </div>
+    </a>
     <div class="theme-control">
       <button *ngIf="themeService.themeSignal() == 'dark'" (click)="toggleTheme()"><span class="material-symbols-outlined">
           bedtime
