@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { SinglePostComponent } from './components/single-post/single-post.component';
+import  { PostComponent } from './components/post/post.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
@@ -15,6 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HeaderComponent,
     PostsComponent,
+    SinglePostComponent,
+    PostComponent,
     FooterComponent
   ],
   imports: [
