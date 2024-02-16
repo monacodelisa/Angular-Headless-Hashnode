@@ -1,0 +1,26 @@
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1 class="app-name">Angular & Headless Hashnode</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      [opened]="snavIsOpen" fixedTopGap="56">
+      <mat-nav-list>
+        @for (nav of navItems; track nav) {
+        <a mat-list-item routerLink=".">
+          <span><mat-icon color="primary" >{{nav.icon}}</mat-icon>
+            {{nav.name }}</span>
+        </a>
+        }
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <!-- <router-outlet></router-outlet> -->
+      <app-home></app-home>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+<app-footer></app-footer>

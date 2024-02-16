@@ -1,0 +1,56 @@
+:host mat-list-item {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  mat-toolbar {
+    .app-name {
+      margin-left: 8px;
+    }
+  }
+
+
+  mat-sidenav-container {
+    flex: 1;
+
+    mat-sidenav {
+
+      mat-nav-list {
+        a {
+          padding: 1rem 2rem 1rem 1rem;
+          span {
+            display: flex;
+            text-transform: uppercase;
+
+            mat-icon {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .is-mobile {
+    mat-toolbar {
+      position: fixed;
+      z-index: 2;
+    }
+
+    mat-sidenav-container {
+      flex: 1 0 auto;
+    }
+  }
+
+  mat-sidenav-content {
+    padding: 1rem;
+  }
+}
