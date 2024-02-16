@@ -10,7 +10,7 @@
     </button>
   </div>
   <div *ngIf="layout == 'grid'" class="cards-wrapper grid">
-    <a *ngFor="let post of posts" class="card">
+    <a *ngFor="let post of posts" class="card" routerLink="post">
       <div class="card-image">
         <img [src]="post.node.coverImage.url">
       </div>
