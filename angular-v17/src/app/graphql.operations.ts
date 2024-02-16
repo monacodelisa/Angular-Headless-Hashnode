@@ -49,3 +49,34 @@ query Publication {
   }
 }
 `;
+
+export const GET_SINGLE_POST = gql`
+query SinglePost($slug: String!) {
+  publication(host: "${BLOG_HOST}") {
+    post(slug: $slug) {
+      id,
+      slug,
+      title,
+      readTimeInMinutes,
+      tags {
+        name
+      },
+      author {
+        name,
+        profilePicture,
+        socialMediaLinks {
+          twitter
+          youtube
+        }
+      }
+      coverImage {
+        url
+      },
+      content {
+        html
+      },
+      publishedAt,
+    }
+  }
+}
+`;

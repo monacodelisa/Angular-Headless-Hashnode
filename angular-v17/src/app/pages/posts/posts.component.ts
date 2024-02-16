@@ -1,18 +1,20 @@
 import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { BlogService } from '../../services/blog.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './posts.component.html',
-  styleUrl: './posts.component.scss'
+  styleUrl: './posts.component.scss',
 })
-export class PostsComponent implements OnInit, OnDestroy {
+export default class PostsComponent implements OnInit, OnDestroy {
   loading?: boolean;
   posts: any;
   blogService: BlogService = inject(BlogService);
+  private router = inject(Router);
   private querySubscription?: Subscription;
 
   ngOnInit() {
@@ -20,6 +22,10 @@ export class PostsComponent implements OnInit, OnDestroy {
       this.posts = posts;
       console.log(this.posts);
     });
+  }
+
+  navigateToPost(slug: string) {
+    this.router.navigate(['/post', slug]);
   }
 
   ngOnDestroy() {

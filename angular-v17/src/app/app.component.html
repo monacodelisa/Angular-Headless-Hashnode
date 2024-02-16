@@ -1,5 +1,7 @@
 <div [ngClass]="themeService.themeSignal()">
-  <app-header></app-header>
-  <app-posts class="content"></app-posts>
-  <app-footer></app-footer>
+  <app-header />
+  <div class="content">
+    <router-outlet />
+  </div>
+  <app-footer />
 </div>
