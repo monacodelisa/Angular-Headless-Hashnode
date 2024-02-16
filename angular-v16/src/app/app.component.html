@@ -1,8 +1,7 @@
 <div [ngClass]="themeService.themeSignal()">
   <app-header></app-header>
-  <app-posts class="content"></app-posts>
-  <!-- <div class="content">
-    <img src="https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-headless-hashnode.jpg" alt="angular headless hashnode">
-  </div> -->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
   <app-footer></app-footer>
 </div>
