@@ -1,17 +1,19 @@
 <div [class]="themeService.themeSignal()">
   <div class="container" [class.is-mobile]="mobileQuery.matches">
     <mat-toolbar>
-      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-      <a routerLink="home" class="logo">
-        <img src="../assets/images/angular-headless-hashnode-logo-tr.png" alt="">
-        <h1 class="app-name">Angular & Headless Hashnode</h1>
-      </a>
+      <div class="site-info">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <a routerLink="home" class="logo">
+          <img src="../assets/images/angular-headless-hashnode-logo-tr.png" alt="">
+          <h1 class="app-name">Angular & Headless Hashnode</h1>
+        </a>
+      </div>
       <div class="theme-control">
         <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
         @if (themeService.themeSignal() === 'dark') {
-          <mat-icon>dark_mode</mat-icon>
+        <mat-icon>dark_mode</mat-icon>
         } @else {
-          <mat-icon>light_mode</mat-icon>
+        <mat-icon>light_mode</mat-icon>
         }
       </div>
     </mat-toolbar>
@@ -33,6 +35,6 @@
         <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
+    <app-footer></app-footer>
   </div>
-  <app-footer></app-footer>
 </div>

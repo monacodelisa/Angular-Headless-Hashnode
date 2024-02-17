@@ -85,6 +85,15 @@ $dark-text-color: #333;
     }
     mat-sidenav-content {
       color: $light-text-color;
+
+      .home {
+        color: $light-text-color;
+
+        a {
+          color: $accent-1;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
