@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import PostDetailComponent from './post-detail.component';
 import { BlogService } from '../../services/blog.service';
 import { Observable, of } from 'rxjs';
-import { Post } from '../../types/post.type';
+import { Post } from '../../models/post';
 
 class MockBlogService {
   getSinglePost(slug: string): Observable<Post> {
