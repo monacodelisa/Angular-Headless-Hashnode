@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.blogInfo = data;
       this.blogName = this.blogInfo.title;
       this.blogSocialLinks = data.links;
-      console.log(this.blogSocialLinks);
     });
   }
 

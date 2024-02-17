@@ -25,6 +25,12 @@ $dark-theme: mat.define-dark-theme((color: (primary: $dark-theme-primary,
       typography: mat.define-typography-config(),
     ));
 
+// Accent color
+$accent-1: #c8adcd;
+$accent-2: #9b7ba2;
+$accent-3: #a878b1;
+$accent-4: #7f6a82;
+
 // Dark theme variables
 $dark-bg-color: #222;
 $semi-dark-bg-color: #333;
@@ -36,15 +42,91 @@ $semi-light-bg-color: #c0c0c0;
 $dark-text-color: #333;
 
 
+
 // Dark mode
 .dark {
   @include mat.all-component-colors($dark-theme);
 
   background-color: $semi-dark-bg-color;
   color: $light-text-color;
+
+
+  mat-toolbar {
+    color: $light-text-color;;
+
+    mat-icon {
+      color: $accent-1;
+    }
+
+    a {
+      color: $accent-1;
+
+      h1 {
+        color: $accent-1;
+      }
+    }
+  }
+
+  mat-sidenav-container {
+    mat-sidenav {
+      mat-nav-list {
+        a {
+          span {
+            color: $accent-1;
+          }
+
+          &.active {
+            span {
+              color: $accent-3;
+            }
+          }
+        }
+      }
+    }
+    mat-sidenav-content {
+      color: $light-text-color;
+    }
+  }
 }
 
 // Light mode
 .light {
   @include mat.all-component-themes($light-theme);
+
+  mat-toolbar {
+    color: $dark-text-color;
+
+    mat-icon {
+      color: $accent-4;
+    }
+
+    a {
+      color: $accent-4;
+
+      h1 {
+        color: $accent-4;
+      }
+    }
+  }
+
+  mat-sidenav-container {
+    mat-sidenav {
+      mat-nav-list {
+        a {
+          span {
+            color: $accent-2;
+          }
+
+          &.active {
+            span {
+              color: $accent-4;
+            }
+          }
+        }
+      }
+    }
+    mat-sidenav-content {
+      color: $dark-text-color;
+    }
+  }
 }
