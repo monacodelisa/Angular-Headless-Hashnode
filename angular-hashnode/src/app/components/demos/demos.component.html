@@ -1,1 +1,24 @@
-<p>demos works!</p>
+<div class="demos">
+  <div class="cards-wrapper">
+    @for (site of liveSites16; track site) {
+      <a href="{{ site.url }}" target="_blank" rel="noopener noreferrer">
+        <mat-card>
+          <mat-card-header>
+            <img src="{{site.image}}" alt="">
+          </mat-card-header>
+          <div class="version-wrapper">
+            <div class="version">
+              <img src="../../../assets/icons/angular.png" alt="">
+              <p>{{site.version}}</p>
+            </div>
+          </div>
+          <mat-card-content>
+            <h3>UI Library: {{site.uiLib}}</h3>
+            <h3>Dynamic Theme: {{site.dynamicTheme}}</h3>
+            <h3>Deployment: {{site.deployment}}</h3>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    }
+  </div>
+</div>
