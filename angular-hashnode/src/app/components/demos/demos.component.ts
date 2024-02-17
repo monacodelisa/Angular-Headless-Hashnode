@@ -1,7 +1,9 @@
-import { Component, inject } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 
 import { MatCardModule } from "@angular/material/card";
 import { ThemeService } from "../../services/theme.service";
+import { HttpClient } from "@angular/common/http";
+import { LiveSite } from "../../models/live-site";
 
 @Component({
 	selector: "app-demos",
@@ -10,32 +12,19 @@ import { ThemeService } from "../../services/theme.service";
 	templateUrl: "./demos.component.html",
 	styleUrl: "./demos.component.scss",
 })
-export class DemosComponent {
+export class DemosComponent implements OnInit {
   themeService: ThemeService = inject(ThemeService);
+  http: HttpClient = inject(HttpClient);
 
-	liveSites16 = [
-		{
-      imageDark: "../../../assets/images/angular-v16-dark-hashnode.jpg",
-      imageLight: "../../../assets/images/angular-v16-light-hashnode.jpg",
-			version: "v16",
-			uiLib: "none",
-			dynamicTheme: "yes",
-			deployment: "Netlify",
-			url: "https://angular-v16-hashnode.monacodelisa.com/"
-		},
-		{
-			version: "v16",
-			uiLib: "Angular Material",
-			dynamicTheme: "yes",
-      deployment: "Netlify",
-			url: ""
-		},
-		{
-			version: "v16",
-			uiLib: "PrimeNG",
-			dynamicTheme: "yes",
-      deployment: "Netlify",
-			url: ""
-		}
-	];
+	liveSites17: LiveSite[] = [];
+	liveSites16: LiveSite[] = [];
+
+  ngOnInit(): void {
+    this.http.get<LiveSite[]>("../../assets/JSON/live-sites-17.json").subscribe(data => {
+      this.liveSites17 = data;
+    });
+    this.http.get<LiveSite[]>("../../assets/JSON/live-sites-16.json").subscribe(data => {
+      this.liveSites16 = data;
+    });
+  }
 }
