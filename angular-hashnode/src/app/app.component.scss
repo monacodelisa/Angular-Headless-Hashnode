@@ -13,6 +13,7 @@
 
   mat-toolbar {
     justify-content: space-between;
+    min-height: 4rem;
 
     .site-info {
       display: flex;
