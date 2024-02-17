@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Goal } from "../../models/goal";
 import { Feature } from "../../models/feature";
+import { ThemeService } from "../../services/theme.service";
 
 @Component({
 	selector: "app-home",
@@ -12,6 +13,7 @@ import { Feature } from "../../models/feature";
 })
 export class HomeComponent implements OnInit {
   videoVolume = 0;
+  themeService: ThemeService = inject(ThemeService);
   http: HttpClient = inject(HttpClient);
 
 	goals: Goal[] = [];
