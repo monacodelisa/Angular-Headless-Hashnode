@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
-import { Post } from '../../types/post.type';
+import { Post } from '../../models/post';
 import { Observable } from 'rxjs';
 
 @Component({

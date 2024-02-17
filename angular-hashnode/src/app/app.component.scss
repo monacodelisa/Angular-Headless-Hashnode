@@ -12,20 +12,44 @@
   right: 0;
 
   mat-toolbar {
-    .app-name {
-      margin-left: 8px;
+    justify-content: space-between;
+
+    .site-info {
+      display: flex;
+      align-items: center;
+      .logo {
+        display: flex;
+        text-decoration: none;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+          margin: 0 0.5rem;
+        }
+      }
+    }
+
+    .theme-control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      mat-icon {
+        margin-right: 0.5rem;
+      }
     }
   }
 
-
   mat-sidenav-container {
     flex: 1;
+    overflow: visible;
 
     mat-sidenav {
 
       mat-nav-list {
         a {
           padding: 1rem 2rem 1rem 1rem;
+
           span {
             display: flex;
             text-transform: uppercase;
@@ -51,6 +75,10 @@
   }
 
   mat-sidenav-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     padding: 1rem;
+    margin-bottom: 2rem;
   }
 }
