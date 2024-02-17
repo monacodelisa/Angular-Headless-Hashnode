@@ -4,7 +4,11 @@
       <a href="{{ site.url }}" target="_blank" rel="noopener noreferrer">
         <mat-card>
           <mat-card-header>
-            <img src="{{site.image}}" alt="">
+            @if (themeService.themeSignal() === 'dark') {
+              <img src="{{site.imageDark}}" alt="">
+            } @else {
+              <img src="{{site.imageLight}}" alt="">
+            }
           </mat-card-header>
           <div class="version-wrapper">
             <div class="version">

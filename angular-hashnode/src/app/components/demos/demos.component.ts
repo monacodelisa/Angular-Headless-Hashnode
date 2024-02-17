@@ -1,6 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 
 import { MatCardModule } from "@angular/material/card";
+import { ThemeService } from "../../services/theme.service";
 
 @Component({
 	selector: "app-demos",
@@ -10,9 +11,12 @@ import { MatCardModule } from "@angular/material/card";
 	styleUrl: "./demos.component.scss",
 })
 export class DemosComponent {
+  themeService: ThemeService = inject(ThemeService);
+
 	liveSites16 = [
 		{
-      image: "../../../assets/images/angular-v16-hashnode.jpg",
+      imageDark: "../../../assets/images/angular-v16-dark-hashnode.jpg",
+      imageLight: "../../../assets/images/angular-v16-light-hashnode.jpg",
 			version: "v16",
 			uiLib: "none",
 			dynamicTheme: "yes",
