@@ -35,13 +35,13 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 ## Angular App Versions
 
-### `angular-v16` - has no UI libraries
-### `angular-v16-AnguMAT` - has Angular Material
-### `angular-v16-PrimeNG` - has PrimeNG 
-### `angular-v17` - has no UI libraries
-### `angular-v17-AnguMAT` - has Angular Material
-### `angular-v17-PrimeNG` - has PrimeNG 
-### `angular-hashnode`- presentation site
+#### `angular-v16` - has no UI libraries
+#### `angular-v16-AnguMAT` - has Angular Material
+#### `angular-v16-PrimeNG` - has PrimeNG 
+#### `angular-v17` - has no UI libraries
+#### `angular-v17-AnguMAT` - has Angular Material
+#### `angular-v17-PrimeNG` - has PrimeNG 
+#### `angular-hashnode`- presentation site
 
 
 ## Contributing
@@ -107,9 +107,9 @@ Be advised that a lot of features are yet to be implemented.
 git clone https://github.com/your-username/angular-headless-hashnode.git
 cd angular-headless-hashnode
 ```
-2. Select Angular version 16 
+2. Select one of the available [app versions](#angular-app-versions)
 ```
-cd angular-16
+cd <chosen-app-version>
 ```
 
 3. Install dependencies.
