@@ -107,9 +107,9 @@ Be advised that a lot of features are yet to be implemented.
 git clone https://github.com/your-username/angular-headless-hashnode.git
 cd angular-headless-hashnode
 ```
-2. Select Angular version 16 
+2. Select one of the available [app versions](#angular-app-versions)
 ```
-cd angular-16
+cd <chosen-app-version>
 ```
 
 3. Install dependencies.
