@@ -2,7 +2,7 @@
   base = "/angular-v16"
   command = "npm run build:prod"
   publish = "dist/"
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF angular-v16"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF angular-v16-angumat angular-v17"
 
   [[redirects]]
   from = "/*"
