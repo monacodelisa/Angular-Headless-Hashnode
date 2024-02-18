@@ -19,7 +19,7 @@ In other words - this project is very much like the starter kit that Hashnode pr
 - Responsive layout improvements for different devices
 
 ## Existing Setup & Features
-- [Angular](https://angular.dev) v16 & v17
+
 - [Appolo Angular](https://the-guild.dev/graphql/apollo-angular/docs) - GraphQL Client for Angular
 - [Font Awesome Icons](https://fontawesome.com/)
 - [Google Material Symbols and Icons](https://fonts.google.com/icons)
@@ -33,9 +33,16 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 ### [Angular v17 native - no UI libraries](https://angular-v17-hashnode.monacodelisa.com/)                          
 
-## To Be Implemented or Considered Features
-- adding v16 & v17 with Angular Material
-- adding v16 & v17 with PrimeNG
+## Angular App Versions
+
+### `angular-v16` - has no UI libraries
+### `angular-v16-AnguMAT` - has Angular Material
+### `angular-v16-PrimeNG` - has PrimeNG 
+### `angular-v17` - has no UI libraries
+### `angular-v17-AnguMAT` - has Angular Material
+### `angular-v17-PrimeNG` - has PrimeNG 
+### `angular-hashnode`- presentation site
+
 
 ## Contributing
 
@@ -57,11 +64,13 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 2. Create your patch, **including appropriate test cases**.
 
-3. Follow our [Coding Rules](#coding-rules).
+3. This is a monorepo that includes 6 versions of the app, make sure that you are working on the correct app version.
 
-4. Run the full test suite, as described in the developer documentation, and ensure that all tests pass.
+4. Follow our [Coding Rules](./CONTRIBUTING.md#coding-rules).
 
-5. Commit your changes using a descriptive commit message.
+5. Run the full test suite, as described in the developer documentation, and ensure that all tests pass.
+
+6. Commit your changes using a descriptive commit message as specified in [CONTRIBUTING.md](./CONTRIBUTING.md/#commit-message-guidelines).
 
      ```shell
      git commit --all
