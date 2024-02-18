@@ -35,13 +35,13 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 ## Angular App Versions
 
-### `angular-v16` - has no UI libraries
-### `angular-v16-AnguMAT` - has Angular Material
-### `angular-v16-PrimeNG` - has PrimeNG 
-### `angular-v17` - has no UI libraries
-### `angular-v17-AnguMAT` - has Angular Material
-### `angular-v17-PrimeNG` - has PrimeNG 
-### `angular-hashnode`- presentation site
+#### `angular-v16` - has no UI libraries
+#### `angular-v16-AnguMAT` - has Angular Material
+#### `angular-v16-PrimeNG` - has PrimeNG 
+#### `angular-v17` - has no UI libraries
+#### `angular-v17-AnguMAT` - has Angular Material
+#### `angular-v17-PrimeNG` - has PrimeNG 
+#### `angular-hashnode`- presentation site
 
 
 ## Contributing
