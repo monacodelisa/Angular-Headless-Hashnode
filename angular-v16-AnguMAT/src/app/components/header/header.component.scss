@@ -5,6 +5,8 @@ mat-toolbar {
     justify-content: space-between;
 
     &:nth-child(2) {
+      height: 3rem;
+      padding-bottom: 1rem;
       border-bottom: 1px solid #80808050;
     }
 
@@ -28,6 +30,12 @@ mat-toolbar {
       }
     }
 
+    .theme-control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .social {
       display: flex;
       align-items: flex-start;
@@ -39,20 +47,13 @@ mat-toolbar {
         i {
           height: 1.1rem;
           width: 1.1rem;
+          margin-right: 0.6rem;
 
           &:before {
             font-size: 1.1rem;
           }
         }
       }
-    }
-
-    .follow {
-      // button {
-      //   font-size: 1.1rem;
-      //   padding: 0.3rem 1.1rem;
-      //   border-radius: 2rem;
-      // }
     }
 
     .series {

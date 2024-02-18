@@ -42,6 +42,10 @@ $dark-text-color: #333;
 
   background-color: $semi-dark-bg-color;
   color: $light-text-color;
+
+  mat-toolbar {
+    color: $semi-light-bg-color;
+  }
 }
 
 // Light mode
