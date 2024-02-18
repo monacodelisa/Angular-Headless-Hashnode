@@ -15,7 +15,7 @@
     "uiLib": "Angular Material",
     "dynamicTheme": "yes",
     "deployment": "none yet",
-    "url": "https://github.com/monacodelisa/Angular-Headless-Hashnode"
+    "url": "https://angular-v17-angumat-hashnode.monacodelisa.com/"
   },
   {
     "imageDark": "../../../assets/images/angular-hashnode-contribute-sign.jpg",
@@ -24,6 +24,6 @@
     "uiLib": "PrimeNG",
     "dynamicTheme": "yes",
     "deployment": "none yet",
-    "url": "https://github.com/monacodelisa/Angular-Headless-Hashnode"
+    "url": "https://angular-v17-primeng-hashnode.monacodelisa.com/"
   }
 ]
