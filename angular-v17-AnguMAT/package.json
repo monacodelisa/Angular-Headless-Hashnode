@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular-v17-AnguMAT": "node dist/angular-v17-angu-mat/server/server.mjs"
