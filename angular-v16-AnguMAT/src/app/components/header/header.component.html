@@ -5,14 +5,17 @@
       <h1>{{ blogName }}</h1>
     </a>
     <div class="theme-control">
-      <mat-slide-toggle color="primary" checked></mat-slide-toggle>
-      <mat-icon>sunny</mat-icon>
+      <mat-slide-toggle color="primary" checked (click)="toggleTheme()"></mat-slide-toggle>
+      <mat-icon color="primary" *ngIf="themeService.themeSignal() === 'dark'">bedtime</mat-icon>
+      <mat-icon color="primary" *ngIf="themeService.themeSignal() === 'light'">brightness_5</mat-icon>
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row>
     <div class="social">
       <div class="social-link">
         <a href="" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-linkedin"></i>
           <i class="fa-solid fa-globe"></i>
         </a>
       </div>
@@ -29,4 +32,3 @@
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
-
