@@ -9,7 +9,7 @@ import { ThemeService } from './services/theme.service';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'angular-v17-AnguMAT';
