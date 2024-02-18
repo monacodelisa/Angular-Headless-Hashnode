@@ -66,11 +66,11 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 3. This is a monorepo that includes 6 versions of the app, make sure that you are working on the correct app version.
 
-4. Follow our [Coding Rules](#coding-rules).
+4. Follow our [Coding Rules](./CONTRIBUTING.md#coding-rules).
 
 5. Run the full test suite, as described in the developer documentation, and ensure that all tests pass.
 
-6. Commit your changes using a descriptive commit message.
+6. Commit your changes using a descriptive commit message as specified in [CONTRIBUTING.md](./CONTRIBUTING.md/#commit-message-guidelines).
 
      ```shell
      git commit --all
