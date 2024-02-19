@@ -4,20 +4,21 @@ import { Subscription } from 'rxjs';
 import { BlogService } from '../../services/blog.service';
 
 import { KeyValuePipe } from '@angular/common';
+import { SocialLinks } from '../../models/social-links';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [KeyValuePipe],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   blogInfo: any;
-	blogName = "";
-  blogSocialLinks: any[] = [];
+  blogName = '';
+  blogSocialLinks!: SocialLinks;
   private querySubscription?: Subscription;
-  themeService:ThemeService = inject(ThemeService);
+  themeService: ThemeService = inject(ThemeService);
   blogService: BlogService = inject(BlogService);
 
   topics = [
@@ -27,11 +28,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ];
 
   ngOnInit(): void {
-    this.querySubscription = this.blogService.getBlogInfo().subscribe((data) => {
-      this.blogInfo = data;
-      this.blogName = this.blogInfo.title;
-      this.blogSocialLinks = data.links;
-    });
+    this.querySubscription = this.blogService
+      .getBlogInfo()
+      .subscribe((data) => {
+        this.blogInfo = data;
+        this.blogName = this.blogInfo.title;
+        const { __typename, ...links } = data.links;
+        this.blogSocialLinks = links;
+      });
   }
 
   toggleTheme() {

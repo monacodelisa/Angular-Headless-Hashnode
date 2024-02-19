@@ -27,20 +27,21 @@
         </a>
       </div>
     </div>
-    <!-- @for (social of blogSocialLinks | keyvalue; track social) {
-        <div class="social-link">
-          @if (social.value && social.key !== 'website') {
-            <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-{{social.key}}"></i>
-            </a>
-          }
-          @if (social.value && social.key === 'website') {
-            <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-globe"></i>
-            </a>
-          }
-        </div>
-      } -->
+    <div class="social-link">
+      @for (social of blogSocialLinks | keyvalue; track social) {
+
+      @if (social.value && social.key !== 'website') {
+      <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-{{social.key}}"></i>
+      </a>
+      }
+      @if (social.value && social.key === 'website') {
+      <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-globe"></i>
+      </a>
+      }
+      }
+    </div>
     <div class="follow">
       <button>Follow</button>
     </div>
