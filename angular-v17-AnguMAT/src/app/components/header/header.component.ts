@@ -20,6 +20,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 export class HeaderComponent {
   themeService: ThemeService = inject(ThemeService);
 
+  blogName: string = 'Angular Headless Hashnode';
+  topics = [
+    { name: 'Angular', route: '/angular' },
+    { name: 'Web Dev', route: '/webdev' },
+    { name: 'DS & Algo', route: '/dsa' },
+  ];
+
   toggleTheme() {
     this.themeService.updateTheme();
   }
