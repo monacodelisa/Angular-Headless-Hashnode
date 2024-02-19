@@ -1,42 +1,26 @@
 <mat-toolbar>
   <mat-toolbar-row>
     <a routerLink="/" class="logo">
-      <img
-        src="../../../assets/images/angular-headless-hashnode-logo.jpg"
-        alt="logo"
-        width="12px"
-        height="12px"
-      />
+      <img src="../../../assets/images/angular-headless-hashnode-logo.jpg" alt="logo" width="12px" height="12px" />
       <h1>{{ blogName }}</h1>
     </a>
-
     <div class="theme-control">
       <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
-      <button mat-icon-button>
-        @if (themeService.themeSignal() === 'dark'){
-        <mat-icon>bedtime</mat-icon>
-        } @else {
-        <mat-icon>brightness_5</mat-icon>
-        }
-      </button>
+      @if (themeService.themeSignal() === 'dark'){
+      <mat-icon>bedtime</mat-icon>
+      } @else {
+      <mat-icon>brightness_5</mat-icon>
+      }
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row>
     <div class="social">
       <div class="social-link">
-        <a
-          href="https://github.com/monacodelisa/Angular-Headless-Hashnode"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/monacodelisa/Angular-Headless-Hashnode" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-github"></i>
         </a>
 
-        <a
-          href="https://angular-hashnode.monacodelisa.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://angular-hashnode.monacodelisa.com/" target="_blank" rel="noopener noreferrer">
           <i class="fa-solid fa-globe"></i>
         </a>
       </div>
@@ -49,12 +33,7 @@
   <mat-toolbar-row>
     <div class="series">
       @for (topic of topics; track topic) {
-      <a
-        class="topic-link"
-        href="{{ topic.route }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        >{{ topic.name }}
+      <a class="topic-link" href="{{ topic.route }}" target="_blank" rel="noopener noreferrer">{{ topic.name }}
       </a>
       }
     </div>
