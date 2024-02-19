@@ -19,28 +19,19 @@
   <div class="toolbar-row">
     <div class="social">
       <div class="social-link">
-        <a href="https://github.com/monacodelisa/Angular-Headless-Hashnode" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://angular-hashnode.monacodelisa.com/" target="_blank" rel="noopener noreferrer">
-          <i class="fa-solid fa-globe"></i>
-        </a>
+        @for (social of blogSocialLinks | keyvalue; track social) {
+          @if (social.value && social.key !== 'website') {
+          <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-{{social.key}}"></i>
+          </a>
+          }
+          @if (social.value && social.key === 'website') {
+          <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+          }
+        }
       </div>
-    </div>
-    <div class="social-link">
-      @for (social of blogSocialLinks | keyvalue; track social) {
-
-      @if (social.value && social.key !== 'website') {
-      <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-{{social.key}}"></i>
-      </a>
-      }
-      @if (social.value && social.key === 'website') {
-      <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-globe"></i>
-      </a>
-      }
-      }
     </div>
     <div class="follow">
       <button>Follow</button>
