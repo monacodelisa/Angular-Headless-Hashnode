@@ -13,10 +13,8 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 - Develop a flexible template for Angular integration with headless Hashnode.
 - Connect the Angular app to Hashnode's GraphQL database to retrieve posts and blog data.
-- Support Angular versions 16 and 17 native - without UI libraries and just custom SCSS.
-- Support Angular versions 16 and 17 with Angular Material UI.
-- Support Angular versions 16 and 17 with PrimeNG.
 - Responsive layout improvements for different devices
+- Support Angular v17 and up
 
 ## Existing Setup & Features
 
@@ -28,17 +26,14 @@ In other words - this project is very much like the starter kit that Hashnode pr
 ## LIVE VERSIONS
 
 | [![v16 dark](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![v16 light](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
-| - | - |
-### [Angular v16 native - no UI libraries](https://angular-v16-hashnode.monacodelisa.com/)                          
+| - | - |                         
 
 ### [Angular v17 native - no UI libraries](https://angular-v17-hashnode.monacodelisa.com/)                          
 
 ## Angular App Versions
 
-#### `angular-v16` - has no UI libraries
-#### `angular-v16-AnguMAT` - has Angular Material
-#### `angular-v16-PrimeNG` - has PrimeNG 
 #### `angular-v17` - has no UI libraries
+#### `angular-v17-modMAT` - modules and Angular Material
 #### `angular-v17-AnguMAT` - has Angular Material
 #### `angular-v17-PrimeNG` - has PrimeNG 
 #### `angular-hashnode`- presentation site

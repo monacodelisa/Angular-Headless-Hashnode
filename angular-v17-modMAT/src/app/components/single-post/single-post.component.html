@@ -1,0 +1,10 @@
+<a [routerLink]="['post', post.node.slug ]">
+  <mat-card>
+    <div class="card-image">
+      <img [src]="post.node.coverImage.url">
+    </div>
+    <mat-card-content>
+      <h3>{{post.node.title}}</h3>
+    </mat-card-content>
+  </mat-card>
+</a>
