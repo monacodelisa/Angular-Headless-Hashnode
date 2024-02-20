@@ -1,0 +1,19 @@
+.post-card {
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  margin: 0 20px;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  img {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+.mat-mdc-card-header{
+  padding: 25px;
+}
+
+mat-grid-list{
+  margin-top: 10px;
+}
