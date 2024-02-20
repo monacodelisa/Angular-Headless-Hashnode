@@ -1,7 +1,7 @@
 [build]
   base = "/angular-v17-modMAT"
   command = "npm run build:prod"
-  publish = "dist/browser"
+  publish = "dist/"
 
   [[redirects]]
   from = "/*"
