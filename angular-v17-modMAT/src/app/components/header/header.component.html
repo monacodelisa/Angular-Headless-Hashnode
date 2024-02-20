@@ -1,0 +1,35 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <a routerLink="/" class="logo">
+      <img src="../../../assets/images/angular-headless-hashnode-logo.jpg" alt="logo" />
+      <h1>{{ blogName }}</h1>
+    </a>
+    <div class="theme-control">
+      <mat-slide-toggle color="primary" checked (click)="toggleTheme()"></mat-slide-toggle>
+      <mat-icon color="primary" *ngIf="themeService.themeSignal() === 'dark'">bedtime</mat-icon>
+      <mat-icon color="primary" *ngIf="themeService.themeSignal() === 'light'">brightness_5</mat-icon>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <div class="social">
+      <div class="social-link">
+        <a href="" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-solid fa-globe"></i>
+        </a>
+      </div>
+    </div>
+    <div class="follow">
+      <button mat-raised-button>Follow</button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <div class="series">
+      <div class="topic-link" *ngFor="let topic of topics">
+        <a href="{{topic.route }}" target="_blank" rel="noopener noreferrer">{{topic.name}}</a>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
