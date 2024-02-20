@@ -10,7 +10,7 @@ import { BlogService } from 'src/app/services/blog.service';
 export class FooterComponent implements OnInit, OnDestroy {
   blogInfo: any;
   blogName = "";
-  date = new Date().getFullYear();
+  year = new Date().getFullYear();
   private querySubscription?: Subscription;
   blogService: BlogService = inject(BlogService);
 
