@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { BlogService } from "../../services/blog.service";
 import { Subscription } from "rxjs";
 
+import { ToolbarModule } from "primeng/toolbar";
+
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [ToolbarModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
