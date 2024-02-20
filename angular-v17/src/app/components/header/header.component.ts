@@ -5,11 +5,12 @@ import { BlogService } from '../../services/blog.service';
 
 import { KeyValuePipe } from '@angular/common';
 import { SocialLinks } from '../../models/social-links';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [KeyValuePipe],
+  imports: [KeyValuePipe, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
