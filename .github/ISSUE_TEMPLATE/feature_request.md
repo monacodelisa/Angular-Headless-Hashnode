@@ -12,8 +12,7 @@ assignees: ''
 - [ ] `angular-v17` - has no UI libraries
 - [ ] `angular-v17-modMAT` - modules and Angular Material
 - [ ] `angular-v17-AnguMAT` - has Angular Material
-- [ ] `angular-v17-PrimeNG` - has PrimeNG 
-- [ ] `angular-hashnode`- presentation site
+- [ ] `angular-v17-PrimeNG` - has PrimeNG
 
 
 **Is your feature request related to a problem? Please describe.**
