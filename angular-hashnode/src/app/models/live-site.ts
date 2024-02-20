@@ -4,6 +4,7 @@ export interface LiveSite {
   angularVersion: string;
   uiLib: string;
   dynamicTheme: boolean;
+  structure: string;
   deployment: string;
   url: string;
 }

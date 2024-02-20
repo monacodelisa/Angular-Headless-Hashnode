@@ -23,8 +23,5 @@ export class DemosComponent implements OnInit {
     this.http.get<LiveSite[]>("../../assets/JSON/live-sites-17.json").subscribe(data => {
       this.liveSites17 = data;
     });
-    this.http.get<LiveSite[]>("../../assets/JSON/live-sites-16.json").subscribe(data => {
-      this.liveSites16 = data;
-    });
   }
 }
