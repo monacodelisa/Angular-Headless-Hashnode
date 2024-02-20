@@ -49,9 +49,26 @@ $dark-text-color: #333;
 
   background-color: $semi-dark-bg-color;
   color: $light-text-color;
+
+  .footer {
+    a {
+      &:hover {
+        color: #bcbcbc;
+      }
+    }
+  }
 }
 
 // Light mode
 .light {
   @include mat.all-component-themes($light-theme);
+
+  .footer {
+    a {
+      color: #858585;
+      &:hover {
+        color: #707070;
+      }
+    }
+  }
 }
