@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-v17-modMAT:build:production"
+              "buildTarget": "angular-v17-modMAT:build:production"
             },
             "development": {
-              "browserTarget": "angular-v17-modMAT:build:development"
+              "buildTarget": "angular-v17-modMAT:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-v17-modMAT:build"
+            "buildTarget": "angular-v17-modMAT:build"
           }
         },
         "test": {
