@@ -9,8 +9,8 @@
           <div class="author-text">
             <span class="author-name">{{post.author.name}}</span>
             <div class="post-meta">
-              <p-tag severity="info" value="{{post.publishedAt | date: 'MMM dd, yyyy' }}"></p-tag>
-              <p-tag severity="info" value="{{post.readTimeInMinutes}} min read"><i class="read-time-icon pi pi-clock"></i></p-tag>
+              <p-tag value="{{post.publishedAt | date: 'MMM dd, yyyy' }}"><i class="tag-icon pi pi-calendar"></i></p-tag>
+              <p-tag value="{{post.readTimeInMinutes}} min read"><i class="tag-icon pi pi-clock"></i></p-tag>
             </div>
           </div>
         </div>
