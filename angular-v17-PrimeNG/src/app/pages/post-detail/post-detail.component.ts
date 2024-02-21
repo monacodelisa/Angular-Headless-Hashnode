@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, signal } from '@angular/core';
+import { Component, inject, Input, OnInit, signal } from '@angular/core';
 import { BlogService } from "../../services/blog.service";
 import { DatePipe } from "@angular/common";
 import { TagModule } from 'primeng/tag';
@@ -21,8 +21,7 @@ export class PostDetailComponent {
 
   post = signal<Post | null>(null);
 
-  constructor(private blogService: BlogService) {
-  }
+  private blogService = inject(BlogService);
 
   ngOnInit() {
     this.blogService.getSinglePost(this.slug)

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { BlogService } from "../../services/blog.service";
 import { CardModule } from "primeng/card";
 import { NgOptimizedImage } from "@angular/common";
@@ -15,8 +15,9 @@ export class PostsComponent {
 
   posts: any;
 
-  constructor(private blogService: BlogService, private router: Router) {
-  }
+  private blogService = inject(BlogService);
+
+  private router = inject(Router);
 
   ngOnInit() {
     this.blogService.getPosts()
