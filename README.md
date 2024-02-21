@@ -25,7 +25,7 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 ## LIVE VERSIONS
 
-| [![angular headless hashnode dark](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![angular headless hashnode light](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
+| [![angular headless hashnode dark](/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![angular headless hashnode light](/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
 | - | - |                         
 
 ### You can see the live versions on the [DEMO SITE](https://angular-hashnode.monacodelisa.com/demos)                          
