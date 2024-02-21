@@ -1,0 +1,21 @@
+.posts-view {
+  width: 95vw;
+  min-height: 67.2vh;
+  padding: 0.5rem 0;
+
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 1rem;
+
+    &.grid {
+      p-card {
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
