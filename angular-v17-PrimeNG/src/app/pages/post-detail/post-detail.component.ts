@@ -2,6 +2,7 @@ import { Component, Input, OnInit, signal } from '@angular/core';
 import { BlogService } from "../../services/blog.service";
 import { DatePipe } from "@angular/common";
 import { TagModule } from 'primeng/tag';
+import { Post } from "../../models/post";
 
 @Component({
   selector: 'app-post-detail',
@@ -18,7 +19,7 @@ export class PostDetailComponent {
   @Input()
   slug!: string;
 
-  post = signal<any>(null);
+  post = signal<Post | null>(null);
 
   constructor(private blogService: BlogService) {
   }
