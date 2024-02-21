@@ -1,12 +1,14 @@
 import { Component, Input, OnInit, signal } from '@angular/core';
 import { BlogService } from "../../services/blog.service";
 import { DatePipe } from "@angular/common";
+import { TagModule } from 'primeng/tag';
 
 @Component({
   selector: 'app-post-detail',
   standalone: true,
   imports: [
-    DatePipe
+    DatePipe,
+    TagModule
   ],
   templateUrl: './post-detail.component.html',
   styleUrl: './post-detail.component.scss'

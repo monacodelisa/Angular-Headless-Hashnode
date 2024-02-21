@@ -63,6 +63,7 @@
 
 .author-name {
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .post-meta {
@@ -70,17 +71,6 @@
   align-items: center;
   gap: 10px;
 }
-
-.published-date,
-.read-time {
-  background-color: #444;
-  color: #ffffff;
-  padding: 2px 6px;
-  border-radius: 10px;
-  font-size: 0.8em;
-}
-
-.read-time::before {
-  content: '⏱';
+.read-time-icon {
   margin-right: 5px;
 }
