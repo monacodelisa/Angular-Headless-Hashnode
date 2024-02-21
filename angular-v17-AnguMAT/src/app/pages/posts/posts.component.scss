@@ -1,0 +1,23 @@
+mat-grid-list {
+  display: flex;
+  margin: 2rem;
+
+  mat-card {
+    margin: 0 20px;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 8px #00000033;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 0.35rem 0.35rem 0 0;
+    }
+
+    mat-card-header {
+      padding: 25px;
+    }
+  }
+}

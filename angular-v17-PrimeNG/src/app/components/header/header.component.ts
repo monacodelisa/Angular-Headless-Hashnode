@@ -1,23 +1,40 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component,OnDestroy, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { Subscription } from "rxjs";
 import { ThemeService } from '../../services/theme.service';
+import { BlogService } from "../../services/blog.service";
+
+import { KeyValuePipe } from '@angular/common';
+import { SocialLinks } from "../../models/social-links";
 
 @Component({
-  selector: 'app-header',
+  selector: "app-header",
   standalone: true,
-  imports: [FormsModule, ToolbarModule, ButtonModule, InputSwitchModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  imports: [
+    FormsModule,
+    KeyValuePipe,
+    ToolbarModule,
+    ButtonModule,
+    InputSwitchModule
+  ],
+  templateUrl: "./header.component.html",
+  styleUrl: "./header.component.scss",
 })
-export class HeaderComponent implements OnInit {
-  blogName: string = 'Sample Blog';
+export class HeaderComponent implements OnInit, OnDestroy {
+  blogService: BlogService = inject(BlogService);
+  blogInfo: any;
+  blogName = '';
+  blogSocialLinks!: SocialLinks;
   checked: boolean = true;
   selectedTheme: string = 'dark';
   themeService: ThemeService = inject(ThemeService);
+
+  private querySubscription?: Subscription;
+
   topics = [
     {name: 'Angular', route: '/angular'},
     {name: 'Web Dev', route: '/webdev'},
@@ -25,11 +42,23 @@ export class HeaderComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+    this.querySubscription = this.blogService
+      .getBlogInfo()
+      .subscribe((data) => {
+        this.blogInfo = data;
+        this.blogName = this.blogInfo.title;
+        const { __typename, ...links } = data.links;
+        this.blogSocialLinks = links;
+      });
     this.themeService.setTheme(this.selectedTheme);
   }
 
   onThemeChange(theme: string): void {
     this.selectedTheme = theme;
     this.themeService.setTheme(theme);
+  }
+
+  ngOnDestroy() {
+    this.querySubscription?.unsubscribe();
   }
 }

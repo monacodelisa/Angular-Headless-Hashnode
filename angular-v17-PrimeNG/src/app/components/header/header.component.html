@@ -11,12 +11,18 @@
   <div class="toolbar-row">
     <div class="social">
       <div class="social-link">
-        <a href="https://github.com/monacodelisa/Angular-Headless-Hashnode" target="_blank" rel="noopener noreferrer">
-          <i class="pi pi-github"></i>
+        @for (social of blogSocialLinks | keyvalue; track social) {
+        @if (social.value && social.key !== 'website') {
+        <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+          <i class="pi pi-{{social.key}}"></i>
         </a>
-        <a href="https://angular-v17-hashnode.monacodelisa.com/" target="_blank" rel="noopener noreferrer">
+        }
+        @if (social.value && social.key === 'website') {
+        <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
           <i class="pi pi-globe"></i>
         </a>
+        }
+        }
       </div>
     </div>
     <div class="follow">

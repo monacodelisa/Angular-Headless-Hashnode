@@ -1,0 +1,12 @@
+<mat-grid-list [cols]="cols$ | async" rowHeight="5:4" gutterSize="15px">
+  @for (post of posts$ | async; track post) {
+    <mat-grid-tile>
+      <mat-card (click)="navigateToPost(post.slug)" class="post-card">
+        <img [src]="post?.coverImage?.url" alt="post-cover-image">
+        <mat-card-header>
+          <mat-card-title>{{ post?.title }}</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </mat-grid-tile>
+  }
+</mat-grid-list>

@@ -1,0 +1,18 @@
+<div class="posts-view">
+  <!-- <div class="layout-control">
+    <button mat-raised-button (click)="toggleLayout()">
+      <mat-icon *ngIf="layout == 'grid'">grid_on</mat-icon>
+      <mat-icon *ngIf="layout == 'list'">list_on</mat-icon>
+    </button>
+  </div> -->
+
+  @for (post of posts; track post) {
+    <app-single-post [post]="post" class="cards-wrapper grid"></app-single-post>
+  }
+
+
+  <!-- <div *ngIf="layout == 'list'" class="cards-wrapper list">
+      <app-single-post *ngFor="let post of posts" [post]="post" class="card"></app-single-post>
+  </div> -->
+</div>
+
