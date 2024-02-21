@@ -5,7 +5,7 @@
       <h1>{{ blogName }}</h1>
     </a>
     <div class="theme-control">
-      <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+      <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'light' : 'dark')" id="theme-switch"></p-inputSwitch>
     </div>
   </div>
   <div class="toolbar-row">
