@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from "apollo-angular";
 import { map } from 'rxjs';
-import { GET_BLOG_INFO, GET_POSTS, GET_SINGLE_POST } from '../graphql.operations';
+import { GET_BLOG_INFO, GET_POSTS, GET_SERIES_LIST, GET_SINGLE_POST } from '../graphql.operations';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +24,14 @@ export class BlogService {
       query: GET_POSTS,
     })
     .valueChanges.pipe(map(({ data }) => data.publication.posts.edges));
+  }
+
+  getSeriesList() {
+    return this.apollo
+    .watchQuery<any>({
+      query: GET_SERIES_LIST,
+    })
+    .valueChanges.pipe(map(({ data }) => data.publication.seriesList.edges));
   }
 
   getSinglePost(slug: string) {

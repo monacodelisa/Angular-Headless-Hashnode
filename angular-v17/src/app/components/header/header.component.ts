@@ -5,7 +5,7 @@ import { BlogService } from '../../services/blog.service';
 
 import { KeyValuePipe } from '@angular/common';
 import { SocialLinks } from '../../models/social-links';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -18,15 +18,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   blogInfo: any;
   blogName = '';
   blogSocialLinks!: SocialLinks;
+  seriesList: any;
+  private router = inject(Router);
   private querySubscription?: Subscription;
   themeService: ThemeService = inject(ThemeService);
   blogService: BlogService = inject(BlogService);
-
-  topics = [
-    { name: 'Angular', route: '/angular' },
-    { name: 'Web Dev', route: '/webdev' },
-    { name: 'DS & Algo', route: '/dsa' },
-  ];
 
   ngOnInit(): void {
     this.querySubscription = this.blogService
@@ -37,6 +33,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
         const { __typename, ...links } = data.links;
         this.blogSocialLinks = links;
       });
+    this.querySubscription = this.blogService
+      .getSeriesList()
+      .subscribe((data) => {
+        this.seriesList = data;
+      });
+
   }
 
   toggleTheme() {

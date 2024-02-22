@@ -35,7 +35,7 @@ query Publication {
         node {
           id,
           slug,
-          coverImage{
+          coverImage {
             url
           }
           title,
@@ -43,6 +43,24 @@ query Publication {
           content {
             html
           }
+        }
+      }
+    }
+  }
+}
+`;
+
+export const GET_SERIES_LIST = gql`
+query Publication {
+  publication(host: "${BLOG_HOST}") {
+    title
+    seriesList(first:10) {
+      edges {
+        node {
+          id,
+          name,
+          slug,
+          coverImage
         }
       }
     }
