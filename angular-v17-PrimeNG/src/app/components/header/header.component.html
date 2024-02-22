@@ -31,8 +31,8 @@
   </div>
   <div class="toolbar-row">
     <div class="series">
-      @for (topic of topics; track topic) {
-      <a class="topic-link" href="" target="_blank" rel="noopener noreferrer">{{ topic.name}}</a>
+      @for (serie of series| async; track serie) {
+      <a [routerLink]="'series/' + serie.node.slug" class="topic-link">{{ serie.node.name}}</a>
       }
     </div>
   </div>

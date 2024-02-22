@@ -1,28 +1,32 @@
-import { Component,OnDestroy, inject, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { InputSwitchModule } from 'primeng/inputswitch';
-import { Subscription } from "rxjs";
+import { Observable, Subscription } from 'rxjs';
 import { ThemeService } from '../../services/theme.service';
-import { BlogService } from "../../services/blog.service";
+import { BlogService } from '../../services/blog.service';
 
-import { KeyValuePipe } from '@angular/common';
-import { SocialLinks } from "../../models/social-links";
+import { AsyncPipe, KeyValuePipe } from '@angular/common';
+import { SocialLinks } from '../../models/social-links';
+import { EdgeSeries } from '../../models/series';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: "app-header",
+  selector: 'app-header',
   standalone: true,
   imports: [
-    FormsModule,
-    KeyValuePipe,
-    ToolbarModule,
+    AsyncPipe,
     ButtonModule,
-    InputSwitchModule
+    FormsModule,
+    InputSwitchModule,
+    KeyValuePipe,
+    RouterLink,
+    ToolbarModule,
   ],
-  templateUrl: "./header.component.html",
-  styleUrl: "./header.component.scss",
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   blogService: BlogService = inject(BlogService);
@@ -31,25 +35,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   blogSocialLinks!: SocialLinks;
   checked: boolean = true;
   selectedTheme: string = 'dark';
+  series = new Observable<EdgeSeries[]>();
   themeService: ThemeService = inject(ThemeService);
 
   private querySubscription?: Subscription;
 
-  topics = [
-    {name: 'Angular', route: '/angular'},
-    {name: 'Web Dev', route: '/webdev'},
-    {name: 'DS & Algo', route: '/dsa'},
-  ];
-
   ngOnInit(): void {
-    this.querySubscription = this.blogService
-      .getBlogInfo()
-      .subscribe((data) => {
-        this.blogInfo = data;
-        this.blogName = this.blogInfo.title;
-        const { __typename, ...links } = data.links;
-        this.blogSocialLinks = links;
-      });
+    this._getBlogInfo();
+    this._getSeriesList();
     this.themeService.setTheme(this.selectedTheme);
   }
 
@@ -58,7 +51,22 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.themeService.setTheme(theme);
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.querySubscription?.unsubscribe();
+  }
+
+  private _getBlogInfo(): void {
+    this.querySubscription = this.blogService
+      .getBlogInfo()
+      .subscribe((data) => {
+        this.blogInfo = data;
+        this.blogName = this.blogInfo.title;
+        const { __typename, ...links } = data.links;
+        this.blogSocialLinks = links;
+      });
+  }
+
+  private _getSeriesList(): void {
+    this.series = this.blogService.getSeriesList();
   }
 }
