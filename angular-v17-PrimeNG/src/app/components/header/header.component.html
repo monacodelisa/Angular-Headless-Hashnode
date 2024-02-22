@@ -31,8 +31,8 @@
   </div>
   <div class="toolbar-row">
     <div class="series">
-      @for (serie of series| async; track serie) {
-      <a [routerLink]="'series/' + serie.node.slug" class="topic-link">{{ serie.node.name}}</a>
+      @for (series of seriesList| async; track series) {
+      <a [routerLink]="'series/' + series.node.slug" class="topic-link">{{ series.node.name}}</a>
       }
     </div>
   </div>

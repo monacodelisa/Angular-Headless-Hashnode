@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   blogSocialLinks!: SocialLinks;
   checked: boolean = true;
   selectedTheme: string = 'dark';
-  series = new Observable<EdgeSeries[]>();
+  seriesList = new Observable<EdgeSeries[]>();
   themeService: ThemeService = inject(ThemeService);
 
   private querySubscription?: Subscription;
@@ -67,6 +67,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   private _getSeriesList(): void {
-    this.series = this.blogService.getSeriesList();
+    this.seriesList = this.blogService.getSeriesList();
   }
 }
