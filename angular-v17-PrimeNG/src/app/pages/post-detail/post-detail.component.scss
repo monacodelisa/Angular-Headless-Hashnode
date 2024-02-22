@@ -1,0 +1,77 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.blog-post {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.blog-post h1.title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.blog-post .cover-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.blog-post .content {
+  font-size: 16px;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-details {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.author-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.author-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tag-icon {
+  margin-right: 5px;
+}
