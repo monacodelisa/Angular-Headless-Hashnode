@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { SeriesComponent } from './components/series/series.component';
 
 export const routes: Routes = [
   {
@@ -9,4 +10,7 @@ export const routes: Routes = [
     path: 'post/:slug',
     loadComponent: () => import('./components/post-detail/post-detail.component'),
   },
+  {
+    path: 'series/:slug', component: SeriesComponent,
+  }
 ];
