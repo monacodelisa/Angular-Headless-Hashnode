@@ -47,7 +47,7 @@ export class BlogService {
     .valueChanges.pipe(map(({ data }) => data.publication.series.posts.edges.map((edge: { node: any; }) => edge.node)));
   }
 
-  getSinglePost(slug: string) {
+  getSinglePost(slug: string): Observable<Post> {
     console.log('Querying post with slug:', slug);
     return this.apollo
       .watchQuery<any>({
