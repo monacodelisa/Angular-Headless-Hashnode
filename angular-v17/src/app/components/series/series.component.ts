@@ -13,7 +13,7 @@ import { switchMap } from "rxjs";
 	templateUrl: "./series.component.html",
 	styleUrl: "./series.component.scss",
 })
-export default class SeriesComponent implements OnInit {
+export class SeriesComponent implements OnInit {
 	route: ActivatedRoute = inject(ActivatedRoute);
 	slug: string = "";
   postsInSeries$!: Observable<Post[]>;

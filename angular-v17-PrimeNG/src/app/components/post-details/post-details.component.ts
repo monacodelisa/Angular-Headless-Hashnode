@@ -1,6 +1,7 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { AsyncPipe, DatePipe } from '@angular/common';
+import { TagModule } from 'primeng/tag';
 import { Post } from '../../models/post';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
@@ -8,9 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-post-detail',
   standalone: true,
-  imports: [AsyncPipe, DatePipe],
+  imports: [
+    DatePipe,
+    TagModule,
+    AsyncPipe
+  ],
   templateUrl: './post-details.component.html',
-  styleUrl: './post-details.component.scss',
+  styleUrl: './post-details.component.scss'
 })
 export class PostDetailsComponent implements OnInit {
   slug!: string;

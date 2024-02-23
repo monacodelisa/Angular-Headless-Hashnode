@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { CardModule } from 'primeng/card';
 import { Router } from '@angular/router';
@@ -12,12 +12,10 @@ import { AsyncPipe } from '@angular/common';
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss'
 })
-export class PostsComponent {
+export class PostsComponent implements OnInit {
   posts = new Observable<any>();
-
-  private blogService = inject(BlogService);
-
   private router = inject(Router);
+  private blogService = inject(BlogService);
 
   ngOnInit() {
     this.posts = this.blogService.getPosts();

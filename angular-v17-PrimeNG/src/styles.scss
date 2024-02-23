@@ -11,8 +11,20 @@ a {
   margin: 1rem;
   cursor: pointer;
 
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+
   .p-card-title {
-    height: 6rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+    height: 4.3rem;
+  }
+
+  .p-card-content {
+    display: none;
   }
 }
 

@@ -1,5 +1,3 @@
-import { SocialLinks } from './social-links';
-
 export interface BlogInfo {
   id: string;
   title: string;
@@ -7,3 +5,16 @@ export interface BlogInfo {
   followersCount: number;
   url: string;
 }
+
+export type SocialLinks = {
+  twitter: string;
+  instagram: string;
+  github: string;
+  website: string;
+  hashnode: string;
+  youtube: string;
+  dailydev: string;
+  linkedin: string;
+  mastodon: string;
+};
+

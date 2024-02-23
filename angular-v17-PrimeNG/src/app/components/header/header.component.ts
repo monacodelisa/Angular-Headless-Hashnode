@@ -1,17 +1,16 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { ThemeService } from '../../services/theme.service';
+import { BlogService } from '../../services/blog.service';
+import { AsyncPipe, KeyValuePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { BlogInfo, SocialLinks } from '../../models/blog-info';
+import { SeriesList } from '../../models/post';
 
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { InputSwitchModule } from 'primeng/inputswitch';
-import { Subscription } from 'rxjs';
-import { ThemeService } from '../../services/theme.service';
-import { BlogService } from '../../services/blog.service';
-
-import { AsyncPipe, KeyValuePipe } from '@angular/common';
-import { SocialLinks } from '../../models/social-links';
-import { EdgeSeries } from '../../models/series';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -35,7 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   blogSocialLinks!: SocialLinks;
   checked: boolean = true;
   selectedTheme: string = 'dark';
-  seriesList = new Observable<EdgeSeries[]>();
+  seriesList!: SeriesList[];
   themeService: ThemeService = inject(ThemeService);
 
   private querySubscription?: Subscription;
@@ -46,10 +45,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe((data) => {
         this.blogInfo = data;
         this.blogName = this.blogInfo.title;
-        const { __typename, ...links } = data.links;
-        this.blogSocialLinks = links;
+        this.blogSocialLinks = data.links;
       });
-    this.themeService.setTheme(this.selectedTheme);
+    this.querySubscription = this.blogService
+      .getSeriesList()
+      .subscribe((data) => {
+        this.seriesList = data;
+      });
   }
 
   onThemeChange(theme: string): void {
@@ -61,18 +63,4 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.querySubscription?.unsubscribe();
   }
 
-  private _getBlogInfo(): void {
-    this.querySubscription = this.blogService
-      .getBlogInfo()
-      .subscribe((data) => {
-        this.blogInfo = data;
-        this.blogName = this.blogInfo.title;
-        const { ...links } = data.links;
-        this.blogSocialLinks = links;
-      });
-  }
-
-  private _getSeriesList(): void {
-    this.seriesList = this.blogService.getSeriesList();
-  }
 }

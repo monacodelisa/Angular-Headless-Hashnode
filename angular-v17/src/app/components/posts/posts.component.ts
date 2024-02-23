@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy, inject } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Component, OnInit, inject } from '@angular/core';
+import { Observable } from 'rxjs';
 import { BlogService } from '../../services/blog.service';
 import { Router, RouterLink } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
@@ -12,12 +12,11 @@ import { Post } from '../../models/post';
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss',
 })
-export default class PostsComponent implements OnInit, OnDestroy {
+export class PostsComponent implements OnInit {
   loading?: boolean;
   posts = new Observable<Post[]>();
   blogService: BlogService = inject(BlogService);
   private router = inject(Router);
-  private querySubscription?: Subscription;
 
   ngOnInit() {
     this.posts = this.blogService.getPosts();
@@ -25,9 +24,5 @@ export default class PostsComponent implements OnInit, OnDestroy {
 
   navigateToPost(slug: string) {
     this.router.navigate(['/post', slug]);
-  }
-
-  ngOnDestroy() {
-    this.querySubscription?.unsubscribe();
   }
 }
