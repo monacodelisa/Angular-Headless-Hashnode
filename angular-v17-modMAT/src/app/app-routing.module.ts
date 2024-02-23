@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { PostComponent } from './components/post/post.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 const routes: Routes = [
-	{ path: "", component: HomeComponent },
-  { path: "post/:slug", component: PostComponent },
+	{ path: "", component: PostsComponent },
+  { path: "post/:slug", component: PostDetailsComponent },
 	{ path: "**", redirectTo: "", pathMatch: "full" },
 ];
 
