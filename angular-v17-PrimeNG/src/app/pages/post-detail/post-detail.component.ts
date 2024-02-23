@@ -15,12 +15,9 @@ import { Post } from "../../models/post";
   styleUrl: './post-detail.component.scss'
 })
 export class PostDetailComponent {
-
   @Input()
   slug!: string;
-
   post = signal<Post | null>(null);
-
   private blogService = inject(BlogService);
 
   ngOnInit() {

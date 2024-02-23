@@ -1,13 +1,13 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
-import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { Post } from '../../models/post';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-post-detail',
   standalone: true,
-  imports: [AsyncPipe, NgIf, DatePipe],
+  imports: [AsyncPipe, DatePipe],
   templateUrl: './post-detail.component.html',
   styleUrl: './post-detail.component.scss',
 })
