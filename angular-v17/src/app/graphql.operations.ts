@@ -77,7 +77,9 @@ query Publication ($slug: String!) {
       posts(first: 10) {
         edges {
           node {
+            id,
             title,
+            slug,
             coverImage {
               url
             }

@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from "@angular/core";
-import { ActivatedRoute, Params, RouterLink } from "@angular/router";
+import { ActivatedRoute, Params, Router, RouterLink } from "@angular/router";
 import { Observable } from "rxjs/internal/Observable";
 import { Post } from "../../models/post";
 import { AsyncPipe } from "@angular/common";
@@ -18,6 +18,7 @@ export class SeriesComponent implements OnInit {
 	slug: string = "";
   postsInSeries$!: Observable<Post[]>;
   blogService: BlogService = inject(BlogService);
+  private router = inject(Router);
 
 	ngOnInit(): void {
 		this.postsInSeries$ = this.route.params.pipe(
@@ -27,4 +28,8 @@ export class SeriesComponent implements OnInit {
       })
     );
 	}
+
+  navigateToPost(slug: string) {
+    this.router.navigate(['/post', slug]);
+  }
 }
