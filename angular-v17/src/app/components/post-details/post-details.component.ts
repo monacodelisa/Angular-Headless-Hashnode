@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { AsyncPipe, DatePipe } from '@angular/common';
 import { Post } from '../../models/post';
