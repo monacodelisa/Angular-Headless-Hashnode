@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { BlogService } from "../../services/blog.service";
-import { Subscription } from "rxjs";
+import { BlogService } from '../../services/blog.service';
+import { Subscription } from 'rxjs';
 
-import { ToolbarModule } from "primeng/toolbar";
+import { ToolbarModule } from 'primeng/toolbar';
 
 @Component({
   selector: 'app-footer',
@@ -12,7 +12,6 @@ import { ToolbarModule } from "primeng/toolbar";
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
   blogName = '';
 
   date = new Date().getFullYear();

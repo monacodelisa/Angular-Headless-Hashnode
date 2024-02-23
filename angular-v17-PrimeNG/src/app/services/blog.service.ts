@@ -8,11 +8,9 @@ import { EdgeSeries } from '../models/series';
   providedIn: 'root'
 })
 export class BlogService {
+  constructor(private apollo: Apollo) {}
 
-  constructor(private apollo: Apollo) {
-  }
-
-  getBlogInfo() {
+  getBlogInfo(): Observable<BlogInfo> {
     return this.apollo
       .watchQuery<any>({
         query: GET_BLOG_INFO,
@@ -20,7 +18,7 @@ export class BlogService {
       .valueChanges.pipe(map(({ data }) => data.publication));
   }
 
-  getPosts() {
+  getPosts(): Observable<Post[]> {
     return this.apollo
       .watchQuery<any>({
         query: GET_POSTS,
@@ -36,7 +34,7 @@ export class BlogService {
       .valueChanges.pipe(map(({ data }) => data.publication.seriesList.edges));
   }
 
-  getSinglePost(slug: string) {
+  getSinglePost(slug: string): Observable<Post> {
     return this.apollo
       .watchQuery<any>({
         query: GET_SINGLE_POST,
