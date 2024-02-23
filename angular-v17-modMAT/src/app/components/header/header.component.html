@@ -33,9 +33,9 @@
   </mat-toolbar-row>
   <mat-toolbar-row>
     <div class="series">
-      <div class="topic-link" *ngFor="let topic of topics">
-        <a href="{{topic.route }}" target="_blank" rel="noopener noreferrer">{{topic.name}}</a>
-      </div>
+      @for (series of seriesList; track series) {
+        <a [routerLink]="'series/' + series.slug" class="series-link">{{ series.name}}</a>
+        }
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
