@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { SeriesComponent } from './components/series/series.component';
 
 export const routes: Routes = [
   {
@@ -9,10 +8,12 @@ export const routes: Routes = [
   },
   {
     path: 'post/:slug',
-    loadComponent: () => import('./components/post-detail/post-detail.component')
-      .then(c => c.PostDetailComponent)
+    loadComponent: () => import('./components/post-details/post-details.component')
+      .then(c => c.PostDetailsComponent)
   },
   {
-    path: 'series/:slug', component: SeriesComponent,
+    path: 'series/:slug',
+    loadComponent: () => import('./components/series/series.component')
+      .then(c => c.SeriesComponent)
   }
 ];

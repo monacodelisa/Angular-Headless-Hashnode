@@ -53,7 +53,8 @@ query Publication {
 export const GET_SERIES_LIST = gql`
 query Publication {
   publication(host: "${BLOG_HOST}") {
-    title
+    id,
+    title,
     seriesList(first:10) {
       edges {
         node {
