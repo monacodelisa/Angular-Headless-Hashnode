@@ -4,8 +4,9 @@ import { Subscription } from 'rxjs';
 import { BlogService } from '../../services/blog.service';
 
 import { KeyValuePipe } from '@angular/common';
-import { SocialLinks } from '../../models/social-links';
-import { Router, RouterLink } from '@angular/router';
+import { BlogInfo, SocialLinks } from '../../models/blog-info';
+import { RouterLink } from '@angular/router';
+import { SeriesList } from '../../models/post';
 
 @Component({
   selector: 'app-header',
@@ -15,14 +16,13 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  blogInfo: any;
-  blogName = '';
+  blogInfo!: BlogInfo;
+  blogName: string = '';
   blogSocialLinks!: SocialLinks;
-  seriesList: any;
-  private router = inject(Router);
-  private querySubscription?: Subscription;
+  seriesList!: SeriesList[];
   themeService: ThemeService = inject(ThemeService);
   blogService: BlogService = inject(BlogService);
+  private querySubscription?: Subscription;
 
   ngOnInit(): void {
     this.querySubscription = this.blogService
@@ -30,15 +30,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe((data) => {
         this.blogInfo = data;
         this.blogName = this.blogInfo.title;
-        const { __typename, ...links } = data.links;
-        this.blogSocialLinks = links;
+        this.blogSocialLinks = data.links;
       });
     this.querySubscription = this.blogService
       .getSeriesList()
       .subscribe((data) => {
         this.seriesList = data;
       });
-
   }
 
   toggleTheme() {

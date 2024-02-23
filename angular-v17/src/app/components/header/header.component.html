@@ -40,7 +40,7 @@
   <div class="toolbar-row">
     <div class="series">
       @for (series of seriesList; track series) {
-      <a [routerLink]="'series/' + series.node.slug" class="series-link" href="{{ series.route }}">{{ series.node.name}}</a>
+      <a [routerLink]="'series/' + series.slug" class="series-link">{{ series.name}}</a>
       }
     </div>
   </div>
