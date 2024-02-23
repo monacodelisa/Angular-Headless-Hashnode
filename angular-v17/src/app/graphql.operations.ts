@@ -60,7 +60,28 @@ query Publication {
           id,
           name,
           slug,
-          coverImage
+        }
+      }
+    }
+  }
+}
+`;
+
+export const GET_POSTS_IN_SERIES = gql`
+query Publication ($slug: String!) {
+  publication(host: "${BLOG_HOST}") {
+    id,
+    isTeam ,
+    title,
+    series(slug: $slug) {
+      posts(first: 10) {
+        edges {
+          node {
+            title,
+            coverImage {
+              url
+            }
+          }
         }
       }
     }
