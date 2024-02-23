@@ -1,4 +1,4 @@
-@if (post(); as post) {
+@if (post | async; as post) {
   <div class="container">
     <article class="blog-post">
       <h1 class="title">{{ post.title }}</h1>

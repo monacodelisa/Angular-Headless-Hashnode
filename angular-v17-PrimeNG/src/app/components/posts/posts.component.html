@@ -1,6 +1,6 @@
 <div class="posts-view">
   <div class="cards-wrapper grid">
-    @for (post of posts; track post.id) {
+    @for (post of posts | async; track post.id) {
       <p-card class="post-card" header="{{ post.node.title }}" (click)="navigateToPost(post.node.slug)">
         <ng-template pTemplate="header">
           <img class="card-image" [src]="post.node.coverImage.url" [alt]="post.node.title + ' image'"/>

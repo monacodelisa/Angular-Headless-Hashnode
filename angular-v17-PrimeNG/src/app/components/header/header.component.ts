@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { InputSwitchModule } from 'primeng/inputswitch';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { ThemeService } from '../../services/theme.service';
 import { BlogService } from '../../services/blog.service';
 
@@ -30,8 +30,8 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   blogService: BlogService = inject(BlogService);
-  blogInfo: any;
-  blogName = '';
+  blogInfo!: BlogInfo;
+  blogName:string = '';
   blogSocialLinks!: SocialLinks;
   checked: boolean = true;
   selectedTheme: string = 'dark';
@@ -41,8 +41,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private querySubscription?: Subscription;
 
   ngOnInit(): void {
-    this._getBlogInfo();
-    this._getSeriesList();
+    this.querySubscription = this.blogService
+      .getBlogInfo()
+      .subscribe((data) => {
+        this.blogInfo = data;
+        this.blogName = this.blogInfo.title;
+        const { __typename, ...links } = data.links;
+        this.blogSocialLinks = links;
+      });
     this.themeService.setTheme(this.selectedTheme);
   }
 
@@ -51,7 +57,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.themeService.setTheme(theme);
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy() {
     this.querySubscription?.unsubscribe();
   }
 
@@ -61,7 +67,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe((data) => {
         this.blogInfo = data;
         this.blogName = this.blogInfo.title;
-        const { __typename, ...links } = data.links;
+        const { ...links } = data.links;
         this.blogSocialLinks = links;
       });
   }
