@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import PostDetailComponent from './post-detail.component';
+import PostDetailComponent from './post-details.component';
 import { BlogService } from '../../services/blog.service';
 import { Observable, of } from 'rxjs';
 import { Post } from '../../models/post';
