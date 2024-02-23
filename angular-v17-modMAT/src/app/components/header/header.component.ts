@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { SocialLinks } from 'src/app/models/social-links';
+import { SocialLinks } from 'src/app/models/blog-info';
 import { BlogService } from 'src/app/services/blog.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
@@ -50,8 +50,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe((data) => {
         this.blogInfo = data;
         this.blogName = this.blogInfo.title;
-        const { __typename, ...links } = data.links;
-        this.blogSocialLinks = links;
+        this.blogSocialLinks = data.links;
       });
   }
 
