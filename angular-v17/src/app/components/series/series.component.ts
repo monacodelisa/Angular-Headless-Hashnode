@@ -1,9 +1,10 @@
 import { Component, OnInit, inject } from "@angular/core";
-import { ActivatedRoute, RouterLink } from "@angular/router";
+import { ActivatedRoute, Params, RouterLink } from "@angular/router";
 import { Observable } from "rxjs/internal/Observable";
 import { Post } from "../../models/post";
 import { AsyncPipe } from "@angular/common";
 import { BlogService } from "../../services/blog.service";
+import { switchMap } from "rxjs";
 
 @Component({
 	selector: "app-series",
@@ -15,13 +16,15 @@ import { BlogService } from "../../services/blog.service";
 export class SeriesComponent implements OnInit {
 	route: ActivatedRoute = inject(ActivatedRoute);
 	slug: string = "";
-  postsInSeries = new Observable<Post[]>();
+  postsInSeries$!: Observable<Post[]>;
   blogService: BlogService = inject(BlogService);
 
 	ngOnInit(): void {
-		this.route.params.subscribe((params) => {
-			this.slug = params["slug"];
-		});
-    this.postsInSeries = this.blogService.getPostsInSeries(this.slug);
+		this.postsInSeries$ = this.route.params.pipe(
+      switchMap((params: Params) => {
+        this.slug = params["slug"];
+        return this.blogService.getPostsInSeries(this.slug);
+      })
+    );
 	}
 }
