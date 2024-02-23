@@ -4,7 +4,6 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ThemeService } from './services/theme.service';
-import PostsComponent from './components/posts/posts.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,6 @@ import PostsComponent from './components/posts/posts.component';
     CommonModule,
     RouterOutlet,
     HeaderComponent,
-    PostsComponent,
     FooterComponent,
     RouterOutlet
   ],
