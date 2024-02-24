@@ -1,0 +1,96 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000056;
+  z-index: 1;
+}
+
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 26vw;
+  height: 50vh;
+  margin: auto;
+  padding: 0 0.8rem;
+  border-radius: 0.3rem;
+  z-index: 10;
+
+  .close {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    .close-btn {
+      cursor: pointer;
+    }
+  }
+
+  .dialog-header {
+    padding: 0 2rem;
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      margin: 1rem;
+      border-radius: 50%;
+    }
+  }
+
+  .dialog-content {
+    padding: 0 2rem;
+
+    h3 {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .dialog-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+
+    p {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2563eb;
+        color: #fff;
+        font-size: 1.1rem;
+        width: 100%;
+        padding: 0.7rem;
+        margin: 1rem 0;
+        border: none;
+        border-radius: 3rem;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+
+    .link {
+      color: #2563eb;
+      font-size: 0.8.5rem;
+      margin: 0;
+    }
+  }
+}

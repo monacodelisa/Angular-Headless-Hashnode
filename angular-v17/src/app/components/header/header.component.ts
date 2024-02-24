@@ -7,11 +7,13 @@ import { KeyValuePipe } from '@angular/common';
 import { BlogInfo, SocialLinks } from '../../models/blog-info';
 import { RouterLink } from '@angular/router';
 import { SeriesList } from '../../models/post';
+import { FollowDialogComponent } from '../../partials/follow-dialog/follow-dialog.component';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [KeyValuePipe, RouterLink],
+  imports: [KeyValuePipe, RouterLink, FollowDialogComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -22,9 +24,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   seriesList!: SeriesList[];
   themeService: ThemeService = inject(ThemeService);
   blogService: BlogService = inject(BlogService);
+  modalService: ModalService = inject(ModalService);
   private querySubscription?: Subscription;
 
   ngOnInit(): void {
+    // to add blog image (favicon) query
     this.querySubscription = this.blogService
       .getBlogInfo()
       .subscribe((data) => {
@@ -42,6 +46,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   toggleTheme() {
     this.themeService.updateTheme();
+  }
+
+  openDialog() {
+    this.modalService.showDialog = true;
   }
 
   ngOnDestroy() {
