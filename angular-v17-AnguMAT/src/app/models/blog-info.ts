@@ -1,4 +1,13 @@
+export interface BlogInfo {
+  id: string;
+  title: string;
+  links: SocialLinks;
+  followersCount: number;
+  url: string;
+}
+
 export type SocialLinks = {
+  __typename?: string;
   twitter: string;
   instagram: string;
   github: string;
@@ -9,3 +18,4 @@ export type SocialLinks = {
   linkedin: string;
   mastodon: string;
 };
+

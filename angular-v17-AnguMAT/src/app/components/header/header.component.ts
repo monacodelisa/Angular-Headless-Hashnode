@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { SocialLinks } from '../../models/social-links';
+import { SocialLinks } from '../../models/blog-info';
 import { BlogService } from '../../services/blog.service';
 
 @Component({

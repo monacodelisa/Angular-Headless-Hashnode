@@ -112,6 +112,11 @@ a {
     }
   }
 
+  .published-date,
+  .read-time {
+    background-color: #555;
+  }
+
   pre {
     background-color: #222;
   }
@@ -153,6 +158,12 @@ a {
       }
     }
   }
+
+  .published-date,
+  .read-time {
+    background-color: #d2d2d2;
+  }
+
 
   pre {
     background-color: #444;
