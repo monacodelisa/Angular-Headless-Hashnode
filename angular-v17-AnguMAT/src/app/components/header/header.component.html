@@ -36,10 +36,9 @@
   </mat-toolbar-row>
   <mat-toolbar-row>
     <div class="series">
-      @for (topic of topics; track topic) {
-      <a class="topic-link" href="{{ topic.route }}">{{ topic.name }}
-      </a>
-      }
+      @for (series of seriesList; track series) {
+        <a [routerLink]="'series/' + series.slug" class="series-link">{{ series.name}}</a>
+        }
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
