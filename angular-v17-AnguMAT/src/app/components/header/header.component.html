@@ -7,7 +7,7 @@
     <div class="theme-control">
       <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
       @if (themeService.themeSignal() === 'dark'){
-      <mat-icon>bedtime</mat-icon>
+      <mat-icon color="accent">bedtime</mat-icon>
       } @else {
       <mat-icon>brightness_5</mat-icon>
       }
@@ -30,7 +30,6 @@
         }
       </div>
     </div>
-
     <div class="follow">
       <button mat-fab extended color="#0f0f0f">Follow</button>
     </div>
@@ -38,7 +37,7 @@
   <mat-toolbar-row>
     <div class="series">
       @for (topic of topics; track topic) {
-      <a class="topic-link" href="{{ topic.route }}" target="_blank" rel="noopener noreferrer">{{ topic.name }}
+      <a class="topic-link" href="{{ topic.route }}">{{ topic.name }}
       </a>
       }
     </div>
