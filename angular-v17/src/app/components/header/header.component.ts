@@ -48,10 +48,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.themeService.updateTheme();
   }
 
-  openDialog() {
-    this.modalService.showDialog = true;
-  }
-
   ngOnDestroy() {
     this.querySubscription?.unsubscribe();
   }
