@@ -4,13 +4,12 @@ import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
 import { Post } from '../../models/post';
 import { Observable } from 'rxjs';
 
-import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-post-detail',
   standalone: true,
-  imports: [AsyncPipe, NgIf, DatePipe, MatChipsModule, MatIconModule],
+  imports: [AsyncPipe, NgIf, DatePipe, MatIconModule],
   templateUrl: './post-detail.component.html',
   styleUrl: './post-detail.component.scss',
 })
