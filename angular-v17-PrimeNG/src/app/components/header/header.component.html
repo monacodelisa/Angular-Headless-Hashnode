@@ -5,7 +5,7 @@
       <h1>{{ blogName }}</h1>
     </a>
     <div class="theme-control">
-      <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+      <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')" id="theme-switch"></p-inputSwitch>
     </div>
   </div>
   <div class="toolbar-row">
@@ -31,8 +31,8 @@
   </div>
   <div class="toolbar-row">
     <div class="series">
-      @for (topic of topics; track topic) {
-      <a class="topic-link" href="" target="_blank" rel="noopener noreferrer">{{ topic.name}}</a>
+      @for (series of seriesList; track series) {
+      <a [routerLink]="'series/' + series.slug" class="topic-link">{{ series.name}}</a>
       }
     </div>
   </div>

@@ -8,6 +8,20 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+pre {
+  line-height: 2.2rem;
+  padding: 1rem 1.5rem 1rem;
+  border-radius: 0.3rem;
+
+  .hljs-keyword{
+    color: #f92672;
+  }
+  .hljs-built_in {
+    color: #e6db74;
+
+  }
+}
+
 .card {
   width: 20vw;
   margin: 1rem;
@@ -98,6 +112,14 @@ a {
     }
   }
 
+  .published-date,
+  .read-time {
+    background-color: #555;
+  }
+
+  pre {
+    background-color: #222;
+  }
 
   footer {
     a {
@@ -135,6 +157,17 @@ a {
         background-color: #c2c2c2;
       }
     }
+  }
+
+  .published-date,
+  .read-time {
+    background-color: #d2d2d2;
+  }
+
+
+  pre {
+    background-color: #444;
+    color: #eaeaea;
   }
 
   footer {

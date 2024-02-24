@@ -1,0 +1,21 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+
+body {
+  background-color: var(--gray-50);
+}
+
+.p-card,
+.p-toolbar {
+  background-color: var(--gray-200);
+}
+
+.p-tag {
+  background-color: var(--blue-100);
+  color: var(--gray-600)
+}
+
+.p-button {
+  background-color: var(--blue-200);
+  color: var(--gray-600);
+  border: none;
+}

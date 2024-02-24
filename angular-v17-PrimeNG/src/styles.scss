@@ -5,3 +5,34 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.post-card {
+  width: 20vw;
+  margin: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .p-card-title {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+    height: 4.3rem;
+  }
+
+  .p-card-content {
+    display: none;
+  }
+}
+
+.card-image {
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  object-fit: cover;
+}

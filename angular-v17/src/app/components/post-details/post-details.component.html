@@ -1,0 +1,31 @@
+@if (post$ | async; as post) {
+<div class="container">
+  <article class="blog-post">
+    <h1 class="title">{{ post.title }}</h1>
+    <img class="cover-image" [src]="post.coverImage.url" alt="Cover image for {{ post.title }}">
+    <div class="post-details">
+      <div class="author-info">
+        <img class="author-image" [src]="post.author.profilePicture" alt="{{post.author.name}}">
+        <div class="author-text">
+          <span class="author-name">{{post.author.name}}</span>
+          <div class="post-meta">
+            <span class="published-date">
+              <span class="material-symbols-outlined">
+                today
+              </span>
+              {{post.publishedAt | date: 'MMM dd, yyyy' }}
+            </span>
+            <span class="read-time">
+              <span class="material-symbols-outlined">
+                timer
+              </span>
+              {{post.readTimeInMinutes}} min read
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content" [innerHTML]="post.content.html"></div>
+  </article>
+</div>
+}

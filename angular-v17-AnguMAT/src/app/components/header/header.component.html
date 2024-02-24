@@ -12,7 +12,7 @@
     <div class="theme-control">
       <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
       @if (themeService.themeSignal() === 'dark'){
-      <mat-icon>bedtime</mat-icon>
+      <mat-icon color="accent">bedtime</mat-icon>
       } @else {
       <mat-icon>brightness_5</mat-icon>
       }
@@ -21,24 +21,22 @@
   <mat-toolbar-row>
     <div class="social">
       <div class="social-link">
-        <a
-          href="https://github.com/monacodelisa/Angular-Headless-Hashnode"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
 
-        <a
-          href="https://angular-hashnode.monacodelisa.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-solid fa-globe"></i>
-        </a>
+        @for (social of blogSocialLinks | keyvalue; track social) {
+          @if (social.value && social.key !== 'website') {
+          <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-{{social.key}}"></i>
+          </a>
+          }
+          @if (social.value && social.key === 'website') {
+          <a href="{{social.value}}" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+          }
+        }
+
       </div>
     </div>
-
     <div class="follow">
       <button
         mat-fab
@@ -53,12 +51,9 @@
   <mat-toolbar-row>
     <div class="series">
       @for (topic of topics; track topic) {
-      <a
-        class="topic-link"
-        href="{{ topic.route }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        >{{ topic.name }}
+
+      <a class="topic-link" href="{{ topic.route }}">{{ topic.name }}
+
       </a>
       }
     </div>

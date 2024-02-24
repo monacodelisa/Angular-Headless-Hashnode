@@ -1,41 +1,43 @@
-import { Component, OnDestroy, OnInit, inject } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { ThemeService } from '../../services/theme.service';
+import { BlogService } from '../../services/blog.service';
+import { AsyncPipe, KeyValuePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { BlogInfo, SocialLinks } from '../../models/blog-info';
+import { SeriesList } from '../../models/post';
 
-import { ToolbarModule } from "primeng/toolbar";
-import { ButtonModule } from "primeng/button";
-import { InputSwitchModule } from "primeng/inputswitch";
-import { Subscription } from "rxjs";
-import { BlogService } from "../../services/blog.service";
-
-import { KeyValuePipe } from '@angular/common';
-import { SocialLinks } from "../../models/social-links";
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @Component({
-	selector: "app-header",
-	standalone: true,
-	imports: [
-    FormsModule,
-    KeyValuePipe,
-    ToolbarModule,
+  selector: 'app-header',
+  standalone: true,
+  imports: [
+    AsyncPipe,
     ButtonModule,
-    InputSwitchModule
+    FormsModule,
+    InputSwitchModule,
+    KeyValuePipe,
+    RouterLink,
+    ToolbarModule,
   ],
-	templateUrl: "./header.component.html",
-	styleUrl: "./header.component.scss",
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  checked = 'true';
-  blogInfo: any;
-  blogName = '';
-  blogSocialLinks!: SocialLinks;
-  private querySubscription?: Subscription;
   blogService: BlogService = inject(BlogService);
+  blogInfo!: BlogInfo;
+  blogName:string = '';
+  blogSocialLinks!: SocialLinks;
+  checked: boolean = true;
+  selectedTheme: string = 'dark';
+  seriesList!: SeriesList[];
+  themeService: ThemeService = inject(ThemeService);
 
-	topics = [
-		{ name: "Angular", route: "/angular" },
-		{ name: "Web Dev", route: "/webdev" },
-		{ name: "DS & Algo", route: "/dsa" },
-	];
+  private querySubscription?: Subscription;
 
   ngOnInit(): void {
     this.querySubscription = this.blogService
@@ -46,6 +48,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
         const { __typename, ...links } = data.links;
         this.blogSocialLinks = links;
       });
+    this.querySubscription = this.blogService
+      .getSeriesList()
+      .subscribe((data) => {
+        this.seriesList = data;
+      });
+  }
+
+  onThemeChange(theme: string): void {
+    this.selectedTheme = theme;
+    this.themeService.setTheme(theme);
   }
 
   ngOnDestroy() {

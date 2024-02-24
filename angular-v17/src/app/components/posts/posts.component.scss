@@ -1,0 +1,51 @@
+.posts-view {
+  width: 70vw;
+  min-height: 67.2vh;
+  padding: 0.5rem 0;
+
+  .layout-control {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 1rem;
+
+    &.grid {
+      .card {
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+        }
+
+      }
+    }
+
+    &.list {
+      .card {
+        display: flex;
+        width: 70%;
+
+        .card-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem 0 0 1rem ;
+        }
+
+        .card-info {
+          .card-title {
+            height: 4rem;
+            border-radius: 0;
+          }
+
+          .card-brief {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

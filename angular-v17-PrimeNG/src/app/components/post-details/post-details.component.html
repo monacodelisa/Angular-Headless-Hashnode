@@ -1,0 +1,22 @@
+@if (post$ | async; as post) {
+  <div class="container">
+    <article class="blog-post">
+      <h1 class="title">{{ post.title }}</h1>
+      <img class="cover-image" [src]="post.coverImage.url" alt="Cover image for {{ post.title }}">
+      <div class="post-details">
+        <div class="author-info">
+          <img class="author-image" [src]="post.author.profilePicture" alt="{{ post.author.name}}">
+          <div class="author-text">
+            <span class="author-name">{{post.author.name}}</span>
+            <div class="post-meta">
+              <p-tag value="{{post.publishedAt | date: 'MMM dd, yyyy' }}"><i class="tag-icon pi pi-calendar"></i></p-tag>
+              <p-tag value="{{post.readTimeInMinutes}} min read"><i class="tag-icon pi pi-clock"></i></p-tag>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content" [innerHTML]="post.content.html"></div>
+    </article>
+  </div>
+}

@@ -35,7 +35,7 @@ query Publication {
         node {
           id,
           slug,
-          coverImage{
+          coverImage {
             url
           }
           title,
@@ -50,4 +50,74 @@ query Publication {
 }
 `;
 
+export const GET_SERIES_LIST = gql`
+query Publication {
+  publication(host: "${BLOG_HOST}") {
+    title
+    seriesList(first:10) {
+      edges {
+        node {
+          id,
+          name,
+          slug,
+        }
+      }
+    }
+  }
+}
+`;
 
+export const GET_POSTS_IN_SERIES = gql`
+query Publication ($slug: String!) {
+  publication(host: "${BLOG_HOST}") {
+    id,
+    isTeam ,
+    title,
+    series(slug: $slug) {
+      posts(first: 10) {
+        edges {
+          node {
+            id,
+            title,
+            slug,
+            coverImage {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
+export const GET_SINGLE_POST = gql`
+query SinglePost($slug: String!) {
+  publication(host: "${BLOG_HOST}") {
+    post(slug: $slug) {
+      id,
+      slug,
+      title,
+      readTimeInMinutes,
+      tags {
+        name
+      },
+      author {
+        name,
+        profilePicture,
+        socialMediaLinks {
+          twitter
+          youtube
+        }
+      }
+      coverImage {
+        url
+      },
+      content {
+        html
+      },
+      publishedAt,
+    }
+  }
+}
+`;

@@ -4,28 +4,25 @@ import { Subscription } from 'rxjs';
 import { BlogService } from '../../services/blog.service';
 
 import { KeyValuePipe } from '@angular/common';
-import { SocialLinks } from '../../models/social-links';
+import { BlogInfo, SocialLinks } from '../../models/blog-info';
+import { RouterLink } from '@angular/router';
+import { SeriesList } from '../../models/post';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [KeyValuePipe],
+  imports: [KeyValuePipe, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  blogInfo: any;
-  blogName = '';
+  blogInfo!: BlogInfo;
+  blogName: string = '';
   blogSocialLinks!: SocialLinks;
-  private querySubscription?: Subscription;
+  seriesList!: SeriesList[];
   themeService: ThemeService = inject(ThemeService);
   blogService: BlogService = inject(BlogService);
-
-  topics = [
-    { name: 'Angular', route: '/angular' },
-    { name: 'Web Dev', route: '/webdev' },
-    { name: 'DS & Algo', route: '/dsa' },
-  ];
+  private querySubscription?: Subscription;
 
   ngOnInit(): void {
     this.querySubscription = this.blogService
@@ -35,6 +32,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.blogName = this.blogInfo.title;
         const { __typename, ...links } = data.links;
         this.blogSocialLinks = links;
+      });
+    this.querySubscription = this.blogService
+      .getSeriesList()
+      .subscribe((data) => {
+        this.seriesList = data;
       });
   }
 

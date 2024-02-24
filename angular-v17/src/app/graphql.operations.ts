@@ -35,13 +35,55 @@ query Publication {
         node {
           id,
           slug,
-          coverImage{
+          coverImage {
             url
           }
           title,
           brief,
           content {
             html
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
+export const GET_SERIES_LIST = gql`
+query Publication {
+  publication(host: "${BLOG_HOST}") {
+    id,
+    title,
+    seriesList(first:10) {
+      edges {
+        node {
+          id,
+          name,
+          slug,
+        }
+      }
+    }
+  }
+}
+`;
+
+export const GET_POSTS_IN_SERIES = gql`
+query Publication ($slug: String!) {
+  publication(host: "${BLOG_HOST}") {
+    id,
+    isTeam ,
+    title,
+    series(slug: $slug) {
+      posts(first: 10) {
+        edges {
+          node {
+            id,
+            title,
+            slug,
+            coverImage {
+              url
+            }
           }
         }
       }

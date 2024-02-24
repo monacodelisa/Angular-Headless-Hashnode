@@ -1,9 +1,9 @@
 <div class="toolbar" role="banner">
   <div class="toolbar-row">
-    <div class="logo">
+    <a routerLink="/" class="logo">
       <img src="../../../assets/images/angular-headless-hashnode-logo.jpg" alt="logo" />
       <h1>{{ blogName }}</h1>
-    </div>
+    </a>
     <div class="theme-control">
       @if (themeService.themeSignal() == 'dark') {
       <button (click)="toggleTheme()"><span class="material-symbols-outlined">
@@ -39,8 +39,8 @@
   </div>
   <div class="toolbar-row">
     <div class="series">
-      @for (topic of topics; track topic) {
-      <a class="topic-link" href="{{ topic.route }}" target="_blank" rel="noopener noreferrer">{{ topic.name}}</a>
+      @for (series of seriesList; track series) {
+      <a [routerLink]="'series/' + series.slug" class="series-link">{{ series.name}}</a>
       }
     </div>
   </div>

@@ -25,18 +25,17 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 ## LIVE VERSIONS
 
-| [![v16 dark](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![v16 light](https://raw.githubusercontent.com/monacodelisa/Angular-Headless-Hashnode/develop/angular-v16/src/assets/images/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
+| [![angular headless hashnode dark](/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![angular headless hashnode light](/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
 | - | - |                         
 
-### [Angular v17 native - no UI libraries](https://angular-v17-hashnode.monacodelisa.com/)                          
+### You can see the live versions on the [DEMO SITE](https://angular-hashnode.monacodelisa.com/demos)                          
 
 ## Angular App Versions
 
-#### `angular-v17` - has no UI libraries
-#### `angular-v17-modMAT` - modules and Angular Material
-#### `angular-v17-AnguMAT` - has Angular Material
-#### `angular-v17-PrimeNG` - has PrimeNG 
-#### `angular-hashnode`- presentation site
+#### `angular-v17` - has no UI libraries [LIVE](https://angular-v17-hashnode.netlify.app/)                          
+#### `angular-v17-modMAT` - modules and Angular Material [LIVE](https://angular-v17-modmat.netlify.app/)                         
+#### `angular-v17-AnguMAT` - has Angular Material [LIVE](https://angular-v17-angumat.netlify.app/)      
+#### `angular-v17-PrimeNG` - has PrimeNG [LIVE](https://angular-v17-primeng.netlify.app/)      
 
 
 ## Contributing
