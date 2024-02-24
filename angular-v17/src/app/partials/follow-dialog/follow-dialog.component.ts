@@ -14,6 +14,6 @@ export class FollowDialogComponent implements OnInit {
   blogService: BlogService = inject(BlogService);
 
   ngOnInit(): void {
-    // to add blog image
+    // to add blog image (favicon) query
   }
 }
