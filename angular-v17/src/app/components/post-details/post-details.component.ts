@@ -4,11 +4,12 @@ import { AsyncPipe, DatePipe } from '@angular/common';
 import { Post } from '../../models/post';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { ClipboardCopyButtonDirective } from '../../directives/clipboard-copy-button.directive';
 
 @Component({
   selector: 'app-post-detail',
   standalone: true,
-  imports: [AsyncPipe, DatePipe],
+  imports: [AsyncPipe, DatePipe, ClipboardCopyButtonDirective],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.scss',
 })
