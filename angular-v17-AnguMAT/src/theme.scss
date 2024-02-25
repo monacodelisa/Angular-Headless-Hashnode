@@ -55,6 +55,10 @@ $dark-text-color: #333;
     background-color: #555;
   }
 
+  :host app-follow-dialog {
+    background-color: #555;
+  }
+
   .footer {
     a {
       &:hover {

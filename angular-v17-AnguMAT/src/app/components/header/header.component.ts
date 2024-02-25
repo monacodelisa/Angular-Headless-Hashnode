@@ -1,28 +1,35 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
-
 import { KeyValuePipe } from '@angular/common';
-
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink } from '@angular/router';
 import { SeriesList } from '../../models/post';
 import { Subscription } from 'rxjs';
 import { BlogInfo, SocialLinks } from '../../models/blog-info';
 import { BlogService } from '../../services/blog.service';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {
+  MatDialog,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogTitle,
+} from '@angular/material/dialog';
+import { FollowDialogComponent } from '../../partials/follow-dialog/follow-dialog.component';
+
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     KeyValuePipe,
+    RouterLink,
     MatSlideToggleModule,
     MatIconModule,
-    MatButtonModule,
     MatToolbarModule,
-    RouterLink
+    MatButtonModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -35,6 +42,8 @@ export class HeaderComponent implements OnInit, OnDestroy{
   themeService: ThemeService = inject(ThemeService);
   blogService: BlogService = inject(BlogService);
   private querySubscription?: Subscription;
+
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.querySubscription = this.blogService
@@ -54,6 +63,13 @@ export class HeaderComponent implements OnInit, OnDestroy{
 
   toggleTheme() {
     this.themeService.updateTheme();
+  }
+
+  openDialog() {
+    this.dialog.open(FollowDialogComponent, {
+      height: '50vh',
+      width: '26vw',
+    });
   }
 
   ngOnDestroy() {
