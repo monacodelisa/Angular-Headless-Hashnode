@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="follow">
-      <button>Follow</button>
+      <button (click)="modalService.showDialog=true">Follow</button>
     </div>
   </div>
   <div class="toolbar-row">
@@ -45,3 +45,6 @@
     </div>
   </div>
 </div>
+@if (modalService.showDialog) {
+  <app-follow-dialog></app-follow-dialog>
+}

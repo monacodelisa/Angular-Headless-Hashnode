@@ -94,6 +94,12 @@ a {
     color: #c2c2c2;
   }
 
+  .dialog-container {
+    background-color: #000;
+    color: #c2c2c2;
+    box-shadow: 5px 5px 4px #202020d9;
+  }
+
   .content {
     background-color: #444;
     color: #f5f5f5;
@@ -110,6 +116,11 @@ a {
         color: #c2c2c2;
       }
     }
+  }
+
+  .published-date,
+  .read-time {
+    background-color: #555;
   }
 
   pre {
@@ -142,6 +153,11 @@ a {
     color: #656565;
   }
 
+  .dialog-container {
+    background-color: #ededed;
+    box-shadow: 5px 5px 4px #20202054;
+  }
+
   .content {
     background-color: #dedede;
     .card {
@@ -156,6 +172,12 @@ a {
       }
     }
   }
+
+  .published-date,
+  .read-time {
+    background-color: #d2d2d2;
+  }
+
 
   pre {
     background-color: #444;

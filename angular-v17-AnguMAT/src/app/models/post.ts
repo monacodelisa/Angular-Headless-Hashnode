@@ -10,6 +10,14 @@ export type Post = {
   publishedAt: string;
 };
 
+export interface SeriesList {
+  id: string;
+  name: string;
+  slug: string;
+  coverImage?: string;
+  posts?: Post[];
+}
+
 export interface Tag {
   name: string;
 }

@@ -22,7 +22,6 @@ export class PostDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.slug = params['slug'];
-      console.log("Post Slug:", this.slug);
       this.post$ = this.blogService.getSinglePost(this.slug);
     });
   }

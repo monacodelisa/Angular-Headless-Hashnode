@@ -7,6 +7,7 @@ export interface BlogInfo {
 }
 
 export type SocialLinks = {
+  __typename?: string;
   twitter: string;
   instagram: string;
   github: string;

@@ -10,12 +10,11 @@
             <span class="author-name">{{post.author.name}}</span>
             <div class="post-meta">
               <p-tag value="{{post.publishedAt | date: 'MMM dd, yyyy' }}"><i class="tag-icon pi pi-calendar"></i></p-tag>
-              <p-tag value="{{post.readTimeInMinutes}} min read"><i class="tag-icon pi pi-clock"></i></p-tag>
+              <p-tag value="{{post.readTimeInMinutes}} min read"><i class="tag-icon pi pi-book"></i></p-tag>
             </div>
           </div>
         </div>
       </div>
-
       <div class="content" [innerHTML]="post.content.html"></div>
     </article>
   </div>

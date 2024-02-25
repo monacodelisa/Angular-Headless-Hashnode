@@ -9,8 +9,14 @@
           <div class="author-text">
             <span class="author-name">{{post.author.name}}</span>
             <div class="post-meta">
-              <span class="published-date">{{post.publishedAt | date: 'MMM dd, yyyy' }}</span>
-              <span class="read-time">{{post.readTimeInMinutes}} min read</span>
+              <span class="published-date">
+                <mat-icon>today</mat-icon>
+                {{post.publishedAt | date: 'MMM dd, yyyy' }}
+              </span>
+              <span class="read-time">
+                <mat-icon>import_contacts</mat-icon>
+                {{post.readTimeInMinutes}} min read
+              </span>
             </div>
           </div>
         </div>

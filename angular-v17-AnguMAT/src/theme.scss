@@ -50,6 +50,11 @@ $dark-text-color: #333;
   background-color: $semi-dark-bg-color;
   color: $light-text-color;
 
+  .published-date,
+  .read-time {
+    background-color: #555;
+  }
+
   .footer {
     a {
       &:hover {
@@ -62,6 +67,15 @@ $dark-text-color: #333;
 // Light mode
 .light {
   @include mat.all-component-themes($light-theme);
+
+  mat-card {
+    background-color: #f5f5f5;
+  }
+
+  .published-date,
+  .read-time {
+    background-color: $light-bg-color;
+  }
 
   .footer {
     a {

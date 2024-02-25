@@ -25,7 +25,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 			.subscribe((data) => {
 				this.blogInfo = data;
 				this.blogName = this.blogInfo.title;
-				this.blogSocialLinks = data.links;
+				const { __typename, ...links } = data.links;
+        this.blogSocialLinks = links;
 			});
 		this.querySubscription = this.blogService
 			.getSeriesList()
