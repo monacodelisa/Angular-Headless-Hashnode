@@ -5,11 +5,17 @@ import { Post } from '../../models/post';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { ClipboardCopyButtonDirective } from '../../directives/clipboard-copy-button.directive';
+import { SanitizerHtmlPipe } from '../../pipes/sanitizer-html.pipe';
 
 @Component({
   selector: 'app-post-detail',
   standalone: true,
-  imports: [AsyncPipe, DatePipe, ClipboardCopyButtonDirective],
+  imports: [
+    AsyncPipe,
+    ClipboardCopyButtonDirective,
+    DatePipe,
+    SanitizerHtmlPipe
+  ],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.scss',
 })

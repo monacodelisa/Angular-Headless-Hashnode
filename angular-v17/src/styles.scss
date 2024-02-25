@@ -18,6 +18,7 @@ pre {
   .hljs-keyword {
     color: #f92672;
   }
+
   .hljs-built_in {
     color: #e6db74;
 
@@ -72,7 +73,27 @@ button {
 a {
   text-decoration: none;
   color: inherit;
-  margin: 0 0.4rem;
+}
+
+
+.blog-post {
+  .content {
+    a {
+      text-decoration: underline;
+      margin: 0;
+    }
+
+    p {
+      img {
+        display: block;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 65%;
+        width: auto;
+      }
+    }
+  }
 }
 
 
@@ -94,7 +115,7 @@ a {
     }
   }
 
-  h1,h3 {
+  h1, h3 {
     color: #c2c2c2;
   }
 
@@ -135,6 +156,7 @@ a {
   footer {
     a {
       color: #a7a7a7;
+
       &:hover {
         color: #bcbcbc;
       }
@@ -163,6 +185,7 @@ a {
 
   .content {
     background-color: #dedede;
+
     .card {
       border: 1px solid #0000001f;
 
@@ -190,6 +213,7 @@ a {
   footer {
     a {
       color: #898989;
+
       &:hover {
         color: #a0a0a0;
       }
