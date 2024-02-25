@@ -36,6 +36,7 @@
       margin: 0.8rem 0 0.5rem;
 
       a {
+        margin: 0 0.4rem;
 
         i {
           height: 1.1rem;
@@ -62,9 +63,10 @@
       width: 100%;
       padding: 0.7rem 0;
 
-      a {
+      .series-link {
         font-size: 1.1rem;
         text-transform: uppercase;
+        margin: 0 0.4rem;
       }
     }
   }
