@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="follow">
-      <p-button label="Follow" [raised]="true"></p-button>
+      <p-button (click)="showDialog()" label="Follow" [raised]="true"></p-button>
     </div>
   </div>
   <div class="toolbar-row">
@@ -37,3 +37,12 @@
     </div>
   </div>
 </p-toolbar>
+
+<p-dialog [(visible)]="visible" [style]="{width: '27vw'}">
+  <div class="logo-wrapper">
+    <img class="logo" src="/assets/images/angular-headless-hashnode-logo.jpg" alt="">
+  </div>
+  <h3>Hey, 👋 sign up or sign in to interact.</h3>
+  <a class="button" href="https://hashnode.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/hashnode-logo-white.png" alt="Sign in">Sign in with Hashnode</a>
+  <p>This blog is powered by <a class="link" href="https://hashnode.com/" target="_blank" rel="noopener noreferrer">Hashnode</a>. To interact with the content on this blog, please log in through Hashnode.</p>
+</p-dialog>

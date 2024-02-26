@@ -1,7 +1,10 @@
-import { Component, OnDestroy, OnInit, inject } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
+import { Component, Inject, OnDestroy, OnInit, inject } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { Subscription } from "rxjs";
 import { SocialLinks } from "src/app/models/blog-info";
 import { SeriesList } from "src/app/models/post";
+import { FollowDialogComponent } from "src/app/partials/follow-dialog/follow-dialog.component";
 import { BlogService } from "src/app/services/blog.service";
 import { ThemeService } from "src/app/services/theme.service";
 
@@ -18,6 +21,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	themeService: ThemeService = inject(ThemeService);
 	blogService: BlogService = inject(BlogService);
 	private querySubscription?: Subscription;
+
+  constructor(public dialog: MatDialog, @Inject(DOCUMENT) private document: Document) {}
 
 	ngOnInit(): void {
 		this.querySubscription = this.blogService
@@ -38,6 +43,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	toggleTheme() {
 		this.themeService.updateTheme();
 	}
+
+  openDialog() {
+    this.dialog.open(FollowDialogComponent, {
+      height: '50vh',
+      width: '26vw',
+    });
+    let followDialog = this.document.querySelector('mat-dialog-container') as HTMLElement;
+    if (this.themeService.themeSignal() === 'dark') {
+      followDialog.classList.add('dark');
+    }
+  }
 
 	ngOnDestroy() {
 		this.querySubscription?.unsubscribe();

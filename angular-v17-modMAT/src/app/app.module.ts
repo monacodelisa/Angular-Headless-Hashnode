@@ -10,7 +10,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { PostsComponent } from './components/posts/posts.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -18,8 +19,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatIconModule} from '@angular/material/icon';
-import { PostsComponent } from './components/posts/posts.component';
-import { PostDetailsComponent } from './components/post-details/post-details.component';
+import {
+	MatDialogActions,
+	MatDialogClose,
+	MatDialogContent,
+	MatDialogTitle,
+} from "@angular/material/dialog";
+import { FollowDialogComponent } from './partials/follow-dialog/follow-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,8 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
     HeaderComponent,
     FooterComponent,
     PostsComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    FollowDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,11 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
     MatCardModule,
     MatButtonModule,
     MatSlideToggleModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogActions,
+    MatDialogClose,
+    MatDialogContent,
+    MatDialogTitle,
   ],
   exports: [RouterModule],
   providers: [

@@ -24,5 +24,4 @@ import { ThemeService } from "../../services/theme.service";
 	styleUrl: "./follow-dialog.component.scss",
 })
 export class FollowDialogComponent {
-  themeService: ThemeService = inject(ThemeService);
 }
