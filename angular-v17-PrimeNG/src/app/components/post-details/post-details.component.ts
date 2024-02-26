@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-post-detail',
+  selector: 'app-post-details',
   standalone: true,
   imports: [
     DatePipe,

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import PostDetailComponent from './post-detail.component';
+import PostDetailsComponent from './post-details.component';
 import { BlogService } from '../../services/blog.service';
 import { Observable, of } from 'rxjs';
 import { Post } from '../../models/post';
@@ -11,13 +11,13 @@ class MockBlogService {
 }
 
 describe('PostDetailComponent', () => {
-  let component: PostDetailComponent;
-  let fixture: ComponentFixture<PostDetailComponent>;
+  let component: PostDetailsComponent;
+  let fixture: ComponentFixture<PostDetailsComponent>;
   let blogService: BlogService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PostDetailComponent],
+      imports: [PostDetailsComponent],
       providers: [
         { provide: BlogService, useClass: MockBlogService },
       ],
@@ -25,7 +25,7 @@ describe('PostDetailComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostDetailComponent);
+    fixture = TestBed.createComponent(PostDetailsComponent);
     component = fixture.componentInstance;
     blogService = TestBed.inject(BlogService);
     component.slug = 'test-slug';
