@@ -14,11 +14,11 @@ import { switchMap } from "rxjs";
 	styleUrl: "./series.component.scss",
 })
 export class SeriesComponent implements OnInit {
-	route: ActivatedRoute = inject(ActivatedRoute);
-	slug: string = "";
+  slug: string = "";
   postsInSeries$!: Observable<Post[]>;
   blogService: BlogService = inject(BlogService);
   private router = inject(Router);
+	route: ActivatedRoute = inject(ActivatedRoute);
 
 	ngOnInit(): void {
 		this.postsInSeries$ = this.route.params.pipe(

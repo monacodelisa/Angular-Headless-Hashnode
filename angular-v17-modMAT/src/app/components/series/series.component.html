@@ -1,0 +1,16 @@
+<div class="series-view">
+  <div class="cards-wrapper grid">
+    @for (post of postsInSeries$ | async; track post) {
+      <mat-card>
+      <a (click)="navigateToPost(post.slug)">
+        <div class="card-image">
+          <img [src]="post.coverImage.url">
+        </div>
+        <div class="card-title">
+          <h3>{{post.title}}</h3>
+        </div>
+      </a>
+    </mat-card>
+    }
+  </div>
+</div>
