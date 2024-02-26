@@ -3,6 +3,7 @@ import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HttpLink } from "apollo-angular/http";
 import { ApolloClientOptions, InMemoryCache } from '@apollo/client/core';
 import { provideHttpClient, withFetch } from "@angular/common/http";
@@ -20,7 +21,7 @@ export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withComponentInputBinding()),
-    provideClientHydration(),
+    provideClientHydration(), provideAnimationsAsync(),
     provideHttpClient(withFetch()),
     {
       provide: APOLLO_OPTIONS,
