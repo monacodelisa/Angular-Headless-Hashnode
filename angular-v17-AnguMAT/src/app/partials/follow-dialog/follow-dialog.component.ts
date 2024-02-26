@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import {
 	MatDialogActions,
 	MatDialogClose,
@@ -7,6 +7,7 @@ import {
 } from "@angular/material/dialog";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { ThemeService } from "../../services/theme.service";
 
 @Component({
 	selector: "app-follow-dialog",
@@ -22,4 +23,6 @@ import { MatIconModule } from "@angular/material/icon";
 	templateUrl: "./follow-dialog.component.html",
 	styleUrl: "./follow-dialog.component.scss",
 })
-export class FollowDialogComponent {}
+export class FollowDialogComponent {
+  themeService: ThemeService = inject(ThemeService);
+}
