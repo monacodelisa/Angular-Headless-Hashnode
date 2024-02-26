@@ -16,11 +16,14 @@ a {
     transition: all 0.3s ease-in-out;
   }
 
+  .p-card {
+    height: 100%;
+  }
+
   .p-card-title {
     font-size: 1.2rem;
     line-height: 1.7rem;
     font-weight: 500;
-    height: 4.3rem;
   }
 
   .p-card-content {
