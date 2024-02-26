@@ -1,1 +1,19 @@
 @import "primeng/resources/themes/lara-dark-blue/theme.css";
+
+.social-link {
+  a {
+    i {
+      color: var(--blue-200);
+    }
+  }
+}
+
+.blog-post {
+  a {
+    color: var(--blue-300);
+  }
+  pre {
+    background-color: #222;
+    color: #eaeaea;
+  }
+}
