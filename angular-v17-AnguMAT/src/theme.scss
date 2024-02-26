@@ -55,6 +55,11 @@ $dark-text-color: #333;
     background-color: #555;
   }
 
+  pre {
+    background-color: #222;
+    color: #eaeaea;
+  }
+
   .footer {
     a {
       &:hover {
@@ -75,6 +80,11 @@ $dark-text-color: #333;
   .published-date,
   .read-time {
     background-color: $light-bg-color;
+  }
+  
+  pre {
+    background-color: #444;
+    color: #eaeaea;
   }
 
   .footer {
