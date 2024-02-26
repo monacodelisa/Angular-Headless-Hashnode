@@ -1,19 +1,15 @@
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Params, Router, RouterLink } from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
-import { Post } from '../../models/post';
-import { AsyncPipe } from "@angular/common";
-import { BlogService } from '../../services/blog.service';
-import { CardModule } from 'primeng/card';
+import { Post } from 'src/app/models/post';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-series',
-  standalone: true,
-  imports: [RouterLink, AsyncPipe, CardModule],
   templateUrl: './series.component.html',
   styleUrl: './series.component.scss'
 })
-export class SeriesComponent {
+export class SeriesComponent implements OnInit {
   slug: string = "";
   postsInSeries$!: Observable<Post[]>;
   blogService: BlogService = inject(BlogService);

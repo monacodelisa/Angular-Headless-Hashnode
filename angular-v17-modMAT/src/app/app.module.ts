@@ -26,6 +26,7 @@ import {
 	MatDialogTitle,
 } from "@angular/material/dialog";
 import { FollowDialogComponent } from './partials/follow-dialog/follow-dialog.component';
+import { SeriesComponent } from './components/series/series.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FollowDialogComponent } from './partials/follow-dialog/follow-dialog.co
     FooterComponent,
     PostsComponent,
     PostDetailsComponent,
+    SeriesComponent,
     FollowDialogComponent
   ],
   imports: [
