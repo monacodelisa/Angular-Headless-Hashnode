@@ -13,7 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.scss',
 })
-export default class PostDetailsComponent implements OnInit {
+export class PostDetailsComponent implements OnInit {
   @Input({ required: true }) slug!: string;
 
   post$!: Observable<Post>;

@@ -1,11 +1,11 @@
-import { MatCardModule } from '@angular/material/card';
 import { Component, inject } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { Router, RouterLink } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
-import {MatGridListModule} from '@angular/material/grid-list';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-posts',
@@ -14,7 +14,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss',
 })
-export default class PostsComponent {
+export class PostsComponent {
   private blogService = inject(BlogService);
   private router = inject(Router);
   private breakpointObserver = inject(BreakpointObserver);
