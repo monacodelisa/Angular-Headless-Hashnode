@@ -19,7 +19,11 @@ query Publication {
       mastodon
     }
     followersCount,
-    url
+    url,
+    favicon,
+    author {
+    profilePicture
+    }
   }
 }
 `;
