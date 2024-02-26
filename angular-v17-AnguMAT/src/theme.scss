@@ -55,10 +55,16 @@ $dark-text-color: #333;
     background-color: #555;
   }
 
-  pre {
-    background-color: #222;
-    color: #eaeaea;
+  .blog-post {
+    a {
+      color: #dc82ec;
+    }
+    pre {
+      background-color: #222;
+      color: #eaeaea;
+    }
   }
+
 
   .footer {
     a {
@@ -81,10 +87,15 @@ $dark-text-color: #333;
   .read-time {
     background-color: $light-bg-color;
   }
-  
-  pre {
-    background-color: #444;
-    color: #eaeaea;
+
+  .blog-post {
+    a {
+      color: #be99c5;
+    }
+    pre {
+      background-color: #444;
+      color: #eaeaea;
+    }
   }
 
   .footer {

@@ -48,9 +48,14 @@ $dark-text-color: #333;
     background-color: #555;
   }
 
-  pre {
-    background-color: #222;
-    color: #eaeaea;
+  .blog-post {
+    a {
+      color: #939fe2;
+    }
+    pre {
+      background-color: #222;
+      color: #eaeaea;
+    }
   }
 
   .footer {
@@ -75,9 +80,14 @@ $dark-text-color: #333;
     background-color: $light-bg-color;
   }
 
-  pre {
-    background-color: #444;
-    color: #eaeaea;
+  .blog-post {
+    a {
+      color: #3f51b5;
+    }
+    pre {
+      background-color: #444;
+      color: #eaeaea;
+    }
   }
 
 

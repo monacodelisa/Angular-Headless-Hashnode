@@ -19,3 +19,23 @@ body {
   color: var(--gray-600);
   border: none;
 }
+
+.social-link {
+  a {
+    i {
+      color: var(--blue-600);
+    }
+  }
+}
+
+.blog-post {
+  a {
+    color: var(--blue-400);
+  }
+  pre {
+    background-color: #444;
+    color: #eaeaea;
+  }
+}
+
+
