@@ -8,7 +8,7 @@ import { ClipboardCopyButtonDirective } from '../../directives/clipboard-copy-bu
 import { SanitizerHtmlPipe } from '../../pipes/sanitizer-html.pipe';
 
 @Component({
-  selector: 'app-post-detail',
+  selector: 'app-post-details',
   standalone: true,
   imports: [
     AsyncPipe,

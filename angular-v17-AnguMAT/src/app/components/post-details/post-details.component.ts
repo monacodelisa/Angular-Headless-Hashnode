@@ -7,13 +7,13 @@ import { Observable } from 'rxjs';
 import {MatIconModule} from '@angular/material/icon';
 
 @Component({
-  selector: 'app-post-detail',
+  selector: 'app-post-details',
   standalone: true,
   imports: [AsyncPipe, NgIf, DatePipe, MatIconModule],
-  templateUrl: './post-detail.component.html',
-  styleUrl: './post-detail.component.scss',
+  templateUrl: './post-details.component.html',
+  styleUrl: './post-details.component.scss',
 })
-export default class PostDetailComponent implements OnInit {
+export default class PostDetailsComponent implements OnInit {
   @Input({ required: true }) slug!: string;
 
   post$!: Observable<Post>;

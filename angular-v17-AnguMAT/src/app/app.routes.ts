@@ -7,6 +7,6 @@ export const routes: Routes = [
   },
   {
     path: 'post/:slug',
-    loadComponent: () => import('./components/post-detail/post-detail.component'),
+    loadComponent: () => import('./components/post-details/post-details.component'),
   },
 ];
