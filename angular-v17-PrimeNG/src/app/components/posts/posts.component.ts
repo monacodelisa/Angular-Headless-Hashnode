@@ -1,14 +1,14 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
-import { CardModule } from 'primeng/card';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [CardModule, AsyncPipe],
+  imports: [ AsyncPipe, CardModule],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss'
 })
