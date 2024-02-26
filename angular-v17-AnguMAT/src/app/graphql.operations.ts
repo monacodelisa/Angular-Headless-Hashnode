@@ -68,6 +68,30 @@ query Publication {
 }
 `;
 
+export const GET_POSTS_IN_SERIES = gql`
+query Publication ($slug: String!) {
+  publication(host: "${BLOG_HOST}") {
+    id,
+    isTeam ,
+    title,
+    series(slug: $slug) {
+      posts(first: 10) {
+        edges {
+          node {
+            id,
+            title,
+            slug,
+            coverImage {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
 export const GET_SINGLE_POST = gql`
 query SinglePost($slug: String!) {
   publication(host: "${BLOG_HOST}") {
