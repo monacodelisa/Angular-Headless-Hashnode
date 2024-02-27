@@ -12,7 +12,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
-
+import { FollowDialogComponent } from './partials/follow-dialog/follow-dialog.component';
+import { SeriesComponent } from './components/series/series.component';
+import { SanitizerHtmlPipe } from './pipes/sanitizer-html.pipe';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
@@ -25,8 +27,7 @@ import {
 	MatDialogContent,
 	MatDialogTitle,
 } from "@angular/material/dialog";
-import { FollowDialogComponent } from './partials/follow-dialog/follow-dialog.component';
-import { SeriesComponent } from './components/series/series.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SeriesComponent } from './components/series/series.component';
     PostsComponent,
     PostDetailsComponent,
     SeriesComponent,
-    FollowDialogComponent
+    FollowDialogComponent,
+    SanitizerHtmlPipe
   ],
   imports: [
     BrowserModule,
