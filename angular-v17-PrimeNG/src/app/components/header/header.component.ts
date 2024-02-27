@@ -1,6 +1,5 @@
-import { Component, inject, OnDestroy, OnInit } from "@angular/core";
+import { Component, inject, OnInit } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { Subscription } from "rxjs";
 import { ThemeService } from "../../services/theme.service";
 import { BlogService } from "../../services/blog.service";
 import { AsyncPipe, KeyValuePipe } from "@angular/common";
@@ -12,25 +11,28 @@ import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from "primeng/button";
 import { InputSwitchModule } from "primeng/inputswitch";
 import { DialogModule } from "primeng/dialog";
+import { PostSearchComponent } from "../post-search/post-search.component";
 
 @Component({
 	selector: "app-header",
 	standalone: true,
-	imports: [
-		AsyncPipe,
-		ButtonModule,
-		FormsModule,
-		InputSwitchModule,
-		KeyValuePipe,
-		RouterLink,
-		ToolbarModule,
-		DialogModule,
-	],
+  imports: [
+    AsyncPipe,
+    ButtonModule,
+    FormsModule,
+    InputSwitchModule,
+    KeyValuePipe,
+    RouterLink,
+    ToolbarModule,
+    DialogModule,
+    PostSearchComponent,
+  ],
 	templateUrl: "./header.component.html",
 	styleUrl: "./header.component.scss",
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnInit {
 	blogInfo!: BlogInfo;
+  blogId: string = "";
 	blogName: string = "";
 	blogSocialLinks!: SocialLinks;
 	checked: boolean = true;
@@ -39,18 +41,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	visible: boolean = false;
 	themeService: ThemeService = inject(ThemeService);
 	blogService: BlogService = inject(BlogService);
-	private querySubscription?: Subscription;
 
 	ngOnInit(): void {
-		this.querySubscription = this.blogService
+		this.blogService
 			.getBlogInfo()
 			.subscribe((data) => {
 				this.blogInfo = data;
+        this.blogId = this.blogInfo.id;
 				this.blogName = this.blogInfo.title;
 				const { __typename, ...links } = data.links;
 				this.blogSocialLinks = links;
 			});
-		this.querySubscription = this.blogService
+
+		this.blogService
 			.getSeriesList()
 			.subscribe((data) => {
 				this.seriesList = data;
@@ -64,9 +67,5 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 	showDialog() {
 		this.visible = true;
-	}
-
-	ngOnDestroy() {
-		this.querySubscription?.unsubscribe();
 	}
 }
