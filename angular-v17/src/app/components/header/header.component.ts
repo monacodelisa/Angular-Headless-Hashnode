@@ -40,6 +40,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
           this.siteFavicon.href = this.blogInfo.favicon;
         } else {
           this.blogImage = '/assets/images/angular-headless-hashnode-logo.jpg'
+          this.siteFavicon.href = 'favicon.ico';
         }
 
         if (!this.blogInfo.isTeam) {
@@ -51,6 +52,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
               this.siteFavicon.href = data.profilePicture;
             } else {
               this.blogImage = '/assets/images/angular-headless-hashnode-logo.jpg'
+              this.siteFavicon.href = 'favicon.ico';
             }
           });
         }
