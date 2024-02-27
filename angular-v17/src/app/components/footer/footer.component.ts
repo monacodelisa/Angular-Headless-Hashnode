@@ -1,6 +1,7 @@
-import { Component, OnInit, OnDestroy, inject } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { BlogService } from '../../services/blog.service';
+import { BlogInfo } from '../../models/blog-info';
 
 @Component({
   selector: 'app-footer',
@@ -10,11 +11,12 @@ import { BlogService } from '../../services/blog.service';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent implements OnInit, OnDestroy {
-  blogInfo: any;
-  blogName = "";
+  blogInfo!: BlogInfo;
+  blogName = '';
   date = new Date().getFullYear();
-  private querySubscription?: Subscription;
   blogService: BlogService = inject(BlogService);
+
+  private querySubscription?: Subscription;
 
   ngOnInit(): void {
     this.querySubscription = this.blogService.getBlogInfo().subscribe((data) => {

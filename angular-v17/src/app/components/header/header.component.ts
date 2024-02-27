@@ -28,7 +28,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private querySubscription?: Subscription;
 
   ngOnInit(): void {
-    // to add blog image (favicon) query
     this.querySubscription = this.blogService
       .getBlogInfo()
       .subscribe((data) => {
@@ -36,6 +35,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.blogName = this.blogInfo.title;
         const { __typename, ...links } = data.links;
         this.blogSocialLinks = links;
+        this._validateFavicon();
       });
     this.querySubscription = this.blogService
       .getSeriesList()
@@ -44,11 +44,33 @@ export class HeaderComponent implements OnInit, OnDestroy {
       });
   }
 
-  toggleTheme() {
+  toggleTheme(): void {
     this.themeService.updateTheme();
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.querySubscription?.unsubscribe();
+  }
+
+  private _createFaviconLink(href: string): void {
+    const link: HTMLLinkElement = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/x-icon';
+    link.href = href;
+    link.id = 'favicon-icon';
+    document.head.appendChild(link);
+  }
+
+  private _getDefaultLogoIfNoFavicon(): void {
+    if (this.blogInfo.favicon) {
+      this._createFaviconLink(this.blogInfo.favicon);
+    } else {
+      this.blogInfo.author?.profilePicture && this._createFaviconLink(this.blogInfo.author.profilePicture);
+    }
+  }
+
+  private _validateFavicon(): void {
+    const favicon: HTMLLinkElement | null = document.querySelector('[type="image/x-icon"]');
+    !favicon && this._getDefaultLogoIfNoFavicon();
   }
 }

@@ -4,6 +4,8 @@ export interface BlogInfo {
   links: SocialLinks;
   followersCount: number;
   url: string;
+  favicon?: string;
+  author?:Author;
 }
 
 export type SocialLinks = {
@@ -19,3 +21,6 @@ export type SocialLinks = {
   mastodon: string;
 };
 
+export interface Author {
+  profilePicture?: string;
+}
