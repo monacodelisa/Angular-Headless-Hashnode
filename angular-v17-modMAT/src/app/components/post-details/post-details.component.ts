@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs";
 import { Post } from "src/app/models/post";
