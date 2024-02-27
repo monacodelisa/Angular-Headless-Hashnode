@@ -39,11 +39,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
           this.blogImage = this.blogInfo.favicon;
           this.siteFavicon.href = this.blogInfo.favicon;
         } else {
+          this.blogImage = '/assets/images/angular-headless-hashnode-logo.jpg'
+        }
+
+        if (!this.blogInfo.isTeam) {
           this.blogService
           .getAuthorInfo()
           .subscribe((data) => {
             this.blogImage = data.profilePicture;
-            this.siteFavicon.href = data.profilePicture;
+            if (data.profilePicture) {
+              this.siteFavicon.href = data.profilePicture;
+            } else {
+              this.blogImage = '/assets/images/angular-headless-hashnode-logo.jpg'
+            }
           });
         }
         const { __typename, ...links } = data.links;

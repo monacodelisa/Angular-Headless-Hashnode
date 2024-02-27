@@ -1,5 +1,4 @@
 export interface BlogInfo {
-  author: any;
   id: string;
   title: string;
   isTeam?: boolean;
