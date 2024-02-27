@@ -20,7 +20,8 @@ import { ModalService } from '../../services/modal.service';
 export class HeaderComponent implements OnInit, OnDestroy {
   blogInfo!: BlogInfo;
   blogName: string = '';
-  blogImage: string = '';
+  // start with default image to prevent 404 when returning from post-details page
+  blogImage: string = '/assets/images/angular-headless-hashnode-logo.jpg';
   siteFavicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
   blogSocialLinks!: BlogLinks;
   seriesList!: SeriesList[];

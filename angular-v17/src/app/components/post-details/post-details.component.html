@@ -1,31 +1,61 @@
-@if (post$ | async; as post) {
-<div class="container">
-  <article class="blog-post">
-    <h1 class="title">{{ post.title }}</h1>
-    <img class="cover-image" [src]="post.coverImage.url" alt="Cover image for {{ post.title }}">
-    <div class="post-details">
-      <div class="author-info">
-        <img class="author-image" [src]="post.author.profilePicture" alt="{{post.author.name}}">
-        <div class="author-text">
-          <span class="author-name">{{post.author.name}}</span>
-          <div class="post-meta">
-            <span class="published-date">
-              <span class="material-symbols-outlined">
-                today
-              </span>
-              {{post.publishedAt | date: 'MMM dd, yyyy' }}
-            </span>
-            <span class="read-time">
-              <span class="material-symbols-outlined">
-                import_contacts
-              </span>
-              {{post.readTimeInMinutes}} min read
-            </span>
-          </div>
+<div class="post-details-page" [class]="themeService.themeSignal()">
+  <div class="toolbar">
+    <div class="toolbar-row">
+      <div class="toolbar-row-start">
+        <div class="menu">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </div>
+        <a routerLink="/" class="logo">
+          <h1>Blog Name</h1>
+        </a>
+      </div>
+      <div class="toolbar-row-end">
+        <div class="theme-control">
+          @if (themeService.themeSignal() == 'dark') {
+          <button (click)="toggleTheme()"><span class="material-symbols-outlined">
+              bedtime
+            </span></button>
+          } @else {
+          <button (click)="toggleTheme()"><span class="material-symbols-outlined">
+              wb_sunny
+            </span></button>
+          }
         </div>
       </div>
     </div>
-    <div class="content" [innerHTML]="post.content.html | sanitizerHtml" clipboardCopyButton></div>
-  </article>
+  </div>
+  <div class="content">
+    @if (post$ | async; as post) {
+    <article class="blog-post">
+      <h1 class="title">{{ post.title }}</h1>
+      <img class="cover-image" [src]="post.coverImage.url" alt="Cover image for {{ post.title }}">
+      <div class="post-details">
+        <div class="author-info">
+          <img class="author-image" [src]="post.author.profilePicture" alt="{{post.author.name}}">
+          <div class="author-text">
+            <span class="author-name">{{post.author.name}}</span>
+            <div class="post-meta">
+              <span class="published-date">
+                <span class="material-symbols-outlined">
+                  today
+                </span>
+                {{post.publishedAt | date: 'MMM dd, yyyy' }}
+              </span>
+              <span class="read-time">
+                <span class="material-symbols-outlined">
+                  import_contacts
+                </span>
+                {{post.readTimeInMinutes}} min read
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content" [innerHTML]="post.content.html | sanitizerHtml" clipboardCopyButton></div>
+    </article>
+    }
+  </div>
+  <app-footer></app-footer>
 </div>
-}

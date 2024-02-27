@@ -1,19 +1,27 @@
 import { Routes } from '@angular/router';
+import { LayoutComponent } from './components/layout/layout.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./components/posts/posts.component')
-      .then(c => c.PostsComponent)
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./components/posts/posts.component')
+          .then(c => c.PostsComponent)
+      },
+
+      {
+        path: 'series/:slug',
+        loadComponent: () => import('./components/series/series.component')
+          .then(c => c.SeriesComponent)
+      }
+    ]
   },
   {
     path: 'post/:slug',
-    loadComponent: () => import('./components/post-details/post-details.component')
-      .then(c => c.PostDetailsComponent)
-  },
-  {
-    path: 'series/:slug',
-    loadComponent: () => import('./components/series/series.component')
-      .then(c => c.SeriesComponent)
+    component: PostDetailsComponent
   }
 ];

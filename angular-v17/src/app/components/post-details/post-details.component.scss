@@ -1,11 +1,45 @@
-.container {
-  max-width: 50vw;
-  margin: auto;
+.post-details-page {
+  .toolbar {
+    padding: 1rem 2rem;
 
+    .toolbar-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .toolbar-row-start {
+        display: flex;
+
+        .menu {
+          display: flex;
+          align-items: center;
+          margin-right: 0.7rem;
+          cursor: pointer;
+        }
+
+        .logo {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          h1 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0;
+          }
+        }
+      }
+
+    }
+  }
+
+  // keep this class to center align images within the blog post
   .blog-post {
     margin: 1.25rem 0;
     padding: 1.25rem;
     border-radius: 0.3125rem;
+    max-width: 50vw;
+    margin: auto;
 
     .title {
       font-size: 1.7rem;
