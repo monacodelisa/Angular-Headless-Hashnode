@@ -37,14 +37,14 @@ import {
     PostsComponent,
     PostDetailsComponent,
     SeriesComponent,
-    FollowDialogComponent
+    FollowDialogComponent,
+    SanitizerHtmlPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
     HttpClientModule,
-    SanitizerHtmlPipe,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
