@@ -5,8 +5,9 @@ export const BLOG_HOST = "angular-headless.hashnode.dev";
 export const GET_BLOG_INFO = gql`
 query Publication {
   publication(host: "${BLOG_HOST}") {
-    id,
-    title,
+    id
+    title
+    isTeam
     links {
       twitter
       instagram
@@ -18,11 +19,30 @@ query Publication {
       linkedin
       mastodon
     }
-    followersCount,
-    url,
-    favicon,
+    followersCount
+    url
+    favicon
+  }
+}
+`;
+
+export const GET_AUTHOR_INFO = gql`
+query Publication {
+  publication(host: "${BLOG_HOST}") {
     author {
-    profilePicture
+      username
+      profilePicture
+      socialMediaLinks {
+      	__typename
+        facebook
+        github
+        instagram
+        linkedin
+        stackoverflow
+        twitter
+        website
+        youtube
+      }
     }
   }
 }
