@@ -13,13 +13,12 @@ import { Post } from '../../models/post';
   styleUrl: './posts.component.scss',
 })
 export class PostsComponent implements OnInit {
-  loading?: boolean;
-  posts = new Observable<Post[]>();
+  posts$!: Observable<Post[]>;
   blogService: BlogService = inject(BlogService);
   private router = inject(Router);
 
   ngOnInit() {
-    this.posts = this.blogService.getPosts();
+    this.posts$ = this.blogService.getPosts();
   }
 
   navigateToPost(slug: string) {

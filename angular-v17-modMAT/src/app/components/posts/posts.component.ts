@@ -10,13 +10,13 @@ import { BlogService } from 'src/app/services/blog.service';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent implements OnInit, OnDestroy {
-  posts = new Observable<Post[]>();
+  posts$!: Observable<Post[]>;
   blogService: BlogService = inject(BlogService);
   private router = inject(Router);
   private querySubscription?: Subscription;
 
   ngOnInit() {
-    this.posts = this.blogService.getPosts();
+    this.posts$ = this.blogService.getPosts();
   }
 
   navigateToPost(slug: string) {
