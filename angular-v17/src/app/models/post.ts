@@ -29,7 +29,13 @@ export interface Author {
 }
 
 export interface SocialMediaLinks {
+  facebook: string;
+  github: string;
+  instagram: string;
+  linkedin: string;
+  stackoverflow: string;
   twitter: string;
+  website: string;
   youtube: string;
 }
 
