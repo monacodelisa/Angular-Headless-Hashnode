@@ -3,7 +3,7 @@
     <div class="series">
       <h3>Series</h3>
       @for (series of seriesList; track series) {
-      <a [routerLink]="'../../series/' + series.slug" class="series-link">{{ series.name}}</a>
+      <a [routerLink]="'../../series/' + series.slug" class="series-link">{{series.name}}</a>
       }
     </div>
     <div class="social">

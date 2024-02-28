@@ -1,38 +1,39 @@
-import { Injectable, inject } from '@angular/core';
-import { Apollo } from 'apollo-angular';
+import { Injectable } from '@angular/core';
+import { Apollo } from "apollo-angular";
 import { Observable, map } from 'rxjs';
-import {
-  GET_BLOG_INFO,
-  GET_POSTS,
-  GET_POSTS_IN_SERIES,
-  GET_SERIES_LIST,
-  GET_SINGLE_POST,
-} from '../graphql.operations';
-import { Post, SeriesList } from '../models/post';
+import { GET_AUTHOR_INFO, GET_BLOG_INFO, GET_POSTS, GET_POSTS_IN_SERIES, GET_SERIES_LIST, GET_SINGLE_POST } from '../graphql.operations';
+import { Author, Post, SeriesList } from '../models/post';
 import { BlogInfo } from '../models/blog-info';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class BlogService {
-  private apollo = inject(Apollo);
+
+  constructor(private apollo: Apollo) { }
 
   getBlogInfo(): Observable<BlogInfo> {
     return this.apollo
-      .watchQuery<any>({
-        query: GET_BLOG_INFO,
-      })
-      .valueChanges.pipe(map(({ data }) => data.publication));
+    .watchQuery<any>({
+      query: GET_BLOG_INFO,
+    })
+    .valueChanges.pipe(map(({ data }) => data.publication));
+  }
+
+  getAuthorInfo(): Observable<Author> {
+    return this.apollo
+    .watchQuery<any>({
+      query: GET_AUTHOR_INFO,
+    })
+    .valueChanges.pipe(map(({ data }) => data.publication.author));
   }
 
   getPosts(): Observable<Post[]> {
     return this.apollo
-      .watchQuery<any>({
-        query: GET_POSTS,
-      })
-      .valueChanges.pipe(
-        map(({ data }) => data.publication.posts.edges.map((a: any) => a.node))
-      );
+    .watchQuery<any>({
+      query: GET_POSTS,
+    })
+    .valueChanges.pipe(map(({ data }) => data.publication.posts.edges.map((edge: { node: any; }) => edge.node)));
   }
 
   getSeriesList(): Observable<SeriesList[]> {
@@ -54,14 +55,15 @@ export class BlogService {
     .valueChanges.pipe(map(({ data }) => data.publication.series.posts.edges.map((edge: { node: any; }) => edge.node)));
   }
 
-  getSinglePost(slug: string) {
+
+  getSinglePost(slug: string): Observable<Post>{
     return this.apollo
-      .watchQuery<any>({
-        query: GET_SINGLE_POST,
-        variables: {
-          slug: slug,
-        },
-      })
-      .valueChanges.pipe(map(({ data }) => data.publication.post));
+    .watchQuery<any>({
+      query: GET_SINGLE_POST,
+      variables: {
+        slug: slug,
+      },
+    })
+    .valueChanges.pipe(map(({ data }) => data.publication.post));
   }
 }

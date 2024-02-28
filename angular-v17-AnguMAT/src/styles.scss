@@ -26,6 +26,19 @@ a {
   a {
     margin: 0;
   }
+
+  p {
+    margin: 0;
+
+    img {
+      display: block;
+      height: 100%;
+      max-width: 65%;
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+
   pre {
     line-height: 2.2rem;
     padding: 1rem 1.5rem 1rem;
@@ -42,5 +55,3 @@ a {
     }
   }
 }
-
-
