@@ -4,7 +4,8 @@
       <img src="../../../assets/images/angular-headless-hashnode-logo.jpg" alt="logo" />
       <h1>{{ blogName }}</h1>
     </a>
-    <div class="theme-control">
+    <div class="controls">
+      <app-post-search [blogId]="blogId"></app-post-search>
       <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')" id="theme-switch"></p-inputSwitch>
     </div>
   </div>

@@ -20,6 +20,12 @@ body {
   border: none;
 }
 
+.transparent-button {
+  .p-button-icon-only {
+    background-color: transparent;
+  }
+}
+
 .social-link {
   a {
     i {
