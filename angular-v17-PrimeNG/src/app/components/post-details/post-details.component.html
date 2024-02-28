@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div class="content" [innerHTML]="post.content.html"></div>
+      <div class="content" [innerHTML]="post.content.html | sanitizerHtml"></div>
     </article>
   </div>
 }

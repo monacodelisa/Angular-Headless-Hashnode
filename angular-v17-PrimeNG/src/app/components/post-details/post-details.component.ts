@@ -5,6 +5,7 @@ import { TagModule } from 'primeng/tag';
 import { Post } from '../../models/post';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { SanitizerHtmlPipe } from "../../pipes/sanitizer-html.pipe";
 
 @Component({
   selector: 'app-post-details',
@@ -12,7 +13,8 @@ import { ActivatedRoute } from '@angular/router';
   imports: [
     DatePipe,
     TagModule,
-    AsyncPipe
+    AsyncPipe,
+    SanitizerHtmlPipe
   ],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.scss'
