@@ -3,12 +3,12 @@
     <div class="toolbar-row">
       <div class="toolbar-row-start">
         <div class="menu">
-          <span class="material-symbols-outlined">
+          <span (click)="toggleSidenav()" class="material-symbols-outlined">
             menu
           </span>
         </div>
         <a routerLink="/" class="logo">
-          <h1>Blog Name</h1>
+          <h1>{{blogName}}</h1>
         </a>
       </div>
       <div class="toolbar-row-end">
@@ -27,6 +27,7 @@
     </div>
   </div>
   <div class="content">
+    <app-sidenav [sidenavOpen]="sidenavOpen" [class.show]="sidenavOpen"></app-sidenav>
     @if (post$ | async; as post) {
     <article class="blog-post">
       <h1 class="title">{{ post.title }}</h1>
