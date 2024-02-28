@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, inject } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { AsyncPipe, DatePipe } from '@angular/common';
 import { Post } from '../../models/post';
@@ -30,12 +30,13 @@ export class PostDetailsComponent implements OnInit, OnDestroy {
   sidenavOpen: boolean = false;
   blogInfo!: BlogInfo;
   blogName: string = '';
-  slug!: string;
   post$!: Observable<Post>;
   themeService: ThemeService = inject(ThemeService);
   route: ActivatedRoute = inject(ActivatedRoute);
   private blogService = inject(BlogService);
   private querySubscription?: Subscription;
+
+  @Input({ required: true }) slug!: string;
 
   ngOnInit(): void {
     this.querySubscription = this.blogService
@@ -44,10 +45,7 @@ export class PostDetailsComponent implements OnInit, OnDestroy {
       this.blogInfo = data;
       this.blogName = this.blogInfo.title;
     });
-    this.route.params.subscribe(params => {
-      this.slug = params['slug'];
-      this.post$ = this.blogService.getSinglePost(this.slug);
-    });
+    this.post$ = this.blogService.getSinglePost(this.slug);
   }
 
   toggleTheme(): void {

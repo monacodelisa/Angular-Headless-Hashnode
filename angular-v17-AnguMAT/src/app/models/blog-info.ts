@@ -1,12 +1,14 @@
 export interface BlogInfo {
   id: string;
   title: string;
-  links: SocialLinks;
+  isTeam?: boolean;
+  links: BlogLinks;
   followersCount: number;
   url: string;
+  favicon?: string;
 }
 
-export type SocialLinks = {
+export type BlogLinks = {
   __typename?: string;
   twitter: string;
   instagram: string;
@@ -18,4 +20,3 @@ export type SocialLinks = {
   linkedin: string;
   mastodon: string;
 };
-
