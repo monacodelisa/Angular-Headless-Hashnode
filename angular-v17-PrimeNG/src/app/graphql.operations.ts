@@ -123,3 +123,30 @@ query SinglePost($slug: String!) {
   }
 }
 `;
+
+export const SEARCH_POSTS = gql`
+query SearchPostsOfPublicationFilter($publicationId: ObjectId!, $query: String!) {
+  searchPostsOfPublication(
+    first: 5,
+    filter: {
+      publicationId: $publicationId,
+      query: $query
+    }
+  ) {
+    edges {
+      node {
+        id,
+        slug,
+        coverImage {
+          url
+        },
+        author {
+          name
+        },
+        publishedAt,
+        title
+      }
+    }
+  }
+}
+`;
