@@ -20,8 +20,8 @@ import { ModalService } from '../../services/modal.service';
 export class HeaderComponent implements OnInit, OnDestroy {
   blogInfo!: BlogInfo;
   blogName: string = '';
-  blogImage: string = '';
-  siteFavicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+  // start with default image to prevent 404 when returning from post-details page
+  blogImage: string = '/assets/images/angular-headless-hashnode-logo.jpg';
   blogSocialLinks!: BlogLinks;
   seriesList!: SeriesList[];
   themeService: ThemeService = inject(ThemeService);
@@ -37,22 +37,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.blogName = this.blogInfo.title;
         if (this.blogInfo.isTeam && this.blogInfo.favicon) {
           this.blogImage = this.blogInfo.favicon;
-          this.siteFavicon.href = this.blogInfo.favicon;
         } else {
           this.blogImage = '/assets/images/angular-headless-hashnode-logo.jpg'
-          this.siteFavicon.href = 'favicon.ico';
         }
-
         if (!this.blogInfo.isTeam) {
           this.blogService
           .getAuthorInfo()
           .subscribe((data) => {
-            this.blogImage = data.profilePicture;
             if (data.profilePicture) {
-              this.siteFavicon.href = data.profilePicture;
+              this.blogImage = data.profilePicture;
             } else {
               this.blogImage = '/assets/images/angular-headless-hashnode-logo.jpg'
-              this.siteFavicon.href = 'favicon.ico';
             }
           });
         }

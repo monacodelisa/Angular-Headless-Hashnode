@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { CardModule } from 'primeng/card';
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-posts',
@@ -13,12 +14,12 @@ import { CardModule } from 'primeng/card';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent implements OnInit {
-  posts = new Observable<any>();
+  posts$!: Observable<Post[]>;
   private router = inject(Router);
   private blogService = inject(BlogService);
 
   ngOnInit() {
-    this.posts = this.blogService.getPosts();
+    this.posts$ = this.blogService.getPosts();
   }
 
   navigateToPost(slug: string) {
