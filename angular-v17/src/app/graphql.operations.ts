@@ -30,6 +30,7 @@ export const GET_AUTHOR_INFO = gql`
 query Publication {
   publication(host: "${BLOG_HOST}") {
     author {
+      id
       username
       profilePicture
       socialMediaLinks {
