@@ -15,6 +15,7 @@ import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from "primeng/button";
 import { InputSwitchModule } from "primeng/inputswitch";
 
+import { SanitizerHtmlPipe } from "../../pipes/sanitizer-html.pipe";
 
 @Component({
   selector: 'app-post-details',
@@ -29,7 +30,8 @@ import { InputSwitchModule } from "primeng/inputswitch";
     TagModule,
     ToolbarModule,
     ButtonModule,
-    InputSwitchModule
+    InputSwitchModule,
+    SanitizerHtmlPipe
   ],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.scss'
