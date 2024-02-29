@@ -5,7 +5,7 @@
       <h1>{{ blogName }}</h1>
     </a>
     <div class="controls">
-      <app-post-search [blogId]="blogId"></app-post-search>
+      <app-search-dialog [blogId]="blogId"></app-search-dialog>
       <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')" id="theme-switch"></p-inputSwitch>
     </div>
   </div>

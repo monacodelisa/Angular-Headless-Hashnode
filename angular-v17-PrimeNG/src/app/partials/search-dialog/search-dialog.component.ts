@@ -9,7 +9,7 @@ import { DatePipe } from "@angular/common";
 import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-post-search',
+  selector: 'app-search-dialog',
   standalone: true,
   imports: [
     DialogModule,
@@ -19,8 +19,8 @@ import { Router } from "@angular/router";
     DatePipe,
     ReactiveFormsModule
   ],
-  templateUrl: './post-search.component.html',
-  styleUrl: './post-search.component.scss'
+  templateUrl: './search-dialog.component.html',
+  styleUrl: './search-dialog.component.scss'
 })
 export class PostSearchComponent implements OnInit {
   @Input({required: true})

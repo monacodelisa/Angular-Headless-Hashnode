@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostSearchComponent } from './post-search.component';
+import { PostSearchComponent } from './search-dialog.component';
 
 describe('PostSearchComponent', () => {
   let component: PostSearchComponent;

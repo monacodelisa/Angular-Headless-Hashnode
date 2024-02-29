@@ -11,7 +11,7 @@ import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from "primeng/button";
 import { InputSwitchModule } from "primeng/inputswitch";
 import { DialogModule } from "primeng/dialog";
-import { PostSearchComponent } from "../post-search/post-search.component";
+import { PostSearchComponent } from "../../partials/search-dialog/search-dialog.component";
 
 @Component({
 	selector: "app-header",
