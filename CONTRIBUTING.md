@@ -149,6 +149,7 @@ Store full components in the `components` folder, examples include:
 Place partial components in the `partials` folder, examples:
 - `follow-dialog`, `search-dialog`
 
+
 ### Interfaces
 Keep interfaces in the `models` folder, examples:
 - `blog-info.ts`, `post.ts`
@@ -157,6 +158,9 @@ Keep interfaces in the `models` folder, examples:
 #### Services
 - Place services in the `services` folder, examples:
   - `blog.service.ts`, `theme.service.ts`
+
+#### Pipes in the `pipes` folder 
+#### Directives in the `directives` folder 
 
 #### Page Folder Exclusion
 - Omitting a pages folder due to the current absence of an extensive component count, that would justify its introduction.

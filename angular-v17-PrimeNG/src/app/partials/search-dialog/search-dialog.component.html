@@ -14,7 +14,7 @@
   </span>
 
 
-  @if (posts.length !== 0) {
+  @if (queryFormControl.value && posts.length !== 0) {
     @for (post of posts; track post.id) {
       <div class="search-result" (click)="navigateToPost(post.slug)">
         <div class="info-section">

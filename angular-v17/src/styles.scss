@@ -59,7 +59,7 @@ a {
   color: inherit;
 }
 
-.blog-post {
+article {
   .content {
     a {
       text-decoration: underline;
@@ -144,7 +144,7 @@ a {
     color: #c2c2c2;
   }
 
-  .blog-post {
+  article {
     .published-date,
     .read-time {
       background-color: #555;
@@ -208,7 +208,7 @@ a {
     color: #444;
   }
 
-  .blog-post {
+  article {
     .published-date,
     .read-time {
       background-color: #d2d2d2;

@@ -35,16 +35,11 @@
     }
   }
 
-  .content {
-    display: flex;
-  }
-
-  // keep this class to center align images within the blog post
-  .blog-post {
+  article {
     margin: 0 auto;
+    max-width: 50vw;
     padding: 1.25rem;
     border-radius: 0.3rem;
-    max-width: 50vw;
 
     .title {
       font-size: 1.7rem;

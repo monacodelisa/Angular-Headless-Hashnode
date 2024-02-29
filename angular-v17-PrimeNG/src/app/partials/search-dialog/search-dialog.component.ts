@@ -22,19 +22,15 @@ import { Router } from "@angular/router";
   templateUrl: './search-dialog.component.html',
   styleUrl: './search-dialog.component.scss'
 })
-export class PostSearchComponent implements OnInit {
-  @Input({required: true})
-  blogId!: string;
-
-  queryFormControl = new FormControl('');
+export class SearchDialogComponent implements OnInit {
+  @Input({required: true}) blogId!: string;
 
   visible = false;
-
-  blogService = inject(BlogService);
-
-  router = inject(Router);
-
   posts: Post[] = [];
+  queryFormControl = new FormControl('');
+  blogService: BlogService = inject(BlogService);
+  router: Router = inject(Router);
+
 
   ngOnInit() {
     this.queryFormControl.valueChanges.subscribe(query => this.searchPosts(query));
