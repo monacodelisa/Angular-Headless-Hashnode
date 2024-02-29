@@ -29,11 +29,11 @@ to [monacodelisa](https://github.com/monacodelisa).
 ## Question or Problem?
 
 Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests.
-Instead, we recommend using Stack Overflow to ask support-related questions. 
+Instead, we recommend using Discussions to ask support-related questions. 
 
 ## Found a Bug?
 
-If you find a bug in the source code, you can help by [submitting an issue](#submitting-an-issue) to our [GitHub Repository][github].
+If you find a bug in the source code, you can help by [submitting an issue](#submitting-an-issue) to  [Angular-Headless-Hashnode](https://github.com/monacodelisa/Angular-Headless-Hashnode/issues).
 Even better, you can [submit a Pull Request](#submitting-a-pull-request-pr) with a fix.
 
 
@@ -84,7 +84,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 5. Create your patch, **including appropriate test cases**.
 
-6. Follow our [Coding Rules](#coding-rules).
+6. Follow the [Coding Rules](#coding-rules) and [Commit Message Guidelines](#commit-message-guidelines).
 
 7. Run the full test suite, as described in the developer documentation, and ensure that all tests pass.
 
@@ -106,8 +106,6 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 ### Reviewing a Pull Request
 
 I reserve the right not to accept pull requests from community members who haven't been good citizens of the community.
-
-That's it! Thank you for your contribution!
 
 
 #### After your pull request is merged
@@ -140,13 +138,48 @@ After your pull request is merged, you can safely delete your branch and pull th
 
 
 ## Coding Rules
-To ensure consistency throughout the source code, keep these rules in mind as you are working:
+To ensure consistency throughout the source code and the different app versions, keep these rules in mind as you are working:
 
-* All features or bug fixes **must be tested** by one or more specs (unit-tests).
-* All public API methods **must be documented**.
-* We follow [Google's JavaScript Style Guide][js-style-guide], but wrap all code at **100 characters**.
+### FILE STRUCTURE
+#### Full Components
+Store full components in the `components` folder, examples include:
+- `header`, `footer`, `posts`, `series`, `post-details`
 
-   An automated formatter is available, see [DEVELOPER.md](docs/DEVELOPER.md#clang-format).
+#### Partial Components
+Place partial components in the `partials` folder, examples:
+- `follow-dialog`, `search-dialog`
+
+
+### Interfaces
+Keep interfaces in the `models` folder, examples:
+- `blog-info.ts`, `post.ts`
+- Avoid duplicating existing interfaces.
+
+#### Services
+- Place services in the `services` folder, examples:
+  - `blog.service.ts`, `theme.service.ts`
+
+#### Pipes in the `pipes` folder 
+#### Directives in the `directives` folder 
+
+#### Page Folder Exclusion
+- Omitting a pages folder due to the current absence of an extensive component count, that would justify its introduction.
+
+For clarification on component categorization or any other building block, cross-reference with implementations in other app versions or seek guidance through communication.
+
+
+### NAMING CONVENTIONS
+- For dialogs, ensure the inclusion of the term dialog in the name.
+- Maintain consistency with established naming conventions in other app versions.
+- Propose suggestions for improved and clearer naming in discussions or comments.
+
+### STYLE GUIDE 
+#### The project utilizes SCSS. Copying and pasting CSS from other sources would be accepted only if it is formatted correctly to comply with SCSS conventions.
+#### use relative measurements in the `scss` files:
+- `rem`, `%`
+- `wh`, `vh`, `dvw` `dvh`
+- avoid using `px`
+
 
 ## Commit Message Guidelines
 
@@ -205,3 +238,10 @@ chore: prepare for version 1.0.0 release
 ```
 revert: revert changes from commit abc123
 ```
+
+## Mandatory Compliance with [Coding Rules](#coding-rules) and [Commit Message Guidelines](#commit-message-guidelines) for PR Merges
+
+Kindly ensure that all pull requests strictly adhere to our Coding Rules and Commit Message Guidelines. Non-compliant PRs must be adjusted prior to acceptance.
+
+## Reviewer Accountability
+Reviewers who approve PRs not in alignment with the [Coding Rules](#coding-rules) and [Commit Message Guidelines](#commit-message-guidelines) may face restrictions on their approval privileges. 

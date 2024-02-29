@@ -6,13 +6,15 @@
           [dismissableMask]="true" header="Search posts">
 
   <span class="search-input-container p-input-icon-right">
-    <i class="pi pi-times input-clear-icon" (click)="clearQuery()"></i>
+    @if (queryFormControl.value) {
+      <i class="pi pi-times input-clear-icon" (click)="clearQuery()"></i>
+    }
     <input class="search-input" type="text" pInputText placeholder="Start typing to search..."
            [formControl]="queryFormControl">
   </span>
 
 
-  @if (posts.length !== 0) {
+  @if (queryFormControl.value && posts.length !== 0) {
     @for (post of posts; track post.id) {
       <div class="search-result" (click)="navigateToPost(post.slug)">
         <div class="info-section">
@@ -25,6 +27,10 @@
       </div>
     }
   } @else {
-    <p class="no-result-text"><i class="pi pi-search search-icon"></i>Search articles from this blog</p>
+    @if (queryFormControl.value) {
+      <p class="no-result-text"><i class="pi pi-search search-icon"></i>No matching articles found. Try another search</p>
+    } @else {
+      <p class="no-result-text"><i class="pi pi-search search-icon"></i>Search articles from this blog</p>
+    }
   }
 </p-dialog>

@@ -1,6 +1,6 @@
 .search-input-container {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .search-input {
@@ -12,7 +12,7 @@
 }
 
 .search-icon {
-  margin-right: 10px;
+  margin-right: 0.6rem;
 }
 
 .no-result-text {
@@ -21,13 +21,13 @@
 
 .search-result {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
   align-items: center;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
 
   .post-title {
-    margin-bottom: 5px;
+    margin-bottom: 0.3rem;
   }
 
   .author-name {
@@ -37,12 +37,13 @@
 
   .post-info {
     color: var(--text-color-secondary);
+    font-size: 0.9rem;
   }
 
   img {
     height: 7rem;
     margin-left: auto;
-    border-radius: 6px;
+    border-radius: 0.3rem;
   }
 }
 

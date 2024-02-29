@@ -50,12 +50,11 @@ $dark-text-color: #333;
   background-color: $semi-dark-bg-color;
   color: $light-text-color;
 
-  .published-date,
-  .read-time {
-    background-color: #555;
-  }
-
-  .blog-post {
+  article {
+    .published-date,
+    .read-time {
+      background-color: #555;
+    }
     a {
       color: #dc82ec;
     }
@@ -83,12 +82,11 @@ $dark-text-color: #333;
     background-color: #f5f5f5;
   }
 
-  .published-date,
-  .read-time {
-    background-color: $light-bg-color;
-  }
-
-  .blog-post {
+  article {
+    .published-date,
+    .read-time {
+      background-color: $light-bg-color;
+    }
     a {
       color: #be99c5;
     }

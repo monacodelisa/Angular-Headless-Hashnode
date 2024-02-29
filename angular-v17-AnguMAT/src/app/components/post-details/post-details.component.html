@@ -48,7 +48,7 @@
 
     <mat-sidenav-content>
       @if (post$ | async; as post) {
-      <article class="blog-post">
+      <article>
         <h1 class="title">{{ post.title }}</h1>
         <img class="cover-image" [src]="post.coverImage.url" alt="Cover image for {{ post.title }}">
         <div class="post-details">

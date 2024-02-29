@@ -4,20 +4,21 @@ import { ThemeService } from "../../services/theme.service";
 import { BlogService } from "../../services/blog.service";
 import { AsyncPipe, KeyValuePipe } from "@angular/common";
 import { RouterLink } from "@angular/router";
-import { BlogInfo, SocialLinks } from "../../models/blog-info";
+import { BlogInfo, BlogLinks } from "../../models/blog-info";
 import { SeriesList } from "../../models/post";
 
 import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from "primeng/button";
 import { InputSwitchModule } from "primeng/inputswitch";
 import { DialogModule } from "primeng/dialog";
-import { PostSearchComponent } from "../post-search/post-search.component";
+import { SearchDialogComponent } from "../../partials/search-dialog/search-dialog.component";
 
 @Component({
 	selector: "app-header",
 	standalone: true,
   imports: [
     AsyncPipe,
+    SearchDialogComponent,
     ButtonModule,
     FormsModule,
     InputSwitchModule,
@@ -25,7 +26,6 @@ import { PostSearchComponent } from "../post-search/post-search.component";
     RouterLink,
     ToolbarModule,
     DialogModule,
-    PostSearchComponent,
   ],
 	templateUrl: "./header.component.html",
 	styleUrl: "./header.component.scss",
@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
 	blogInfo!: BlogInfo;
   blogId: string = "";
 	blogName: string = "";
-	blogSocialLinks!: SocialLinks;
+	blogSocialLinks!: BlogLinks;
 	checked: boolean = true;
 	selectedTheme: string = "dark";
 	seriesList!: SeriesList[];
