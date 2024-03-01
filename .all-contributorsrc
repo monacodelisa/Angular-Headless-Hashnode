@@ -1,4 +1,29 @@
 {
   "projectName": "Angular-Headless-Hashnode",
-  "projectOwner": "monacodelisa"
+  "projectOwner": "monacodelisa",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "monacodelisa",
+      "name": "Esther White",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64324417?v=4",
+      "profile": "https://monacodelisa.com/",
+      "contributions": [
+        "code",
+        "maintenance",
+        "review",
+        "tutorial",
+        "content",
+        "ideas",
+        "mentoring",
+        "design",
+        "infra"
+      ]
+    }
+  ]
 }
