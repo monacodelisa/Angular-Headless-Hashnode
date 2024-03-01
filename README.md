@@ -143,7 +143,7 @@ Feel free to create an issue with the feedback label. I will take a look and get
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cleancodecraft"><img src="https://avatars.githubusercontent.com/u/132580309?v=4?s=100" width="100px;" alt="cleancodecraft"/><br /><sub><b>cleancodecraft</b></sub></a><br /><a href="#infra-cleancodecraft" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#test-cleancodecraft" title="Tests">⚠️</a> <a href="#code-cleancodecraft" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cleancodecraft"><img src="https://avatars.githubusercontent.com/u/132580309?v=4?s=100" width="100px;" alt="cleancodecraft"/><br /><sub><b>cleancodecraft</b></sub></a><br /><a href="#infra-cleancodecraft" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#test-cleancodecraft" title="Tests">⚠️</a> <a href="#code-cleancodecraft" title="Code">💻</a> <a href="#blog-cleancodecraft" title="Blogposts">📝</a> <a href="#example-cleancodecraft" title="Examples">💡</a> <a href="#ideas-cleancodecraft" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-cleancodecraft" title="Mentoring">🧑‍🏫</a></td>
     </tr>
   </tbody>
 </table>
