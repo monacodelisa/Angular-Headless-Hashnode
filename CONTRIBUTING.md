@@ -141,14 +141,13 @@ After your pull request is merged, you can safely delete your branch and pull th
 To ensure consistency throughout the source code and the different app versions, keep these rules in mind as you are working:
 
 ### FILE STRUCTURE
-#### Full Components
-Store full components in the `components` folder, examples include:
-- `header`, `footer`, `posts`, `series`, `post-details`
+#### Components
+Store full components that can be used on their own, in the `components` folder, examples include:
+- `header`, `footer`, `posts`, `series`, `post-details`, `layout`, `sidenav`
 
 #### Partial Components
-Place partial components in the `partials` folder, examples:
+Place partial components like dialogs and other smaller reusable components, in the `partials` folder, examples:
 - `follow-dialog`, `search-dialog`
-
 
 ### Interfaces
 Keep interfaces in the `models` folder, examples:
@@ -160,7 +159,7 @@ Keep interfaces in the `models` folder, examples:
   - `blog.service.ts`, `theme.service.ts`
 
 #### Pipes in the `pipes` folder 
-#### Directives in the `directives` folder 
+#### Directives in the `directives` folder etc.
 
 #### Page Folder Exclusion
 - Omitting a pages folder due to the current absence of an extensive component count, that would justify its introduction.
