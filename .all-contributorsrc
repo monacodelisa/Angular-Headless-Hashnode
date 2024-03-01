@@ -23,8 +23,8 @@
         "mentoring",
         "design",
         "infra"
-        ]
-    }, 
+      ]
+    },
     {
       "login": "cleancodecraft",
       "name": "cleancodecraft",
@@ -38,8 +38,6 @@
         "example",
         "ideas",
         "mentoring"
-        ]
-        }
       ]
     }
   ]
