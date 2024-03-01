@@ -23,6 +23,21 @@
         "mentoring",
         "design",
         "infra"
+    }, 
+    {
+      "login": "cleancodecraft",
+      "name": "cleancodecraft",
+      "avatar_url": "https://avatars.githubusercontent.com/u/132580309?v=4",
+      "profile": "https://github.com/cleancodecraft",
+      "contributions": [
+        "infra",
+        "test",
+        "code",
+        "blog",
+        "example",
+        "ideas",
+        "mentoring"
+        }
       ]
     }
   ]
