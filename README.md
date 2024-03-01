@@ -123,18 +123,6 @@ or
 ng serve
 ```
 
-## Celebrate Your Achievements!
-
-If you've added exciting features or functionalities that the project currently lacks, we'd love to see what you've accomplished. Share your contributions, suggestions, or improvements to help enhance the overall app experience. Your input plays a crucial role in making the application even better, and we're eager to see the innovative strides you've taken!
-
-## Found an issue?
-If you have found an issue or bug, please create an issue.
-
-If it's a quick fix, such as a misspelled word or a broken link, feel free to skip creating an issue. You can create a pull request directly.
-
-## Have feedback?
-Feel free to create an issue with the feedback label. I will take a look and get back to you as soon as I can!
-
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -161,3 +149,7 @@ Feel free to create an issue with the feedback label. I will take a look and get
 
 This project follows the [all-contributors](https://allcontributors.org) specification.
 Contributions of any kind are welcome!
+
+## Celebrate Your Achievements!
+
+If you've added exciting features or functionalities that the project currently lacks, we'd love to see what you've accomplished. Share your contributions, suggestions, or improvements to help enhance the overall app experience. Your input plays a crucial role in making the application even better, and we're eager to see the innovative strides you've taken!
