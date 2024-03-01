@@ -30,7 +30,6 @@ import { SearchDialogComponent } from "../../partials/search-dialog/search-dialo
 })
 export class HeaderComponent implements OnInit {
   blogInfo!: BlogInfo;
-  blogId: string = "";
   blogName: string = "";
   // start with default image to prevent 404 when returning from post-details page
   blogImage: string = "/assets/images/angular-headless-hashnode-logo.jpg";
@@ -50,7 +49,6 @@ export class HeaderComponent implements OnInit {
       .getBlogInfo()
       .subscribe((data) => {
         this.blogInfo = data;
-        this.blogId = this.blogInfo.id;
         this.blogName = this.blogInfo.title;
         if (this.blogInfo.isTeam && this.blogInfo.favicon) {
           this.blogImage = this.blogInfo.favicon;
@@ -97,7 +95,7 @@ export class HeaderComponent implements OnInit {
       width: '60%',
       maxHeight: '70%',
       position: {top: '150px'},
-      data: this.blogId
+      data: this.blogInfo.id
     });
     this.applyDialogTheme();
   }
