@@ -1,4 +1,4 @@
-import { Component, Inject, inject, OnDestroy, OnInit } from "@angular/core";
+import { Component, Inject, inject, OnInit } from "@angular/core";
 import { ThemeService } from "../../services/theme.service";
 import { DOCUMENT, KeyValuePipe } from "@angular/common";
 import { RouterLink } from "@angular/router";
