@@ -28,7 +28,7 @@ In other words - this project is very much like the starter kit that Hashnode pr
 | [![angular headless hashnode dark](/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![angular headless hashnode light](/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
 | - | - |                         
 
-### You can see the live versions on the [DEMO SITE](https://angular-hashnode.monacodelisa.com/demos)                          
+### You can see the live versions on the [DEMO SITE](https://angular.hdlshashnode.com/)                          
 
 ## Angular App Versions
 
