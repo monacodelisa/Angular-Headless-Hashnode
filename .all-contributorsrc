@@ -1,4 +1,23 @@
 {
   "projectName": "Angular-Headless-Hashnode",
-  "projectOwner": "monacodelisa"
+  "projectOwner": "monacodelisa",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "cleancodecraft",
+      "name": "cleancodecraft",
+      "avatar_url": "https://avatars.githubusercontent.com/u/132580309?v=4",
+      "profile": "https://github.com/cleancodecraft",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
+    }
+  ]
 }
