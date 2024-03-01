@@ -179,6 +179,8 @@ For clarification on component categorization or any other building block, cross
 - `wh`, `vh`, `dvw` `dvh`
 - avoid using `px`
 
+# INDENTATION & FORMATTING
+Maintain the project's indentation and formatting. Do not include formatting changes in your PRs, only include code that you have changed. It doesn't look like you have done more when you submit a PR with tons of indentation changes - we all see its just indentation and that makes it even more unpleasant to deal with.  
 
 ## Commit Message Guidelines
 
