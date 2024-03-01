@@ -16,7 +16,11 @@
       "contributions": [
         "infra",
         "test",
-        "code"
+        "code",
+        "blog",
+        "example",
+        "ideas",
+        "mentoring"
       ]
     }
   ]
