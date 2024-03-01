@@ -9,6 +9,22 @@
   "contributorsPerLine": 7,
   "contributors": [
     {
+      "login": "monacodelisa",
+      "name": "Esther White",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64324417?v=4",
+      "profile": "https://monacodelisa.com/",
+      "contributions": [
+        "code",
+        "maintenance",
+        "review",
+        "tutorial",
+        "content",
+        "ideas",
+        "mentoring",
+        "design",
+        "infra"
+    }, 
+    {
       "login": "cleancodecraft",
       "name": "cleancodecraft",
       "avatar_url": "https://avatars.githubusercontent.com/u/132580309?v=4",
@@ -21,6 +37,7 @@
         "example",
         "ideas",
         "mentoring"
+        }
       ]
     }
   ]
