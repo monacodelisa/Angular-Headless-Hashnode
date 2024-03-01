@@ -62,6 +62,20 @@
         "security",
         "ideas"
       ]
+    },
+    {
+      "login": "samplelittlered",
+      "name": "Little Red Coding Hood",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127144297?v=4",
+      "profile": "https://github.com/samplelittlered",
+      "contributions": [
+        "code",
+        "blog",
+        "content",
+        "design",
+        "security",
+        "ideas"
+      ]
     }
   ]
 }
