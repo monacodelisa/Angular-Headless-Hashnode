@@ -135,7 +135,7 @@ If it's a quick fix, such as a misspelled word or a broken link, feel free to sk
 ## Have feedback?
 Feel free to create an issue with the feedback label. I will take a look and get back to you as soon as I can!
 
-## Contributors
+## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -146,4 +146,6 @@ Feel free to create an issue with the feedback label. I will take a look and get
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-[![All Contributors](https://img.shields.io/github/all-contributors/projectOwner/projectName?color=ee8449&style=flat-square)](#contributors)
+
+This project follows the [all-contributors](https://allcontributors.org) specification.
+Contributions of any kind are welcome!
