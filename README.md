@@ -140,6 +140,13 @@ Feel free to create an issue with the feedback label. I will take a look and get
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cleancodecraft"><img src="https://avatars.githubusercontent.com/u/132580309?v=4?s=100" width="100px;" alt="cleancodecraft"/><br /><sub><b>cleancodecraft</b></sub></a><br /><a href="#infra-cleancodecraft" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#test-cleancodecraft" title="Tests">⚠️</a> <a href="#code-cleancodecraft" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
