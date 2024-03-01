@@ -4,7 +4,10 @@
       <img src="{{blogImage}}" alt="logo" width="12px" height="12px" />
       <h1>{{ blogName }}</h1>
     </a>
-    <div class="theme-control">
+    <div class="controls">
+      <mat-icon class="search-button" [color]="themeService.themeSignal() === 'dark' ? 'accent' : ''"
+                (click)="openSearchDialog()">search</mat-icon>
+
       <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
       @if (themeService.themeSignal() === 'dark'){
       <mat-icon color="accent">bedtime</mat-icon>
@@ -31,13 +34,13 @@
       </div>
     </div>
     <div class="follow">
-      <button mat-fab extended color="#0f0f0f" (click)="openDialog()">Follow</button>
+      <button mat-fab extended color="#0f0f0f" (click)="openFollowDialog()">Follow</button>
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row>
     <div class="series">
       @for (series of seriesList; track series) {
-        <a [routerLink]="'series/' + series.slug" class="series-link">{{ series.name}}</a>
+        <a [routerLink]="'series/' + series.slug" class="series-link">{{ series.name }}</a>
         }
     </div>
   </mat-toolbar-row>

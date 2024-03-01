@@ -1,7 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from "apollo-angular";
-import { Observable, map } from 'rxjs';
-import { GET_AUTHOR_INFO, GET_BLOG_INFO, GET_POSTS, GET_POSTS_IN_SERIES, GET_SERIES_LIST, GET_SINGLE_POST } from '../graphql.operations';
+import { Observable, map, of } from 'rxjs';
+import {
+  GET_AUTHOR_INFO,
+  GET_BLOG_INFO,
+  GET_POSTS,
+  GET_POSTS_IN_SERIES,
+  GET_SERIES_LIST,
+  GET_SINGLE_POST,
+  SEARCH_POSTS
+} from '../graphql.operations';
 import { Author, Post, SeriesList } from '../models/post';
 import { BlogInfo } from '../models/blog-info';
 
@@ -65,5 +73,21 @@ export class BlogService {
       },
     })
     .valueChanges.pipe(map(({ data }) => data.publication.post));
+  }
+
+  searchPosts(blogId: string, query: string | null): Observable<Post[]> {
+    if (query === null || query.length === 0) {
+      return of([]);
+    }
+
+    return this.apollo
+      .watchQuery<any>({
+        query: SEARCH_POSTS,
+        variables: {
+          publicationId: blogId,
+          query: query
+        }
+      })
+      .valueChanges.pipe(map(({ data }) => data.searchPostsOfPublication.edges.map((edge: { node: any; }) => edge.node)));
   }
 }

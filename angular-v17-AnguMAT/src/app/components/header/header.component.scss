@@ -42,10 +42,16 @@ mat-toolbar {
       }
     }
 
-    .theme-control {
+    .controls {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .search-button {
+      margin-right: 20px;
+      cursor: pointer;
+      align-self: end;
     }
 
     .social {
