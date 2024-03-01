@@ -50,6 +50,18 @@
         "design",
         "ideas"
       ]
+    },
+    {
+      "login": "jhonacs2",
+      "name": "Jhonatan Soto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75391330?v=4",
+      "profile": "https://github.com/jhonacs2",
+      "contributions": [
+        "code",
+        "design",
+        "security",
+        "ideas"
+      ]
     }
   ]
 }
