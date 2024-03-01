@@ -145,8 +145,7 @@ Feel free to create an issue with the feedback label. I will take a look and get
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://monacodelisa.com/"><img src="https://avatars.githubusercontent.com/u/64324417?v=4?s=100" width="100px;" alt="Esther White"/><br /><sub><b>Esther White</b></sub></a><br /><a href="#code-monacodelisa" title="Code">💻</a> <a href="#maintenance-monacodelisa" title="Maintenance">🚧</a> <a href="#review-monacodelisa" title="Reviewed Pull Requests">👀</a> <a href="#tutorial-monacodelisa" title="Tutorials">✅</a> <a href="#content-monacodelisa" title="Content">🖋</a> <a href="#ideas-monacodelisa" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-monacodelisa" title="Mentoring">🧑‍🏫</a> <a href="#design-monacodelisa" title="Design">🎨</a> <a href="#infra-monacodelisa" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cleancodecraft"><img src="https://avatars.githubusercontent.com/u/132580309?v=4?s=100" width="100px;" alt="cleancodecraft"/><br /><sub><b>cleancodecraft</b></sub></a><br /><a href="#infra-cleancodecraft" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#test-cleancodecraft" title="Tests">⚠️</a> <a href="#code-cleancodecraft" title="Code">💻</a> <a href="#blog-cleancodecraft" title="Blogposts">📝</a> <a href="#example-cleancodecraft" title="Examples">💡</a> <a href="#ideas-cleancodecraft" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-cleancodecraft" title="Mentoring">🧑‍🏫</a></td>
-
-    </tr>
+</tr>
   </tbody>
 </table>
 
