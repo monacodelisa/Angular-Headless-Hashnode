@@ -32,10 +32,11 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 ## Angular App Versions
 
-#### `angular-v17` - has no UI libraries [LIVE](https://angular-v17-hashnode.netlify.app/)                          
-#### `angular-v17-modMAT` - modules and Angular Material [LIVE](https://angular-v17-modmat.netlify.app/)                         
-#### `angular-v17-AnguMAT` - has Angular Material [LIVE](https://angular-v17-angumat.netlify.app/)      
-#### `angular-v17-PrimeNG` - has PrimeNG [LIVE](https://angular-v17-primeng.netlify.app/)      
+#### `angular-v17` - has no UI libraries [LIVE](https://angular-v17.hdlshashnode.com/)                          
+                       
+#### `angular-v17-AnguMAT` - has Angular Material [LIVE](https://angular-v17-angumat.hdlshashnode.com/)     
+
+#### `angular-v17-PrimeNG` - has PrimeNG [LIVE](https://angular-v17-primeng.hdlshashnode.com/)      
 
 
 ## Contributing
@@ -62,9 +63,7 @@ In other words - this project is very much like the starter kit that Hashnode pr
 
 4. Follow our [Coding Rules](./CONTRIBUTING.md#coding-rules).
 
-5. Run the full test suite, as described in the developer documentation, and ensure that all tests pass.
-
-6. Commit your changes using a descriptive commit message as specified in [CONTRIBUTING.md](./CONTRIBUTING.md/#commit-message-guidelines).
+6. Commit your changes using a descriptive commit message as specified in [Commit Message Guidelines](./CONTRIBUTING.md/#commit-message-guidelines).
 
      ```shell
      git commit --all
@@ -87,9 +86,9 @@ This app is still in its early stages, and it currently has limited features. At
 
 1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `monacodelisa/angular-headles-hashnopde` repo.
 
-2. Go to the `angular-v16` app and inside the `graphql.operations.ts` file, replace the URL of the blog to point to your blog
+2. Go to your chosen app version, and inside the `graphql.operations.ts` file, replace the URL of the blog to point to your blog.
 
-3. Right now only `angular-v16` can be deployed to Netlify so you just need to select it and deploy from an existing github repo. (Your forked repo)
+3. All three app versions can be deployed to Netlify or Vercel, so you just need to select an app version and deploy from an existing GitHub repo. (Your forked repo)
 
 Be advised that a lot of features are yet to be implemented.
 
