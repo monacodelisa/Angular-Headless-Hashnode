@@ -1,155 +1,35 @@
-![](/angular-hashnode/src/assets/animation/merge-animation.gif)
-
-# Angular Headless Hashnode
-## [![Discord](https://github.com/monacodelisa/icons-and-graphics/blob/main/icomoon/PNG/discord.png?raw=true)](https://discord.gg/3bS3xpCj) Open Source Project 
-
-## Overview 
-
-The **Angular Headless Hashnode Project** aims to seamlessly connect your Angular application to the Hashnode GraphQL database, providing a template for integrating Angular with a headless Hashnode setup.
-
-In other words - this project is very much like the starter kit that Hashnode provides, except that this project uses Angular for the frontend and deployment is set to be done through Netlify.
-
-## Project Goals
-
-- Develop a flexible template for Angular integration with headless Hashnode.
-- Connect the Angular app to Hashnode's GraphQL database to retrieve posts and blog data.
-- Responsive layout improvements for different devices
-- Support Angular v17 and up
-
-## Existing Setup & Features
-
-- [Appolo Angular](https://the-guild.dev/graphql/apollo-angular/docs) - GraphQL Client for Angular
-- [Font Awesome Icons](https://fontawesome.com/)
-- [Google Material Symbols and Icons](https://fonts.google.com/icons)
-- [Google Fonts](https://fonts.google.com/)
-
-## LIVE VERSIONS
-
-| [![angular headless hashnode dark](/angular-headless-hashnode-dark.jpg)](https://angular-hashnode.monacodelisa.com/) | [![angular headless hashnode light](/angular-headless-hashnode-light.jpg)](https://angular-hashnode.monacodelisa.com/) |
-| - | - |                         
-
-### You can see the live versions on the [DEMO SITE](https://angular.hdlshashnode.com/)                          
-
-## Angular App Versions
-
-#### `angular-v17` - has no UI libraries [LIVE](https://angular-v17.hdlshashnode.com/)                          
-                       
-#### `angular-v17-AnguMAT` - has Angular Material [LIVE](https://angular-v17-angumat.hdlshashnode.com/)     
-
-#### `angular-v17-PrimeNG` - has PrimeNG [LIVE](https://angular-v17-primeng.hdlshashnode.com/)      
 
 
-## Contributing
+The project has been renamed and moved ⬇️
 
-### Most of the open issues feature engaging YouTube videos, providing step-by-step guidance on implementing requirements. Dive in and contribute without hesitation – your skills are valued, and you can make a meaningful impact! Join us in building something great together.🌟
+# [HashnodeNG](https://github.com/orgs/HashnodeNG)
 
-#### the default branch is `develop`!
+## Project Migration
 
-### Fork the repository
+### From a personal repository to a GitHub Organization  
 
-1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `monacodelisa/angular-headles-hashnopde` repo.
+The decision to migrate from a personal repository to a GitHub organization stems from practical considerations and the necessity for more effective project management.
 
-### Working on Issues
+While GitHub itself presented no issues, challenges arose in deploying options and maintaining three distinct projects within a single repository. To address these complexities and foster improved project management, I've transitioned to a GitHub organization which was my initial intention but I needed a bit more free time to implement it - and also I wanted to verify that it was the right thing to do.
 
-1. In your local or forked repository, make your changes in a new git branch:
+This setup provides dedicated repositories for each project, streamlining code maintenance, project oversight, and access control.
 
-     ```shell
-     git checkout -b my-fix-branch develop
-     ```
+The transition also addresses some compliance issues. Despite the project's previous location in a personal repository, all essential open-source standards were applicable, with a particular emphasis on the simple understanding that non-adherence to the `CONTRIBUTING.md` guidelines would just result in the PR being rejected. 
 
-2. Create your patch, **including appropriate test cases**.
+From the project's outset, my perspective has been that contributions are aimed at the project's overall enhancement, dissociated from any specific association as the repository owner. 
 
-3. This is a monorepo that includes 6 versions of the app, make sure that you are working on the correct app version.
+When collaborators are requested to adhere to certain standards, it's not a personal directive but rather a commitment to established open-source standards.
+However, it appears that this was not universally understood by others temporarily involved in the project.
 
-4. Follow our [Coding Rules](./CONTRIBUTING.md#coding-rules).
+### The move to a GitHub organization emphasizes that the project's vitality isn't contingent on individual contributors but relies on collective adherence to established guidelines.
 
-6. Commit your changes using a descriptive commit message as specified in [Commit Message Guidelines](./CONTRIBUTING.md/#commit-message-guidelines).
+Despite differing opinions on whether the project's size requires a GitHub organization, this move is aimed at providing room for growth and ensuring the project's sustained development.
 
-     ```shell
-     git commit --all
-     ```
-    Note: the optional commit `--all` command line option will automatically "add" and "rm" edited files.
+In summary, this migration signifies a strategic step toward enhanced project management, streamlined collaboration, and continued alignment with open-source principles. With the move to a GitHub organization, members will benefit from clearly defined roles, fostering a more structured and effective collaborative environment. I appreciate your ongoing support and commitment to project guidelines as we navigate this transition.
 
-6. Push your branch to GitHub:
+### Esther White
+Project Owner, Lead Developer and Maintainer
 
-    ```shell
-    git push origin my-fix-branch
-    ```
+---
 
-7. In GitHub, send a pull request to `angular-headless-hashnode:develop`.
-
-## Using the app with your Hashnode Blog
-
-This app is still in its early stages, and it currently has limited features. At this point, I strongly encourage you to contribute to its development before actively using the app.
-
-### Fork the repository
-
-1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `monacodelisa/angular-headles-hashnopde` repo.
-
-2. Go to your chosen app version, and inside the `graphql.operations.ts` file, replace the URL of the blog to point to your blog.
-
-3. All three app versions can be deployed to Netlify or Vercel, so you just need to select an app version and deploy from an existing GitHub repo. (Your forked repo)
-
-Be advised that a lot of features are yet to be implemented.
-
-### Run locally
-
-1. Clone this repository.
-
-```bash
-git clone https://github.com/your-username/angular-headless-hashnode.git
-cd angular-headless-hashnode
-```
-2. Select one of the available [app versions](#angular-app-versions)
-```
-cd <chosen-app-version>
-```
-
-3. Install dependencies.
-
-```
-npm install
-```
-
-4. Run the app 
-
-```
-npm start
-```
-
-or 
-
-```
-ng serve
-```
-
-## Contributors ✨
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://monacodelisa.com/"><img src="https://avatars.githubusercontent.com/u/64324417?v=4?s=100" width="100px;" alt="Esther White"/><br /><sub><b>Esther White</b></sub></a><br /><a href="#code-monacodelisa" title="Code">💻</a> <a href="#maintenance-monacodelisa" title="Maintenance">🚧</a> <a href="#review-monacodelisa" title="Reviewed Pull Requests">👀</a> <a href="#tutorial-monacodelisa" title="Tutorials">✅</a> <a href="#content-monacodelisa" title="Content">🖋</a> <a href="#ideas-monacodelisa" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-monacodelisa" title="Mentoring">🧑‍🏫</a> <a href="#design-monacodelisa" title="Design">🎨</a> <a href="#infra-monacodelisa" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cleancodecraft"><img src="https://avatars.githubusercontent.com/u/132580309?v=4?s=100" width="100px;" alt="cleancodecraft"/><br /><sub><b>cleancodecraft</b></sub></a><br /><a href="#infra-cleancodecraft" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#test-cleancodecraft" title="Tests">⚠️</a> <a href="#code-cleancodecraft" title="Code">💻</a> <a href="#blog-cleancodecraft" title="Blogposts">📝</a> <a href="#example-cleancodecraft" title="Examples">💡</a> <a href="#ideas-cleancodecraft" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-cleancodecraft" title="Mentoring">🧑‍🏫</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/czBalazs98"><img src="https://avatars.githubusercontent.com/u/53296597?v=4?s=100" width="100px;" alt="czBalazs98"/><br /><sub><b>czBalazs98</b></sub></a><br /><a href="#code-czBalazs98" title="Code">💻</a> <a href="#design-czBalazs98" title="Design">🎨</a> <a href="#ideas-czBalazs98" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jhonacs2"><img src="https://avatars.githubusercontent.com/u/75391330?v=4?s=100" width="100px;" alt="Jhonatan Soto"/><br /><sub><b>Jhonatan Soto</b></sub></a><br /><a href="#code-jhonacs2" title="Code">💻</a> <a href="#design-jhonacs2" title="Design">🎨</a> <a href="#security-jhonacs2" title="Security">🛡️</a> <a href="#ideas-jhonacs2" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/samplelittlered"><img src="https://avatars.githubusercontent.com/u/127144297?v=4?s=100" width="100px;" alt="Little Red Coding Hood"/><br /><sub><b>Little Red Coding Hood</b></sub></a><br /><a href="#code-samplelittlered" title="Code">💻</a> <a href="#blog-samplelittlered" title="Blogposts">📝</a> <a href="#content-samplelittlered" title="Content">🖋</a> <a href="#design-samplelittlered" title="Design">🎨</a> <a href="#security-samplelittlered" title="Security">🛡️</a> <a href="#ideas-samplelittlered" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://portfolio-latest-two.vercel.app/"><img src="https://avatars.githubusercontent.com/u/21971232?v=4?s=100" width="100px;" alt="Sashikumar Yadav"/><br /><sub><b>Sashikumar Yadav</b></sub></a><br /><a href="#code-yshashi" title="Code">💻</a> <a href="#design-yshashi" title="Design">🎨</a> <a href="#ideas-yshashi" title="Ideas, Planning, & Feedback">🤔</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-
-This project follows the [all-contributors](https://allcontributors.org) specification.
-Contributions of any kind are welcome!
-
-## Celebrate Your Achievements!
-
-If you've added exciting features or functionalities that the project currently lacks, we'd love to see what you've accomplished. Share your contributions, suggestions, or improvements to help enhance the overall app experience. Your input plays a crucial role in making the application even better, and we're eager to see the innovative strides you've taken!
+Come and explore the new project's home - [HashnodeNG](https://github.com/orgs/HashnodeNG), existing collaborators will receive an invite to join, new collaborators are welcome.
