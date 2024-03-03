@@ -32,4 +32,4 @@ Project Owner, Lead Developer and Maintainer
 
 ---
 
-Come and explore the new project's home - [HashnodeNG](https://github.com/orgs/HashnodeNG), existing collaborators will receive an invite to join, new collaborators are welcome.
+Come and explore the new project's home - [AnguHashBlog](https://github.com/orgs/AnguHashBlog), existing collaborators will receive an invite to join, new collaborators are welcome.
