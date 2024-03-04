@@ -2,7 +2,7 @@
 
 The project has been renamed and moved ⬇️
 
-# [HashnodeNG](https://github.com/orgs/HashnodeNG)
+# [AnguHashBlog](https://github.com/orgs/AnguHashBlog)
 
 ## Project Migration
 
