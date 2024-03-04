@@ -1,6 +1,6 @@
 
 
-The project has been renamed and moved ⬇️
+# The project has been renamed and moved to a GitHub Organization ⬇️
 
 # [AnguHashBlog](https://github.com/orgs/AnguHashBlog)
 
